@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">InstantaneousBeiAPP</string>
+    <string name="app_name1">瞬贝</string>
+    <string name="empty"></string>
+    <string name="guide_1_text">想知道自己\n具体收入和支出是多少</string>
+    <string name="guide_2_text">钱花在哪些地方\n\t\t\t\t\t\t\t\t能够盈余多少钱</string>
+    <string name="guide_3_text">为买房、买车\n\t\t\t\t\t\t\t\t未来跳槽做好准备</string>
+    <string name="guide_loge_text">任\t何\t时\t间\t\t都\t是\t起\t点</string>
+    <string name="guide_center_text">就\n要\n从\n记\n账\n开\n始\n！</string>
+    <string name="guide_Button_text">立即体验</string>
+    <string name="wallet_remind_Title_btn">记账提醒</string>
+    <string name="wallet_change_Title_btn">更改账户</string>
+    <string name="wallet_oval_loge">账户余额\n580.00</string>
+    <string name="wallet_cash_text">现金\n现金余额</string>
+    <string name="wallet_deposit_card_text">储蓄卡\n储蓄卡余额</string>
+    <string name="wallet_blue_card_text">信用卡\n信用卡余额</string>
+    <string name="wallet_alipay_text">支付宝\n支付宝余额</string>
+    <string name="wallet_add_text">+添加账户</string>
+    <string name="wallet_deposit_card">储蓄卡</string>
+    <string name="wallet_blue_card">信用卡</string>
+    <string name="wallet_alipay">支付宝</string>
+    <string name="wallet_nowrite">未填写</string>
+    <string name="wallet_change_account_name">账户名称</string>
+    <string name="wallet_change_account_sum">账户余额</string>
+    <string name="wallet_change_account_style">账户类型</string>
+    <string name="wallet_change_account_explain">备注说明</string>
+    <string name="wallet_change_color">选择颜色</string>
+    <string name="outflow">流出</string>
+    <string name="intoflow">流入</string>
 </resources>
