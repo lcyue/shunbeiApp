@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">InstantaneousBeiAPP</string>
+    <string name="guide_Button_text">立即体验</string>
+    <string name="wallet_type_money">现金</string>
+    <string name="wallet_account_type">选择账户类型</string>
+    <string name="wallet_type_subsistence">储蓄卡</string>
+    <string name="wallet_type_dc">信用卡</string>
+    <string name="wallet_type_invest_user">投资账户</string>
+    <string name="wallet_type_currency">货币资金</string>
+    <string name="wallet_type_entity">实物储值卡</string>
+    <string name="wallet_type_mesh_user">网络充值账户</string>
+    <string name="wallet_type_housing">住房公积金</string>
+    <string name="wallet_type_invest_user_conteng">(资金账户、证券账户等)</string>
+    <string name="wallet_type_entity_content">(购物卡、公交卡等)</string>
+    <string name="wallet_type_mesh_user_content">(支付宝、微信钱包等)</string>
+    <string name="wallet_select_colour">选择颜色</string>
 </resources>
