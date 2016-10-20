@@ -10,5 +10,9 @@
     <color name="black">#000000</color>
     <color name="white_black">#919191</color>
     <color name="black_gery">#313131</color>
+    <color name="black_word">#333333</color>
+    <color name="grey">#9e9e9e</color>
+    <color name="yellow_wallet">#FEBF5D</color>
+    <color name="blue_wallet">#7BB2F1</color>
 
 </resources>
