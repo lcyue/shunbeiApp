@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/green">
+        <ImageView
+            android:id="@+id/wallet_guide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_left_white"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choice_time"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/positive"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/week"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black_word"
+            android:paddingTop="12dp"
+            android:drawableBottom="@mipmap/icon_rounded_rectangle_white"
+            android:drawablePadding="18dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/month"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/green"
+            android:paddingTop="12dp"
+            android:drawableBottom="@mipmap/icon_rounded_rectangle_green"
+            android:drawablePadding="18dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/year"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black_word"
+            android:paddingTop="12dp"
+            android:drawableBottom="@mipmap/icon_rounded_rectangle_white"
+            android:drawablePadding="18dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/day"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black_word"
+            android:paddingTop="12dp"
+            android:drawableBottom="@mipmap/icon_rounded_rectangle_white"
+            android:drawablePadding="18dp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="31dp"
+        android:text="@string/begintime"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black_word"/>
+
+
+    <!--<DatePicker-->
+        <!--android:id="@+id/chioceBeginTime"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/Theme.AppCompat.DayNight.Dialog.Alert"></DatePicker>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="31dp"
+        android:text="@string/endtime"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black_word"/>
+
+    <!--<DatePicker-->
+        <!--android:id="@+id/chioceEndTime"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--style="@style/Theme.AppCompat.Dialog"></DatePicker>-->
+
+</LinearLayout>

@@ -3,6 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="black_nomal">#FF2D2D2D</color>
+    <color name="green_view">#FFA8C5C5</color>
+    <color name="grey_view">#FF666666</color>
+    <color name="green_nomal">#2ECCCB</color>
     <color name="white">#FFFFFF</color>
     <color name="blue_cyan">#2ECCCB</color>
     <color name="gery">#9e9e9e</color>

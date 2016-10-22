@@ -1,7 +1,24 @@
 <resources>
 
     <string name="app_name">InstantaneousBeiAPP</string>
-    <string name="guide_Button_text">立即体验</string>
+
+    <string name="income">收入</string>
+    <string name="expenditure">支出</string>
+    <string name="salary">工资</string>
+    <string name="job">兼职</string>
+    <string name="redpacket">红包</string>
+    <string name="alimony">生活费</string>
+    <string name="pin">零花钱</string>
+    <string name="investment">投资</string>
+    <string name="bonus">奖金</string>
+    <string name="apply">报销</string>
+    <string name="cash">现金</string>
+    <string name="refund">退款</string>
+    <string name="alipay">支付宝</string>
+    <string name="rest">其他</string>
+    <string name="compile">编辑</string>
+    <string name="chooseaccount">选择账户</string>
+    <string name="guide_button_text">立即体验</string>
     <string name="wallet_type_money">现金</string>
     <string name="wallet_account_type">选择账户类型</string>
     <string name="wallet_type_subsistence">储蓄卡</string>
@@ -69,7 +86,29 @@
     <string name="menu_tel_shake">手机震动提醒</string>
     <string name="menu_remind_way">提醒方式</string>
     <string name="save">保存</string>
-    
+    <string name="guide_laugh_text">2016年9月22日，星期四\n我们相遇了</string>
+    <string name="guide_transition_text">懂瞬贝，会生活</string>
+    <string name="guide_versions_text">懂瞬记账V3.1.0</string>
+    <string name="guide_transition2_firsttext">HI， 亲爱的</string>
+    <string name="guide_transition2_twotext">梦别星辰，脚踏实地</string>
+    <string name="choice_time">选择时间</string>
+    <string name="positive">确定</string>
+    <string name="negative">否定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="week">周</string>
+    <string name="begintime">开始时间</string>
+    <string name="endtime">结束时间</string>
+    <string name="statement">报表</string>
+    <string name="total_expenditure">总支出</string>
+    <string name="total">总计</string>
+    <string name="clothes">服饰</string>
+    <string name="eating_and_drinking">饮食</string>
+    <string name="detail">明细</string>
+    <string name="wallet">钱包</string>
+    <string name="statistical">报表</string>
+    <string name="more">更多</string>
 
 
 </resources>
