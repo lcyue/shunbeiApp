@@ -224,20 +224,24 @@
                 android:orientation="horizontal"
                 android:layout_marginRight="30dp">
 
-                <ImageView
+                <TextView
                     android:id="@+id/icon_detail"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_detail_off"
+                    android:gravity="center"
+                    android:text="@string/detail"
+                    android:drawableTop="@mipmap/icon_detail_off"
                     android:layout_below="@id/rootRelativeLayot"
                     />
-                <ImageView
+                <TextView
                     android:id="@+id/icon_wallet"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_wallet_on"
+                    android:gravity="center"
+                    android:text="@string/wallet"
+                    android:drawableTop="@mipmap/icon_wallet_on"
                     />
             </LinearLayout>
 
@@ -248,17 +252,21 @@
                 android:orientation="horizontal"
                 android:layout_marginLeft="30dp">
 
-                <ImageView
+                <TextView
                     android:id="@+id/icon_statistical"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_statistical_off" />
-                <ImageView
+                    android:gravity="center"
+                    android:text="@string/statistical"
+                    android:drawableTop="@mipmap/icon_statistical_off" />
+                <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_detail_off"
+                    android:gravity="center"
+                    android:text="@string/more"
+                    android:drawableTop="@mipmap/icon_more_off"
                      />
             </LinearLayout>
         </LinearLayout>
