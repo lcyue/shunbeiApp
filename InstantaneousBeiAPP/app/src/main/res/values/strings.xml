@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">InstantaneousBeiAPP</string>
+    <string name="income">收入</string>
+    <string name="expenditure">支出</string>
+    <string name="salary">工资</string>
+    <string name="job">兼职</string>
+    <string name="redpacket">红包</string>
+    <string name="alimony">生活费</string>
+    <string name="pin">零花钱</string>
+    <string name="investment">投资</string>
+    <string name="bonus">奖金</string>
+    <string name="apply">报销</string>
+    <string name="cash">现金</string>
+    <string name="refund">退款</string>
+    <string name="alipay">支付宝</string>
+    <string name="rest">其他</string>
+    <string name="compile">编辑</string>
+    <string name="chooseaccount">选择账户</string>
+
 </resources>
