@@ -41,5 +41,35 @@
     <string name="wallet_change_color">选择颜色</string>
     <string name="outflow">流出</string>
     <string name="intoflow">流入</string>
+    <string name="with_respect_insranraneoous">关于瞬贝</string>
+    <string name="design_introduce">瞬贝记账APP是重庆隔壁工作室设计开发</string>
+    <string name="designer">设计人员：王攀、蒋松、陈珊、尹梽旭</string>
+    <string name="developer">开发人员：王鹏、蒲祖辉、冉娱鑫</string>
+    <string name="design_permission">隔壁工作室许可及服务协议</string>
+    <string name="design_copyrighr">Copyright @ 2016.隔壁工作室 版权所有</string>
+    <string name="menu_remind_charge_accout">记账提醒</string>
+    <string name="menu_remind_character">目前还没有提醒</string>
+    <string name="menu_on">开</string>
+    <string name="menu_off">关</string>
+    <string name="menu_add_renind">添加提醒</string>
+    <string name="menu_compile_name">编辑</string>
+    <string name="menu_delete">删除</string>
+    <string name="menu_adjust_time">调整时间</string>
+    <string name="repetition">重复</string>
+    <string name="one_character">一</string>
+    <string name="two_character">二</string>
+    <string name="three_character">三</string>
+    <string name="four_character">四</string>
+    <string name="five_character">五</string>
+    <string name="six_character">六</string>
+    <string name="day_character">日</string>
+    <string name="menu_alarm_clock">闹钟名</string>
+    <string name="menu_default">默认</string>
+    <string name="menu_task_show">通知任务栏显示</string>
+    <string name="menu_tel_shake">手机震动提醒</string>
+    <string name="menu_remind_way">提醒方式</string>
+    <string name="save">保存</string>
+    
+
 
 </resources>

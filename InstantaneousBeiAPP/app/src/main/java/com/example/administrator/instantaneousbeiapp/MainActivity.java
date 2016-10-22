@@ -8,6 +8,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_wallet_select_colour);
+        setContentView(R.layout.layout_menu_renmid_charge_accout_save);
     }
 }

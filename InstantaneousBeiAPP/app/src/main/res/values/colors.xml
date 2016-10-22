@@ -14,5 +14,6 @@
     <color name="grey">#9e9e9e</color>
     <color name="yellow_wallet">#FEBF5D</color>
     <color name="blue_wallet">#7BB2F1</color>
-
+    <color name="gery_white">#555555</color>
+    <color name="menu_view">#dfdfdf</color>
 </resources>
