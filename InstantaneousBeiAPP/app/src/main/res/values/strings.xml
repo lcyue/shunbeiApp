@@ -1,4 +1,37 @@
 <resources>
+
+    <string name="app_name">InstantaneousBeiAPP</string>
+
+    <string name="income">收入</string>
+    <string name="expenditure">支出</string>
+    <string name="salary">工资</string>
+    <string name="job">兼职</string>
+    <string name="redpacket">红包</string>
+    <string name="alimony">生活费</string>
+    <string name="pin">零花钱</string>
+    <string name="investment">投资</string>
+    <string name="bonus">奖金</string>
+    <string name="apply">报销</string>
+    <string name="cash">现金</string>
+    <string name="refund">退款</string>
+    <string name="alipay">支付宝</string>
+    <string name="rest">其他</string>
+    <string name="compile">编辑</string>
+    <string name="chooseaccount">选择账户</string>
+    <string name="guide_button_text">立即体验</string>
+    <string name="wallet_type_money">现金</string>
+    <string name="wallet_account_type">选择账户类型</string>
+    <string name="wallet_type_subsistence">储蓄卡</string>
+    <string name="wallet_type_dc">信用卡</string>
+    <string name="wallet_type_invest_user">投资账户</string>
+    <string name="wallet_type_currency">货币资金</string>
+    <string name="wallet_type_entity">实物储值卡</string>
+    <string name="wallet_type_mesh_user">网络充值账户</string>
+    <string name="wallet_type_housing">住房公积金</string>
+    <string name="wallet_type_invest_user_conteng">(资金账户、证券账户等)</string>
+    <string name="wallet_type_entity_content">(购物卡、公交卡等)</string>
+    <string name="wallet_type_mesh_user_content">(支付宝、微信钱包等)</string>
+    <string name="wallet_select_colour">选择颜色</string>
     <string name="app_name1">瞬贝</string>
     <string name="empty"></string>
     <string name="guide_1_text">想知道自己\n具体收入和支出是多少</string>
@@ -6,7 +39,6 @@
     <string name="guide_3_text">为买房、买车\n\t\t\t\t\t\t\t\t未来跳槽做好准备</string>
     <string name="guide_loge_text">任\t何\t时\t间\t\t都\t是\t起\t点</string>
     <string name="guide_center_text">就\n要\n从\n记\n账\n开\n始\n！</string>
-    <string name="guide_Button_text">立即体验</string>
     <string name="wallet_remind_Title_btn">记账提醒</string>
     <string name="wallet_change_Title_btn">更改账户</string>
     <string name="wallet_oval_loge">账户余额\n580.00</string>
@@ -49,4 +81,5 @@
     <string name="wallet">钱包</string>
     <string name="statistical">报表</string>
     <string name="more">更多</string>
+
 </resources>

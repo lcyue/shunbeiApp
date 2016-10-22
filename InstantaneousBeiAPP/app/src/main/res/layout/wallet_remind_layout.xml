@@ -201,7 +201,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/icon_oval_wallet"
+                android:src="@mipmap/icon_oval_wallet_blue"
                 android:layout_centerInParent="true"/>
 
             <ImageView
