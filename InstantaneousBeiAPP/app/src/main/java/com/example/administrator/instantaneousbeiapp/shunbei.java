@@ -17,7 +17,6 @@ public class shunbei extends AppCompatActivity implements View.OnTouchListener{
         guide_flipper = (ViewFlipper) findViewById(R.id.guide_flipper);
 
         guide_flipper.setOnTouchListener(this);
-
         //guide_flipper.startFlipping();
 
     }
