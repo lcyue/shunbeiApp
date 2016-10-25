@@ -24,7 +24,7 @@ public class shunbei extends AppCompatActivity implements View.OnTouchListener{
         guide_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(shunbei.this,GuideTransitionOne.class);
+                Intent intent = new Intent(shunbei.this,GuideTransitionTwo.class);
 
             }
         });

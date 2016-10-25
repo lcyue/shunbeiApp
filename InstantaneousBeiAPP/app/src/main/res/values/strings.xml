@@ -38,6 +38,7 @@
     <string name="guide_2_text">钱花在哪些地方\n\t\t\t\t\t\t\t\t能够盈余多少钱</string>
     <string name="guide_3_text">为买房、买车\n\t\t\t\t\t\t\t\t未来跳槽做好准备</string>
     <string name="guide_loge_text">任\t何\t时\t间\t\t都\t是\t起\t点</string>
+    <string name="use_signature">任何时间都是起点</string>
     <string name="guide_center_text">就\n要\n从\n记\n账\n开\n始\n！</string>
     <string name="wallet_remind_Title_btn">记账提醒</string>
     <string name="wallet_change_Title_btn">更改账户</string>
@@ -109,6 +110,12 @@
     <string name="wallet">钱包</string>
     <string name="statistical">报表</string>
     <string name="more">更多</string>
-
+    <string name="menu_use_accout">用户资料</string>
+    <string name="nickname">昵称</string>
+    <string name="signature">签名</string>
+    <string name="birthday">生日</string>
+    <string name="phone">手机</string>
+    <string name="unbound">未绑定</string>
+    <string name="saveing">保存</string>
 
 </resources>

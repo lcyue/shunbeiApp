@@ -17,14 +17,16 @@
         </activity>
 
 
-        <activity android:name=".Guide.GuideTransitionOne"/>
-        <activity android:name=".Guide.GuideTransitionTwo"/>
-        <activity android:name=".Guide.shunbei"/>
-        <activity android:name=".Statement.Statement"/>
-        <activity android:name=".Statement.StatementChoiceTimeActivity"/>
-        <activity android:name=".Wallet.WalletAccountType"/>
-        <activity android:name=".Wallet.WalletSelectColour"/>
-        <activity android:name=".WalletDepositCardActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionOne"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionTwo"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.shunbei"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.Statement"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.StatementChoiceTimeActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletAccountType"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletSelectColour"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.WalletDepositCardActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.WalletRemindActivity"/>
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BeiZhuActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.ShouRu"/>
@@ -38,8 +40,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/>
-        <activity android:name=".WalletRemindActivity"/>
-
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.UseAccount"/>
 
     </application>
 
