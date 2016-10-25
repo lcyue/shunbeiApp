@@ -30,7 +30,6 @@ public class shunbei extends AppCompatActivity implements View.OnTouchListener{
         });
 
         guide_flipper.setOnTouchListener(this);
-
         //guide_flipper.startFlipping();
 
     }
