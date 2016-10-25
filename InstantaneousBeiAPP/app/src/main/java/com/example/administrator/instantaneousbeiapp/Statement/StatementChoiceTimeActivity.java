@@ -1,7 +1,9 @@
-package com.example.administrator.instantaneousbeiapp;
+package com.example.administrator.instantaneousbeiapp.Statement;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.example.administrator.instantaneousbeiapp.R;
 
 /**
  * Created by Administrator on 2016/10/22.

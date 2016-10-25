@@ -15,6 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Guide.GuideTransitionOne"/>
+        <activity android:name=".Guide.GuideTransitionTwo"/>
+        <activity android:name=".Guide.shunbei"/>
+        <activity android:name=".Statement.Statement"/>
+        <activity android:name=".Statement.StatementChoiceTimeActivity"/>
+        <activity android:name=".Wallet.WalletAccountType"/>
+        <activity android:name=".Wallet.WalletSelectColour"/>
+        <activity android:name=".WalletDepositCardActivity"/>
     </application>
 
 </manifest>
