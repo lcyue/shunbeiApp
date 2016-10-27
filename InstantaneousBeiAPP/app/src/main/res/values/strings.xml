@@ -117,5 +117,11 @@
     <string name="phone">手机</string>
     <string name="unbound">未绑定</string>
     <string name="saveing">保存</string>
+    <string name="datail">明细</string>
+    <string name="datail_calendar_time">2016年10月</string>
+    <string name="datail_not_tally">无记账记录</string>
+    <string name="datail_have_tally">有记账记录</string>
+    <string name="datail_add_trait">点击加号记一笔</string>
+
 
 </resources>

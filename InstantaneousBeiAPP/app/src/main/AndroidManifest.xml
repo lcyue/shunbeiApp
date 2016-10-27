@@ -41,6 +41,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.UseAccount"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/>
 
     </application>
 
