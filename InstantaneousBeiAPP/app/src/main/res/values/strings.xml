@@ -1,7 +1,6 @@
 <resources>
 
     <string name="app_name">InstantaneousBeiAPP</string>
-
     <string name="income">收入</string>
     <string name="expenditure">支出</string>
     <string name="salary">工资</string>
@@ -117,5 +116,19 @@
     <string name="phone">手机</string>
     <string name="unbound">未绑定</string>
     <string name="saveing">保存</string>
+    <string name="set">设置</string>
+    <string name="phonenumb">手机号码</string>
+    <string name="onbound">已绑定</string>
+    <string name="gestures_password">手势密码</string>
+    <string name="unset">未设置</string>
+    <string name="about_the_instantaneous_bei">关于瞬贝</string>
+    <string name="check_in_time">签到</string>
+    <string name="bill_renind">记账提醒</string>
+    <string name="voice_of_account">语音记账</string>
+    <string name="exit_account">退出当前账号</string>
+    <string name="create_gestures_password">创建手势密码</string>
+    <string name="gestures_password_text">创建一个手势密码，这样在不知道您的密码情况下不能打开瞬贝</string>
+    <string name="suggestion">意见反馈</string>
+    <string name="putinto">提交</string>
 
 </resources>
