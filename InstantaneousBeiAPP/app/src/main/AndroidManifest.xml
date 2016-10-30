@@ -20,8 +20,10 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionOne"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionTwo"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.shunbei"/>
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.Statement"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.StatementChoiceTimeActivity"/>
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletAccountType"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletSelectColour"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity"/>
@@ -34,17 +36,26 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheChengyuanActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheZhanghuActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XuigaiMimaActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/>
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/>
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.UseAccount"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.MenuSet"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.GesturesPassWord"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ActivitySuggestion"/>
 
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/>
+
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Register.ChangeDeadline"/>
     </application>
 
 </manifest>
