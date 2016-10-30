@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/green">
+        <ImageView
+            android:id="@+id/wallet_guide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_left_white"
+            android:clickable="false"
+            android:visibility="invisible"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/statement"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/positive"
+            android:visibility="invisible"
+            android:clickable="false"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/week"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:paddingTop="12dp"
+                    android:drawableBottom="@mipmap/icon_rounded_rectangle_white"
+                    android:drawablePadding="18dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/month"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/green"
+                    android:paddingTop="12dp"
+                    android:drawableBottom="@mipmap/icon_rounded_rectangle_green"
+                    android:drawablePadding="18dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/year"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:paddingTop="12dp"
+                    android:drawableBottom="@mipmap/icon_rounded_rectangle_white"
+                    android:drawablePadding="18dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:paddingTop="12dp"
+                    android:drawableBottom="@mipmap/icon_rounded_rectangle_white"
+                    android:drawablePadding="18dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_colourful_oval"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/total_expenditure_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_expenditure"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="45dp"
+                    android:textSize="22sp"
+                    android:textColor="@color/green"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4918.2"
+                    android:textSize="24sp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/total_expenditure_text"
+                    android:drawableBottom="@mipmap/icon_arrow"
+                    android:drawablePadding="27dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="@string/total"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:gravity="center"
+                    android:drawableLeft="@mipmap/icon_total"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="4918.2"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="@string/clothes"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:gravity="center"
+                    android:drawableLeft="@mipmap/icon_clothes"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="346.00"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="7.04%"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="@string/eating_and_drinking"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:gravity="center"
+                    android:drawableLeft="@mipmap/icon_eat_and_drimk"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="1346.00"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="27.37%"
+                    android:textSize="18sp"
+                    android:textColor="@color/black_word"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rootRelativeLayot">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/blue_wallet"
+                android:layout_centerVertical="true"></View>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_oval_wallet_blue"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_more_white"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="30dp">
+
+                <TextView
+                    android:id="@+id/icon_detail"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/detail"
+                    android:drawableTop="@mipmap/icon_detail_off"
+                    android:layout_below="@id/rootRelativeLayot"
+                    />
+                <TextView
+                    android:id="@+id/icon_wallet"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/wallet"
+                    android:drawableTop="@mipmap/icon_wallet_off"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:id="@+id/icon_statistical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/statistical"
+                    android:drawableTop="@mipmap/icon_statistical_on" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/more"
+                    android:drawableTop="@mipmap/icon_more_off"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
