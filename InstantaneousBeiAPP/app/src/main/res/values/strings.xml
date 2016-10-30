@@ -122,6 +122,26 @@
     <string name="datail_not_tally">无记账记录</string>
     <string name="datail_have_tally">有记账记录</string>
     <string name="datail_add_trait">点击加号记一笔</string>
-
+    <string name="detail_income">本月收入</string>
+    <string name="detail_budget">本月预算</string>
+    <string name="detail_expend">本月支出</string>
+    <string name="expend">支出</string>
+    <string name="today">今天</string>
+    <string name="derive">数据导出</string>
+    <string name="send">发送</string>
+    <string name="default_books">默认账本</string>
+    <string name="deadline">期限</string>
+    <string name="all_time">所有时间</string>
+    <string name="send_file">发送导出文件到：</string>
+    <string name="e_mail_address">请输入邮箱地址</string>
+    <string name="change_deadline">选择期限</string>
+    <string name="begin_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="this_month">本月</string>
+    <string name="last_month">上个月</string>
+    <string name="this_year">今年</string>
+   <string name="custom_period">自定义周期</string>
 
 </resources>

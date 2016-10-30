@@ -21,4 +21,9 @@
     <color name="gery_white">#555555</color>
     <color name="menu_view">#dfdfdf</color>
     <color name="black_gery_white">#969696</color>
+    <color name="black_getr">#818181</color>
+    <color name="black_white_bag">#ededed</color>
+    <color name="black_size">#333333</color>
+    <color name="gery_size">#999999</color>
+    <color name="gery_e_mail">#cccccc</color>
 </resources>
