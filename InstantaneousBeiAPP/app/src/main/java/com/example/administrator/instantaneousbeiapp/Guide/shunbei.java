@@ -45,7 +45,6 @@ public class shunbei extends AppCompatActivity implements View.OnTouchListener{
             case MotionEvent.ACTION_MOVE:
                 //向右滑动
                 if (motionEvent.getX() - startX > 300) {
-
                     guide_flipper.showNext();
                 }
                 //向左滑动
