@@ -8,7 +8,7 @@
         android:label="@string/app_name1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +37,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheZhanghuActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>
 
-        <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/>
+        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/>-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XuigaiMimaActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/>

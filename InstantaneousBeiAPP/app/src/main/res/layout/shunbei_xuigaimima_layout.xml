@@ -65,6 +65,7 @@
         android:padding="15dp"/>
 
     <TextView
+        android:id="@+id/shunbei_xuigai_wancheng_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="完成"

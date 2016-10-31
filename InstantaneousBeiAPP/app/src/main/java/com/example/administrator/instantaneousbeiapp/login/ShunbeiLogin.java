@@ -15,6 +15,8 @@ import com.example.administrator.instantaneousbeiapp.Wallet.WalletRemindActivity
  */
 public class ShunbeiLogin extends Activity {
     TextView shunbei_login_btn;
+    TextView shunbei_zhuce_btn;
+    TextView shunbei_xuigai_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +24,12 @@ public class ShunbeiLogin extends Activity {
         setContentView(R.layout.shunbei_login_layout);
 
         shunbei_login_btn = (TextView) findViewById(R.id.shunbei_login_btn);
+        shunbei_zhuce_btn = (TextView) findViewById(R.id.shunbei_zhuce_btn);
+        shunbei_xuigai_btn = (TextView) findViewById(R.id.shunbei_xuigai_btn);
 
+        shunbei_xuigai_btn.setOnClickListener(onClickListener);
         shunbei_login_btn.setOnClickListener(onClickListener);
+        shunbei_zhuce_btn.setOnClickListener(onClickListener);
 
     }
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -33,6 +39,14 @@ public class ShunbeiLogin extends Activity {
             switch (v.getId()){
                 case R.id.shunbei_login_btn:
                     intent = new Intent(ShunbeiLogin.this,WalletRemindActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.shunbei_zhuce_btn:
+                    intent = new Intent(ShunbeiLogin.this,ZhuceActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.shunbei_xuigai_btn:
+                    intent = new Intent(ShunbeiLogin.this,XuigaiMimaActivity.class);
                     startActivity(intent);
                     break;
             }
