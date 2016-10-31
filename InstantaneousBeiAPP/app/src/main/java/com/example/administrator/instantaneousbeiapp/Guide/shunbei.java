@@ -25,7 +25,7 @@ public class shunbei extends AppCompatActivity implements View.OnTouchListener{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(shunbei.this,GuideTransitionTwo.class);
-
+                startActivity(intent);
             }
         });
 

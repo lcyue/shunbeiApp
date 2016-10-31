@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.WalletRemindActivity;
+import com.example.administrator.instantaneousbeiapp.Wallet.WalletRemindActivity;
 
 
 /**

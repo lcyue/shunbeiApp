@@ -26,9 +26,9 @@
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletAccountType"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletSelectColour"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.WalletDepositCardActivity"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.WalletRemindActivity"/>
-
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletRemindActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BeiZhuActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.ShouRu"/>
@@ -46,6 +46,9 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.UseAccount"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.MenuSet"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.GesturesPassWord"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.login.ActivitySuggestion"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/>
