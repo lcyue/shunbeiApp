@@ -31,7 +31,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center_vertical">
@@ -53,7 +53,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="100dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="40dp"
                     android:orientation="horizontal"
                     android:layout_gravity="center_vertical"
@@ -92,7 +93,8 @@
                     android:layout_marginLeft="37dp"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/bill_renind"
                     android:layout_gravity="center_vertical"
@@ -114,7 +116,8 @@
                     android:layout_marginLeft="40dp"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/voice_of_account"
                     android:layout_gravity="center_vertical"
@@ -136,7 +139,8 @@
                     android:layout_marginLeft="37dp"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/set"
                     android:layout_gravity="center_vertical"
