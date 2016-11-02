@@ -72,21 +72,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/icon_detail_ellipse_grey" />
-
-            <ImageView
-                android:id="@+id/detail_white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/icon_detail_ellipse_white" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/icon_detail_shape" />
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@mipmap/icon_detail_shape1"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -287,97 +276,7 @@
 
         </LinearLayout>
     </FrameLayout>
-    <!--底部标题栏-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rootRelativeLayot">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green"
-                android:layout_centerVertical="true"></View>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/icon_oval_wallet_blue"
-                android:layout_centerInParent="true"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/icon_more_white"
-                android:layout_centerInParent="true"/>
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="40dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginRight="30dp">
-
-                <TextView
-                    android:id="@+id/icon_detail"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/detail"
-                    android:drawableTop="@mipmap/icon_detail"
-                    android:layout_below="@id/rootRelativeLayot"
-                    />
-                <TextView
-                    android:id="@+id/icon_wallet"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/wallet"
-                    android:drawableTop="@mipmap/icon_wallet"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="30dp">
-
-                <TextView
-                    android:id="@+id/icon_statistical"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/statistical"
-                    android:drawableTop="@mipmap/icon_statistical_off" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/more"
-                    android:drawableTop="@mipmap/icon_more_off"
-                    />
-            </LinearLayout>
-        </LinearLayout>
-
-    </RelativeLayout>
 
 
 </LinearLayout>
