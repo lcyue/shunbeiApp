@@ -58,6 +58,9 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.ChangeDeadline"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.ActivityShunBei"/>
+        <!--自定义ViewGroup做的一个HorizontalScrollView  完成侧滑效果-->
+        <activity android:name=".Detail.DemoCehuaActivity"/>
     </application>
 
 </manifest>
