@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Guide;
+package com.example.administrator.instantaneousbeiapp.guide;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.ViewFlipper;
 
 import com.example.administrator.instantaneousbeiapp.R;
 
-public class shunbei extends AppCompatActivity implements View.OnTouchListener{
+public class Shunbei extends AppCompatActivity implements View.OnTouchListener{
     TextView guide_btn;
     private float startX;
     ViewFlipper guide_flipper;
@@ -24,7 +24,7 @@ public class shunbei extends AppCompatActivity implements View.OnTouchListener{
         guide_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(shunbei.this,GuideTransitionTwo.class);
+                Intent intent = new Intent(Shunbei.this,GuideTransitionTwo.class);
                 startActivity(intent);
             }
         });
