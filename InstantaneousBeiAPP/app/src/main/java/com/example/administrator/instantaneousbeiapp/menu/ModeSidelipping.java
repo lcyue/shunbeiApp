@@ -13,7 +13,7 @@ import com.example.administrator.instantaneousbeiapp.R;
 /**
  * 这是侧滑菜单的mode
  * */
-public class Mode_sidelipping extends Activity{
+public class ModeSidelipping extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);

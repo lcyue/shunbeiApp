@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.homePage.fragment;
+package com.example.administrator.instantaneousbeiapp.homepage.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

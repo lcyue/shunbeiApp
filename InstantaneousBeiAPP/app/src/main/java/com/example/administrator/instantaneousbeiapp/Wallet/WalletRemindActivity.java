@@ -9,7 +9,6 @@ import com.example.administrator.instantaneousbeiapp.R;
  * Created by Administrator on 2016/10/20.
  */
 public class WalletRemindActivity extends Activity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
