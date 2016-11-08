@@ -20,4 +20,14 @@
     <color name="blue_wallet">#7BB2F1</color>
     <color name="gery_white">#555555</color>
     <color name="menu_view">#dfdfdf</color>
+    <color name="suggest_backguand">#EDEDED</color>
+    <color name="black_gery_white">#969696</color>
+    <color name="black_getr">#818181</color>
+    <color name="black_white_bag">#ededed</color>
+    <color name="black_size">#333333</color>
+    <color name="gery_size">#999999</color>
+    <color name="gery_e_mail">#cccccc</color>
+    <color name="green_btn">#2ECBCA</color>
+    <color name="gery_btn">#AEB4B4</color>
+
 </resources>

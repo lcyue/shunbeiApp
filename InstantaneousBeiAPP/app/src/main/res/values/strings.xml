@@ -1,7 +1,6 @@
 <resources>
 
     <string name="app_name">InstantaneousBeiAPP</string>
-
     <string name="income">收入</string>
     <string name="expenditure">支出</string>
     <string name="salary">工资</string>
@@ -38,6 +37,7 @@
     <string name="guide_2_text">钱花在哪些地方\n\t\t\t\t\t\t\t\t能够盈余多少钱</string>
     <string name="guide_3_text">为买房、买车\n\t\t\t\t\t\t\t\t未来跳槽做好准备</string>
     <string name="guide_loge_text">任\t何\t时\t间\t\t都\t是\t起\t点</string>
+    <string name="use_signature">任何时间都是起点</string>
     <string name="guide_center_text">就\n要\n从\n记\n账\n开\n始\n！</string>
     <string name="wallet_remind_Title_btn">记账提醒</string>
     <string name="wallet_change_Title_btn">更改账户</string>
@@ -109,6 +109,52 @@
     <string name="wallet">钱包</string>
     <string name="statistical">报表</string>
     <string name="more">更多</string>
-
+    <string name="menu_use_accout">用户资料</string>
+    <string name="nickname">昵称</string>
+    <string name="signature">签名</string>
+    <string name="birthday">生日</string>
+    <string name="phone">手机</string>
+    <string name="unbound">未绑定</string>
+    <string name="saveing">保存</string>
+    <string name="set">设置</string>
+    <string name="phonenumb">手机号码</string>
+    <string name="onbound">已绑定</string>
+    <string name="gestures_password">手势密码</string>
+    <string name="unset">未设置</string>
+    <string name="about_the_instantaneous_bei">关于瞬贝</string>
+    <string name="check_in_time">签到</string>
+    <string name="bill_renind">记账提醒</string>
+    <string name="voice_of_account">语音记账</string>
+    <string name="exit_account">退出当前账号</string>
+    <string name="create_gestures_password">创建手势密码</string>
+    <string name="gestures_password_text">创建一个手势密码，这样在不知道您的密码情况下不能打开瞬贝</string>
+    <string name="suggestion">意见反馈</string>
+    <string name="putinto">提交</string>
+    <string name="datail">明细</string>
+    <string name="datail_calendar_time">2016年10月</string>
+    <string name="datail_not_tally">无记账记录</string>
+    <string name="datail_have_tally">有记账记录</string>
+    <string name="datail_add_trait">点击加号记一笔</string>
+    <string name="detail_income">本月收入</string>
+    <string name="detail_budget">本月预算</string>
+    <string name="detail_expend">本月支出</string>
+    <string name="expend">支出</string>
+    <string name="today">今天</string>
+    <string name="derive">数据导出</string>
+    <string name="send">发送</string>
+    <string name="default_books">默认账本</string>
+    <string name="deadline">期限</string>
+    <string name="all_time">所有时间</string>
+    <string name="send_file">发送导出文件到：</string>
+    <string name="e_mail_address">请输入邮箱地址</string>
+    <string name="change_deadline">选择期限</string>
+    <string name="begin_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="this_month">本月</string>
+    <string name="last_month">上个月</string>
+    <string name="this_year">今年</string>
+   <string name="custom_period">自定义周期</string>
 
 </resources>
