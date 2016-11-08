@@ -1,7 +1,6 @@
-package com.example.administrator.instantaneousbeiapp.Detail;
+package com.example.administrator.instantaneousbeiapp.detail;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;

@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Wallet;
+package com.example.administrator.instantaneousbeiapp.wallet;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,6 +12,6 @@ public class WalletRemindActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wallet_remind_layout);
+        setContentView(R.layout.wallet_remind_layout);//账户的添加和修改
     }
 }

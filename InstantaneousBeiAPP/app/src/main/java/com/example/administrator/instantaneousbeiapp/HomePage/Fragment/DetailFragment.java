@@ -1,4 +1,6 @@
-package com.example.administrator.instantaneousbeiapp.guide;
+
+package com.example.administrator.instantaneousbeiapp.homepage.fragment;
+
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,18 +12,13 @@ import android.view.ViewGroup;
 import com.example.administrator.instantaneousbeiapp.R;
 
 /**
- * Created by Administrator on 2016/10/31.
+ * Created by Administrator on 2016/11/1.
  */
-public class FratmentTwo extends Fragment {
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
+public class DetailFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_fragment_guide_two,null);
+        View view = inflater.inflate(R.layout.layout_detail_particulars, null); //明细页面的视图
         return view;
     }
 }
