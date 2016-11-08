@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Wallet;
+package com.example.administrator.instantaneousbeiapp.wallet;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,6 +12,6 @@ public class WalletDepositCardActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wallet_deposit_card_layout);
+        setContentView(R.layout.wallet_deposit_card_layout); //消费的详细页面
     }
 }

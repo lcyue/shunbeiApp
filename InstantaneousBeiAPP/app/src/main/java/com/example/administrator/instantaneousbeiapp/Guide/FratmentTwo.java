@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Guide;
+package com.example.administrator.instantaneousbeiapp.guide;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

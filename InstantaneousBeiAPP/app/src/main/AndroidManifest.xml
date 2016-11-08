@@ -17,18 +17,18 @@
         </activity>
 
 
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionOne"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionTwo"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.shunbei"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionOne"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionTwo"/>
+        <!--<activity android:name=".guide.Shunbei"/>-->
 
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.Statement"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.StatementChoiceTimeActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.statement.Statement"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.statement.StatementChoiceTimeActivity"/>
 
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletAccountType"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletSelectColour"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletRemindActivity"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletAccountType"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletSelectColour"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletRemindActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BeiZhuActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.ShouRu"/>
@@ -45,22 +45,22 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/>
 
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.UseAccount"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.MenuSet"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.GesturesPassWord"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.menu.UseAccount"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.menu.MenuSet"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.menu.GesturesPassWord"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ActivitySuggestion"/>
 
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Calendar"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Particulars"/>
 
         <!--<activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>-->
 
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Register.ChangeDeadline"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.ActivityShunBei"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.register.Derive"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.register.Deadline"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.register.ChangeDeadline"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.guide.ActivityShunBei"/>
         <!--自定义ViewGroup做的一个HorizontalScrollView  完成侧滑效果-->
-        <activity android:name=".Detail.DemoCehuaActivity"/>
+        <activity android:name=".detail.DemoCehuaActivity"/>
     </application>
 
 </manifest>

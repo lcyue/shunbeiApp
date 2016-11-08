@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Register;
+package com.example.administrator.instantaneousbeiapp.register;
 
 import android.app.Activity;
 import android.os.Bundle;
