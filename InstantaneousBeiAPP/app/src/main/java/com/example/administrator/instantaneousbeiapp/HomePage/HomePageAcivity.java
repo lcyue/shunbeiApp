@@ -11,6 +11,7 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
 
+
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.DetailFragment;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.StatementFragment;

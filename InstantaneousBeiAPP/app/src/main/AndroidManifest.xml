@@ -19,7 +19,9 @@
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionOne"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionTwo"/>
+
         <!--<activity android:name=".guide.Shunbei"/>-->
+
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.statement.Statement"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.statement.StatementChoiceTimeActivity"/>
