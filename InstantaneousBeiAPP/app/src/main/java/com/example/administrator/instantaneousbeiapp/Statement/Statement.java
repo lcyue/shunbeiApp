@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.statement;
+package com.example.administrator.instantaneousbeiapp.Statement;
 
 import android.app.Activity;
 import android.os.Bundle;

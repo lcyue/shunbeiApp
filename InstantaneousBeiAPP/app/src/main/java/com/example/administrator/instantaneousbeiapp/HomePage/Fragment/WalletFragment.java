@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.homepage.fragment;
+package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,8 +11,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity;
-import com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity;
+import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
+import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
+
 
 /**
  * Created by Administrator on 2016/11/1.

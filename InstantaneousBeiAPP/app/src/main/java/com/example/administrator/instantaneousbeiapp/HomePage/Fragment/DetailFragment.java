@@ -1,5 +1,5 @@
 
-package com.example.administrator.instantaneousbeiapp.homepage.fragment;
+package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
 
 
 import android.os.Bundle;

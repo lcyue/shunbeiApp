@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.detail;
+package com.example.administrator.instantaneousbeiapp.Detail;
 
 import android.app.Activity;
 import android.os.Bundle;
