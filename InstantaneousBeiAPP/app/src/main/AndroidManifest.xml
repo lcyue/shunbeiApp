@@ -8,7 +8,7 @@
         android:label="@string/app_name1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomePage.HomePageAcivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -65,6 +65,7 @@
         <activity android:name=".Detail.DemoCehuaActivity"/>
         <!--首页的注册页面-->
         <!--<activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>-->
+        <activity android:name=".Guide.GuideMainTransition"/>
     </application>
 
 </manifest>
