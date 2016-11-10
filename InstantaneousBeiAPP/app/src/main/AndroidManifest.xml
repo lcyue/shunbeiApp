@@ -55,7 +55,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/>
 
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/>

@@ -11,11 +11,11 @@
         android:background="@color/blue_cyan">
 
         <ImageView
+            android:id="@+id/wallet_guide_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
             android:src="@mipmap/ico_aleft" />
 
         <TextView

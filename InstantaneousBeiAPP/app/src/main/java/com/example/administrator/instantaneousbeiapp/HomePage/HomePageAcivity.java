@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
@@ -82,14 +83,12 @@ public class HomePageAcivity extends FragmentActivity {
             switch (position) {
                 case 0:
                     Drawable top = getResources().getDrawable(R.mipmap.icon_detail_on);
-                    top.setBounds(0, 0, 85, 85);
-                    iconDetailText.setCompoundDrawables(null, top, null, null);
+                    iconDetailText.setCompoundDrawablesWithIntrinsicBounds(null, top, null, null);
                     Drawable top1 = getResources().getDrawable(R.mipmap.icon_wallet_off);
-                    top1.setBounds(0, 0, 85, 85);
-                    iconWalleText.setCompoundDrawables(null, top1, null, null);
+                    iconWalleText.setCompoundDrawablesWithIntrinsicBounds(null, top1, null, null);
                     Drawable top2 = getResources().getDrawable(R.mipmap.icon_statistical_off);
-                    top2.setBounds(0, 0, 85, 85);
-                    iconStatisticalText.setCompoundDrawables(null, top2, null, null);
+                    iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top2, null, null);
+
 
                     iconDetailText.setTextColor(getResources().getColor(R.color.green_btn));
                     iconWalleText.setTextColor(getResources().getColor(R.color.gery_btn));
@@ -97,14 +96,11 @@ public class HomePageAcivity extends FragmentActivity {
                     break;
                 case 1:
                     Drawable top3 = getResources().getDrawable(R.mipmap.icon_wallet_on);
-                    top3.setBounds(0, 0, 85, 85);
-                    iconWalleText.setCompoundDrawables(null, top3, null, null);
+                    iconWalleText.setCompoundDrawablesWithIntrinsicBounds(null, top3, null, null);
                     Drawable top4 = getResources().getDrawable(R.mipmap.icon_detail_off);
-                    top4.setBounds(0, 0, 85, 85);
-                    iconDetailText.setCompoundDrawables(null, top4, null, null);
+                    iconDetailText.setCompoundDrawablesWithIntrinsicBounds(null, top4, null, null);
                     Drawable top5 = getResources().getDrawable(R.mipmap.icon_statistical_off);
-                    top5.setBounds(0, 0, 85, 85);
-                    iconStatisticalText.setCompoundDrawables(null, top5, null, null);
+                    iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top5, null, null);
 
                     iconWalleText.setTextColor(getResources().getColor(R.color.green_btn));
                     iconDetailText.setTextColor(getResources().getColor(R.color.gery_btn));
@@ -112,14 +108,11 @@ public class HomePageAcivity extends FragmentActivity {
                     break;
                 case 2:
                     Drawable top6 = getResources().getDrawable(R.mipmap.icon_statistical_on);
-                    top6.setBounds(0, 0, 85, 85);
-                    iconStatisticalText.setCompoundDrawables(null, top6, null, null);
+                    iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top6, null, null);
                     Drawable top7 = getResources().getDrawable(R.mipmap.icon_detail_off);
-                    top7.setBounds(0, 0, 85, 85);
-                    iconDetailText.setCompoundDrawables(null, top7, null, null);
+                    iconDetailText.setCompoundDrawablesWithIntrinsicBounds(null, top7, null, null);
                     Drawable top8 = getResources().getDrawable(R.mipmap.icon_wallet_off);
-                    top8.setBounds(0, 0, 85, 85);
-                    iconWalleText.setCompoundDrawables(null, top8, null, null);
+                    iconWalleText.setCompoundDrawablesWithIntrinsicBounds(null, top8, null, null);
 
                     iconStatisticalText.setTextColor(getResources().getColor(R.color.green_btn));
                     iconDetailText.setTextColor(getResources().getColor(R.color.gery_btn));
@@ -142,14 +135,12 @@ public class HomePageAcivity extends FragmentActivity {
                 case R.id.icon_detail_text:
                     viewPager.setCurrentItem(0);
                     Drawable top = getResources().getDrawable(R.mipmap.icon_detail_on);
-                    top.setBounds(0, 0, 85, 85);
-                    iconDetailText.setCompoundDrawables(null, top, null, null);
+                    iconDetailText.setCompoundDrawablesWithIntrinsicBounds(null, top, null, null);
                     Drawable top1 = getResources().getDrawable(R.mipmap.icon_wallet_off);
-                    top1.setBounds(0, 0, 85, 85);
-                    iconWalleText.setCompoundDrawables(null, top1, null, null);
+                    iconWalleText.setCompoundDrawablesWithIntrinsicBounds(null, top1, null, null);
                     Drawable top2 = getResources().getDrawable(R.mipmap.icon_statistical_off);
-                    top2.setBounds(0, 0, 85, 85);
-                    iconStatisticalText.setCompoundDrawables(null, top2, null, null);
+                    iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top2, null, null);
+
 
                     iconDetailText.setTextColor(getResources().getColor(R.color.green_btn));
                     iconWalleText.setTextColor(getResources().getColor(R.color.gery_btn));
@@ -158,14 +149,11 @@ public class HomePageAcivity extends FragmentActivity {
                 case R.id.icon_wallet_text:
                     viewPager.setCurrentItem(1);
                     Drawable top3 = getResources().getDrawable(R.mipmap.icon_wallet_on);
-                    top3.setBounds(0, 0, 85, 85);
-                    iconWalleText.setCompoundDrawables(null, top3, null, null);
+                    iconWalleText.setCompoundDrawablesWithIntrinsicBounds(null, top3, null, null);
                     Drawable top4 = getResources().getDrawable(R.mipmap.icon_detail_off);
-                    top4.setBounds(0, 0, 85, 85);
-                    iconDetailText.setCompoundDrawables(null, top4, null, null);
+                    iconDetailText.setCompoundDrawablesWithIntrinsicBounds(null, top4, null, null);
                     Drawable top5 = getResources().getDrawable(R.mipmap.icon_statistical_off);
-                    top5.setBounds(0, 0, 85, 85);
-                    iconStatisticalText.setCompoundDrawables(null, top5, null, null);
+                    iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top5, null, null);
 
                     iconWalleText.setTextColor(getResources().getColor(R.color.green_btn));
                     iconDetailText.setTextColor(getResources().getColor(R.color.gery_btn));
@@ -174,14 +162,11 @@ public class HomePageAcivity extends FragmentActivity {
                 case R.id.icon_statistical_text:
                     viewPager.setCurrentItem(2);
                     Drawable top6 = getResources().getDrawable(R.mipmap.icon_statistical_on);
-                    top6.setBounds(0, 0, 85, 85);
-                    iconStatisticalText.setCompoundDrawables(null, top6, null, null);
+                    iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top6, null, null);
                     Drawable top7 = getResources().getDrawable(R.mipmap.icon_detail_off);
-                    top7.setBounds(0, 0, 85, 85);
-                    iconDetailText.setCompoundDrawables(null, top7, null, null);
+                    iconDetailText.setCompoundDrawablesWithIntrinsicBounds(null, top7, null, null);
                     Drawable top8 = getResources().getDrawable(R.mipmap.icon_wallet_off);
-                    top8.setBounds(0, 0, 85, 85);
-                    iconWalleText.setCompoundDrawables(null, top8, null, null);
+                    iconWalleText.setCompoundDrawablesWithIntrinsicBounds(null, top8, null, null);
 
                     iconStatisticalText.setTextColor(getResources().getColor(R.color.green_btn));
                     iconDetailText.setTextColor(getResources().getColor(R.color.gery_btn));

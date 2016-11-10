@@ -16,10 +16,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/icon_left_white"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="12dp"/>
+            android:layout_centerVertical="true"
+            android:padding="12dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,14 +26,13 @@
             android:textColor="@color/white"
             android:layout_centerInParent="true" />
         <ImageView
+            android:id="@+id/wallet_install_white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/icon_install_white"
+            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="12dp"
-            android:layout_marginBottom="12dp"/>
+           android:padding="12dp"/>
     </RelativeLayout>
 
     <LinearLayout
