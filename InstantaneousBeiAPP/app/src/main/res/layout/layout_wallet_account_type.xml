@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
     <!--账户类型标题-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue_cyan"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:background="@color/blue_cyan">
+
         <ImageView
+            android:id="@+id/wallet_guide_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ico_aleft"
-            android:layout_marginLeft="12dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@mipmap/ico_aleft" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-           android:layout_centerInParent="true"
+            android:layout_centerInParent="true"
             android:text="@string/wallet_account_type"
-            android:textSize="20sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </RelativeLayout>
     <!--分类-->
     <ListView
         android:id="@+id/layout_wallet_type_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:dividerHeight="1dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"/>
+        android:layout_marginRight="12dp"
+        android:dividerHeight="1dp" />
 </LinearLayout>

@@ -2,6 +2,8 @@ package com.example.administrator.instantaneousbeiapp.Wallet;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -17,11 +19,13 @@ import java.util.List;
  */
 public class WalletAccountType extends Activity {
     List<HashMap<String, Object>> list;
+    ImageView walletGuideBtn;//返回按钮
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_wallet_account_type);
+        walletGuideBtn = (ImageView) findViewById(R.id.wallet_guide_btn);
 
         ListView layoutWalletTypeListView = (ListView) findViewById(R.id.layout_wallet_type_listview);
         String[] from = {"wallettypeimg", "wallettypetext",
@@ -29,12 +33,26 @@ public class WalletAccountType extends Activity {
         int[] to = {R.id.layout_wallet_type_img, R.id.layout_wallet_type_text,
                 R.id.layout_wallet_type_con, R.id.layout_wallet_type_cancel_img};
         getDate();
-        SimpleAdapter walletTypeAdapter = new SimpleAdapter(WalletAccountType.this,list,
+        SimpleAdapter walletTypeAdapter = new SimpleAdapter(WalletAccountType.this, list,
                 R.layout.layout_wallet_account_type_text, from, to);
 
         layoutWalletTypeListView.setAdapter(walletTypeAdapter);
+        walletGuideBtn.setOnClickListener(onClickListener);
     }
 
+    //点击事件的方法
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()){
+                case R.id.wallet_guide_btn:
+                    finish();
+                    break;
+            }
+        }
+    };
+
+    //    里面的数据
     public void getDate() {
         list = new ArrayList<HashMap<String, Object>>();
 
@@ -62,7 +80,7 @@ public class WalletAccountType extends Activity {
         HashMap<String, Object> map3 = new HashMap<String, Object>();
         map3.put("wallettypeimg", R.mipmap.wallet_type_invest_user);
         map3.put("wallettypetext", "投资账户");
-        map3.put("wallettypecontenttext","（资金账户、证券账户等）");
+        map3.put("wallettypecontenttext", "（资金账户、证券账户等）");
         map3.put("wallettypetcancelimg", R.mipmap.ico_cancel);
         list.add(map3);
 
@@ -82,7 +100,7 @@ public class WalletAccountType extends Activity {
 
         HashMap<String, Object> map6 = new HashMap<String, Object>();
         map6.put("wallettypeimg", R.mipmap.wallet_type_mesh_user);
-        map6.put("wallettypetext","网络充值账户");
+        map6.put("wallettypetext", "网络充值账户");
         map6.put("wallettypecontenttext", "（支付宝、微信钱包等）");
         map6.put("wallettypetcancelimg", R.mipmap.ico_cancel);
         list.add(map6);
