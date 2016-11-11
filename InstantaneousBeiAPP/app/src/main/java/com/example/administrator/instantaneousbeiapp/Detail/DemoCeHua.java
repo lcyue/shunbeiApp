@@ -22,7 +22,7 @@ public class DemoCeHua extends HorizontalScrollView{
     private int mMenuWidth;
 
     private boolean one =false;
-
+    private boolean isOpen;
     public DemoCeHua(Context context, AttributeSet attrs) {
         super(context, attrs);
         WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -76,5 +76,28 @@ public class DemoCeHua extends HorizontalScrollView{
                 return true;
         }
         return super.onTouchEvent(ev);
+    }
+
+    public void openMenu(){
+        if (isOpen)
+            return;
+        this.smoothScrollTo(0,0);
+        isOpen = true;
+    }
+
+    public void closeMenu(){
+        if (!isOpen)
+            return;
+        this.smoothScrollTo(mMenuWidth,0);
+        isOpen = false;
+    }
+
+    public void togleMenu(){
+        if (isOpen){
+            closeMenu();
+        }else {
+            openMenu();
+        }
+
     }
 }

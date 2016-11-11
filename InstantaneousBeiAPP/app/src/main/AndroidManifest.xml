@@ -8,7 +8,7 @@
         android:label="@string/app_name1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Guide.GuideMainTransition">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,7 +54,7 @@
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/>
-        
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>
@@ -65,7 +65,13 @@
         <activity android:name=".Detail.DemoCehuaActivity"/>
         <!--首页的注册页面-->
         <!--<activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>-->
-        <activity android:name=".Guide.GuideMainTransition"/>
+        <!--<activity android:name=".Guide.GuideMainTransition"/>-->
+        <!---->
+        <activity android:name=".HomePage.HomeMainActivity"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
