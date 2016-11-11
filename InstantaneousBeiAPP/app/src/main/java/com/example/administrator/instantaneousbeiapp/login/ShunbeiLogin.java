@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletRemindActivity;
+
+
 
 
 /**
@@ -33,13 +34,13 @@ public class ShunbeiLogin extends Activity {
         shunbei_zhuce_btn.setOnClickListener(onClickListener);
 
     }
-    View.OnClickListener onClickListener =   new View.OnClickListener() {
+    View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent;
             switch (v.getId()){
                 case R.id.shunbei_login_btn:
-                    intent = new Intent(ShunbeiLogin.this,WalletRemindActivity.class);
+                    intent = new Intent(ShunbeiLogin.this, HomePageAcivity.class);
                     startActivity(intent);
                     break;
                 case R.id.shunbei_zhuce_btn:
