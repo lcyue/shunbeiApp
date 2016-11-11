@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <com.example.administrator.instantaneousbeiapp.detail.DemoCeHua
+    <com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -17,6 +17,6 @@
 
             <include layout="@layout/activity_shunbei_ryx"/>
         </LinearLayout>
-    </com.example.administrator.instantaneousbeiapp.detail.DemoCeHua>
+    </com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua>
 
 </LinearLayout>

@@ -39,10 +39,10 @@ public class ShunbeiLogin extends Activity {
         public void onClick(View v) {
             Intent intent;
             switch (v.getId()){
-                case R.id.shunbei_login_btn:
-                    intent = new Intent(ShunbeiLogin.this, HomePageAcivity.class);
-                    startActivity(intent);
-                    break;
+//                case R.id.shunbei_login_btn:
+//                    intent = new Intent(ShunbeiLogin.this, com.example.administrator.instantaneousbeiapp.homepage.HomePageAcivity.class);
+//                    startActivity(intent);
+//                    break;
                 case R.id.shunbei_zhuce_btn:
                     intent = new Intent(ShunbeiLogin.this,ZhuceActivity.class);
                     startActivity(intent);
