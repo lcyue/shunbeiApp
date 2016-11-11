@@ -6,13 +6,13 @@ import android.os.Bundle;
 import com.example.administrator.instantaneousbeiapp.R;
 
 /**
- * Created by Administrator on 2016/10/19.
+ * Created by Administrator on 2016/11/10.
  */
-public class XuanzheZhanghuActivity extends Activity {
+public class ZhiChuActivity extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.shunbei_xuanzhezhanghu_layout);
-
+        setContentView(R.layout.shunbei_zhichu_layout);
     }
 }

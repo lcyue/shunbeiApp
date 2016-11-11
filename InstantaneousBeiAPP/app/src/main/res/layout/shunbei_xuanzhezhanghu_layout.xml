@@ -16,9 +16,11 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp">
                 <ImageView
+                    android:id="@+id/jizhang_back_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/back"
+                    android:padding="10dp"
                     android:layout_centerVertical="true"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -55,6 +57,7 @@
                     android:layout_height="wrap_content"
                     android:src="@mipmap/yuyin"
                     android:layout_alignParentRight="true"
+                    android:padding="5dp"
                     android:layout_centerVertical="true"/>
 
             </RelativeLayout>
