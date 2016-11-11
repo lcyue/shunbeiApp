@@ -57,6 +57,9 @@
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>
 
+
+
+        
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.ChangeDeadline"/>
