@@ -37,7 +37,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.TianjiaoshouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheChengyuanActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheZhanghuActivity"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>
+        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>-->
 
         <!--<activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/>-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity"/>
@@ -55,7 +55,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Calendar"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Particulars"/>
 
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.homepage.HomePageAcivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Derive"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Deadline"/>
