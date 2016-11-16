@@ -6,7 +6,8 @@
 
     <com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/menu">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -15,7 +16,7 @@
 
             <include layout="@layout/layout_mode_sideslipping" />
 
-            <include layout="@layout/activity_shunbei_ryx"/>
+            <include layout="@layout/homepage_layout"/>
         </LinearLayout>
     </com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua>
 

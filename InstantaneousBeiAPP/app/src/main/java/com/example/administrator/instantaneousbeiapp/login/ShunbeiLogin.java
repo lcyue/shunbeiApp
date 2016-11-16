@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
+import com.example.administrator.instantaneousbeiapp.Homepage.HomePageAcivity;
 import com.example.administrator.instantaneousbeiapp.R;
 
 
@@ -39,10 +39,10 @@ public class ShunbeiLogin extends Activity {
         public void onClick(View v) {
             Intent intent;
             switch (v.getId()){
-//                case R.id.shunbei_login_btn:
-//                    intent = new Intent(ShunbeiLogin.this, com.example.administrator.instantaneousbeiapp.homepage.HomePageAcivity.class);
-//                    startActivity(intent);
-//                    break;
+                case R.id.shunbei_login_btn:
+                    intent = new Intent(ShunbeiLogin.this, HomePageAcivity.class);
+                    startActivity(intent);
+                    break;
                 case R.id.shunbei_zhuce_btn:
                     intent = new Intent(ShunbeiLogin.this,ZhuceActivity.class);
                     startActivity(intent);
