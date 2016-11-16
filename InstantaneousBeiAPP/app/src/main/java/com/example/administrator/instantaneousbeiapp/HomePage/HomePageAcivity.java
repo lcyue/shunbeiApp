@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.HomePage;
+package com.example.administrator.instantaneousbeiapp.Homepage;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -9,12 +9,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.StatementFragment;
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFragment;
+import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.DetailFragment;
+import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.StatementFragment;
+import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.R;
 
 import java.util.ArrayList;
@@ -40,6 +39,7 @@ public class HomePageAcivity extends FragmentActivity {
         iconStatisticalText = (TextView) findViewById(R.id.icon_statistical_text);
 
         fragmentArrayList = new ArrayList<Fragment>();
+
         DetailFragment detailFragment = new DetailFragment();
         WalletFragment walletFragment = new WalletFragment();
         StatementFragment statementFragment = new StatementFragment();

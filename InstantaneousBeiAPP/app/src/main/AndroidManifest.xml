@@ -8,7 +8,7 @@
         android:label="@string/app_name1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".jizhang.XuanzheShijianActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,51 +17,48 @@
         </activity>
 
 
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionOne"/>-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionTwo"/>-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionOne"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionTwo"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.Statement"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.StatementChoiceTimeActivity"/>
 
-        <!--<activity android:name=".guide.Shunbei"/>-->
-
-
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.statement.Statement"/>-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.statement.StatementChoiceTimeActivity"/>-->
-
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletAccountType"/>-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletSelectColour"/>-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity"/>-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletRemindActivity"/>-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity"/>-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletAccountType"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletSelectColour"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletRemindActivity"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BeiZhuActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.ShouRu"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.TianjiaoshouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheChengyuanActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheZhanghuActivity"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/>
+        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>-->
+
+        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/>-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XuigaiMimaActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/>
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/>
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.UseAccount"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.MenuSet"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.GesturesPassWord"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ActivitySuggestion"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Homepage.HomePageAcivity"/>
 
-
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/>-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.Register.ChangeDeadline"/>-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.Guide.ActivityShunBei"/>-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Register.ChangeDeadline"/>
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.ActivityShunBei"/>
         <!--自定义ViewGroup做的一个HorizontalScrollView  完成侧滑效果-->
-        <!--<activity android:name=".detail.DemoCehuaActivity"/>-->
+        <activity android:name=".Detail.DemoCehuaActivity"/>
         <!--首页的注册页面-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>-->
-        <!--<activity android:name=".guide.GuideMainTransition"/>-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.Homepage.HomePageAcivity"/>
+        <activity android:name=".Guide.GuideMainTransition"/>
     </application>
 
 </manifest>

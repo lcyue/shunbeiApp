@@ -26,15 +26,15 @@ public class ActivityShunBei extends FragmentActivity {
         viewPager = (ViewPager) findViewById(R.id.ViewPager);
         fragmentArrayList = new ArrayList<Fragment>();
 
-//        FragmentOne fragmentOne = new FragmentOne();
-//        FratmentTwo fratmentTwo = new FratmentTwo();
-//        FratmentThree fratmentThree = new FratmentThree();
-//        FratmentFour fratmentFour = new FratmentFour();
-//
-//        fragmentArrayList.add(fragmentOne);
-//        fragmentArrayList.add(fratmentTwo);
-//        fragmentArrayList.add(fratmentThree);
-//        fragmentArrayList.add(fratmentFour);
+        FragmentOne fragmentOne = new FragmentOne();
+        FratmentTwo fratmentTwo = new FratmentTwo();
+        FratmentThree fratmentThree = new FratmentThree();
+        FratmentFour fratmentFour = new FratmentFour();
+
+        fragmentArrayList.add(fragmentOne);
+        fragmentArrayList.add(fratmentTwo);
+        fragmentArrayList.add(fratmentThree);
+        fragmentArrayList.add(fratmentFour);
 
         MyFragmentPagerAdapter myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(myFragmentPagerAdapter);
