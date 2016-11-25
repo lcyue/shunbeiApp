@@ -2,20 +2,15 @@ package com.example.administrator.instantaneousbeiapp.Guide;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
+
 import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.R;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 /**
  * 要求第2次进入App显示这个页面，然后跳转

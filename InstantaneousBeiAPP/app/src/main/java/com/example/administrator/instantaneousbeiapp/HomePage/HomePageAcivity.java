@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
@@ -40,6 +39,7 @@ public class HomePageAcivity extends FragmentActivity {
         iconStatisticalText = (TextView) findViewById(R.id.icon_statistical_text);
 
         fragmentArrayList = new ArrayList<Fragment>();
+
         DetailFragment detailFragment = new DetailFragment();
         WalletFragment walletFragment = new WalletFragment();
         StatementFragment statementFragment = new StatementFragment();

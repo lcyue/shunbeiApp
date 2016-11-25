@@ -8,7 +8,8 @@
         android:label="@string/app_name1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Guide.GuideMainTransition">
+        <!--.Guide.GuideMainTransition主入口-->
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,8 +19,6 @@
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionOne"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionTwo"/>
-
-        <!--<activity android:name=".guide.Shunbei"/>-->
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.Statement"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.StatementChoiceTimeActivity"/>
@@ -48,13 +47,13 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.UseAccount"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.MenuSet"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.GesturesPassWord"/>
-        <activity android:name=".login.SuggestionActivity"/>
+
+        <activity android:name="com.example.administrator.instantaneousbeiapp.login.SuggestionActivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.ChangeDeadline"/>
@@ -62,11 +61,9 @@
         <!--自定义ViewGroup做的一个HorizontalScrollView  完成侧滑效果-->
         <activity android:name=".Detail.DemoCehuaActivity"/>
         <!--首页的注册页面-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>-->
-        <!--<activity android:name=".Guide.GuideMainTransition"/>-->
-        <!---->
-        <activity android:name=".HomePage.HomeMainActivity"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+       <!--<activity android:name=".HomePage.HomePageAcivity"/>-->
+        <activity android:name=".Guide.GuideMainTransition"/>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

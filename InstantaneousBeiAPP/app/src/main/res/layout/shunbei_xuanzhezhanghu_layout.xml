@@ -66,159 +66,49 @@
                 android:layout_height="1dp"
                 android:background="@color/grey_view"/>
             <!--选择栏-->
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="80dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:background="#FFD0D0D0">
+                <ImageView
+                    android:id="@+id/jizhang_xuanzhe_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/salary"/>
                 <TextView
+                    android:id="@+id/jizhang_xuanzhe_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/salary"
                     android:textSize="24sp"
                     android:textColor="@color/black_nomal"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:drawableLeft="@mipmap/salary"
-                    android:gravity="center_vertical"
-                    android:drawablePadding="15dp"/>
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"/>
                 <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/jizhang_money_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0.00"
                     android:textSize="24sp"
                     android:textColor="@color/black"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginRight="15dp"/>
-            </RelativeLayout>
-            <!--选项栏-->
-            <GridLayout
+            </LinearLayout>
+            <GridView
+                android:id="@+id/gridview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:rowCount="3"
-                android:columnCount="5"
+                android:layout_height="300dp"
+                android:numColumns="5"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="10dp"
                 android:background="#FFBCBCBC"
-                android:paddingTop="10dp"
-                android:paddingBottom="25dp">
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="0"
-                    android:layout_column="0"
-                    android:text="@string/salary"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/salary"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="0"
-                    android:layout_column="1"
-                    android:text="@string/job"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/job"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="0"
-                    android:layout_column="2"
-                    android:text="@string/redpacket"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/red_packet"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="0"
-                    android:layout_column="3"
-                    android:text="@string/alimony"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/alimony"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="0"
-                    android:layout_column="4"
-                    android:text="@string/pin"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/pin"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="1"
-                    android:layout_column="0"
-                    android:text="@string/investment"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/investment"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="1"
-                    android:layout_column="1"
-                    android:text="@string/bonus"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/bonus"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="1"
-                    android:layout_column="2"
-                    android:text="@string/apply"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/apply"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="1"
-                    android:layout_column="3"
-                    android:text="@string/cash"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/cash"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="1"
-                    android:layout_column="4"
-                    android:text="@string/refund"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/refund"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="2"
-                    android:layout_column="0"
-                    android:text="@string/alipay"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/alipay"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="2"
-                    android:layout_column="1"
-                    android:text="@string/rest"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/rest"/>
-                <TextView
-                    android:layout_columnWeight="1"
-                    android:layout_row="2"
-                    android:layout_column="2"
-                    android:text="@string/compile"
-                    android:textSize="20sp"
-                    android:textColor="@color/black_nomal"
-                    android:gravity="center_horizontal"
-                    android:drawableTop="@mipmap/compile"/>
-
-            </GridLayout>
+                android:paddingTop="5dp"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
