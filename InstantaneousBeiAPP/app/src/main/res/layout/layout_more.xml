@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/more_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/oval_backguand"
+        android:src="@mipmap/icon_rabbit_off"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/more_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="用户名"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"/>
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/grey"
+        android:layout_marginTop="10dp"/>
+
+    <ListView
+        android:id="@+id/more_user_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/grey"
+        android:layout_marginTop="10dp"/>
+
+    <ListView
+        android:id="@+id/more_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+</LinearLayout>

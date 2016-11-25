@@ -16,12 +16,10 @@
             </intent-filter>
         </activity>
 
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionOne"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionTwo"/>
 
         <!--<activity android:name=".guide.Shunbei"/>-->
-
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.Statement"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.StatementChoiceTimeActivity"/>
@@ -50,16 +48,13 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.UseAccount"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.MenuSet"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Menu.GesturesPassWord"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.login.ActivitySuggestion"/>
+        <activity android:name=".login.SuggestionActivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity"/>
 
-
-
-        
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.ChangeDeadline"/>
@@ -75,6 +70,8 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".login.MoreActivity"/>
     </application>
 
 </manifest>

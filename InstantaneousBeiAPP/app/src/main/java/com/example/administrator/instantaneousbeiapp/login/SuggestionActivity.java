@@ -9,7 +9,7 @@ import com.example.administrator.instantaneousbeiapp.R;
 /**
  * Created by Administrator on 2016/10/30.
  */
-public class ActivitySuggestion extends Activity {
+public class SuggestionActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
