@@ -1,5 +1,5 @@
 
-package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
+package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
 
 
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-import com.example.administrator.instantaneousbeiapp.Homepage.HomeMainActivity;
+import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.R;
 
 /**

@@ -58,10 +58,8 @@
             android:textSize="18sp"
             android:textColor="@color/black_word"
             android:text="@string/app_name1"
-            android:layout_alignStart="@+id/use_img"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_alignLeft="@+id/use_img"
             android:id="@+id/textView" />
 
         <View

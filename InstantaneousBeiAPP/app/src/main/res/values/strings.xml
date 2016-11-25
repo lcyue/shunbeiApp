@@ -43,7 +43,8 @@
     <string name="wallet_change_Title_btn">更改账户</string>
     <string name="wallet_oval_loge">账户余额\n580.00</string>
     <string name="wallet_cash_text">现金\n现金余额</string>
-    <string name="wallet_deposit_card_text">储蓄卡\n储蓄卡余额</string>
+    <string name="wallet_deposit_card_text">储蓄卡</string>
+    <string name="wallet_deposit_card_text_balance">储蓄卡余额</string>
     <string name="wallet_blue_card_text">信用卡\n信用卡余额</string>
     <string name="wallet_alipay_text">支付宝\n支付宝余额</string>
     <string name="wallet_add_text">+添加账户</string>

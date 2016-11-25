@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Homepage;
+package com.example.administrator.instantaneousbeiapp.HomePage;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -12,9 +12,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.DetailFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.StatementFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.WalletFragment;
+import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
+import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.StatementFragment;
+import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.R;
 
 import java.util.ArrayList;

@@ -56,7 +56,7 @@
         <!--自定义ViewGroup做的一个HorizontalScrollView  完成侧滑效果-->
         <activity android:name=".Detail.DemoCehuaActivity"/>
         <!--首页的注册页面-->
-        <activity android:name=".Homepage.HomePageAcivity"/>
+       <!--<activity android:name=".HomePage.HomePageAcivity"/>-->
         <activity android:name=".Guide.GuideMainTransition"/>
 
         <meta-data
