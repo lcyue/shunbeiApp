@@ -9,7 +9,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="#FFD0D0D0">
+            android:background="#FFFFFF">
             <!--导航栏-->
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:rowCount="3"
                 android:columnCount="5"
-                android:background="#FFBCBCBC"
+                android:background="#F2F2F2"
                 android:paddingTop="10dp"
                 android:paddingBottom="25dp">
                 <TextView
