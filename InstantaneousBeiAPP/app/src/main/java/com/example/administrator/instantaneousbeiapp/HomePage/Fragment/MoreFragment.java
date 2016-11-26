@@ -1,50 +1,62 @@
-package com.example.administrator.instantaneousbeiapp.login;
+package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
 
-import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.administrator.instantaneousbeiapp.Menu.MenuSet;
 import com.example.administrator.instantaneousbeiapp.Menu.RespectInsranraneoous;
 import com.example.administrator.instantaneousbeiapp.Menu.UseAccount;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Register.Derive;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletRemindActivity;
+import com.example.administrator.instantaneousbeiapp.login.MoreData;
+import com.example.administrator.instantaneousbeiapp.login.SuggestionActivity;
+import com.example.administrator.instantaneousbeiapp.login.mMoreAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2016/11/25.
+ * Created by Administrator on 2016/11/26.
  */
-public class MoreActivity extends Activity {
+public class MoreFragment extends android.support.v4.app.Fragment {
     ImageView imageView;
     TextView userName;
     ListView userlist;
     ListView datalist;
     List<MoreData> list = new ArrayList<MoreData>();
     List<MoreData> dalist = new ArrayList<MoreData>();
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_more);
 
-        imageView = (ImageView) findViewById(R.id.more_img);
-        userName = (TextView) findViewById(R.id.more_user_name);
-        userlist = (ListView) findViewById(R.id.more_user_list);
-        datalist = (ListView) findViewById(R.id.more_data_list);
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.layout_more, null);
+        imageView = (ImageView) view.findViewById(R.id.more_img);
+        userName = (TextView) view.findViewById(R.id.more_user_name);
+        userlist = (ListView) view.findViewById(R.id.more_user_list);
+        datalist = (ListView) view.findViewById(R.id.more_data_list);
 
         getUserListData();
-        mMoreAdapter mMoreAdapter = new mMoreAdapter(this,list);
+        mMoreAdapter mMoreAdapter = new mMoreAdapter(getActivity(),list);
         userlist.setAdapter(mMoreAdapter);
 
         getDataListData();
-        mMoreAdapter mMoreAdapter1 = new mMoreAdapter(this,dalist);
+        mMoreAdapter mMoreAdapter1 = new mMoreAdapter(getActivity(),dalist);
         datalist.setAdapter(mMoreAdapter1);
 
 
@@ -55,22 +67,22 @@ public class MoreActivity extends Activity {
                 switch (i){
                     case 0:
                         //跳用户资料
-                        intent = new Intent(MoreActivity.this, UseAccount.class);
+                        intent = new Intent(getActivity(), UseAccount.class);
                         startActivity(intent);
                         break;
                     case 1:
                         //跳记账提醒
-                        intent = new Intent(MoreActivity.this, WalletRemindActivity.class);
+                        intent = new Intent(getActivity(), WalletRemindActivity.class);
                         startActivity(intent);
                         break;
                     case 2:
-                        //跳选择颜色
-                        intent = new Intent(MoreActivity.this, UseAccount.class);
+                        //跳设置
+                        intent = new Intent(getActivity(), MenuSet.class);
                         startActivity(intent);
                         break;
                     case 3:
                         //跳意见反馈
-                        intent = new Intent(MoreActivity.this, SuggestionActivity.class);
+                        intent = new Intent(getActivity(), SuggestionActivity.class);
                         startActivity(intent);
                         break;
                 }
@@ -83,47 +95,30 @@ public class MoreActivity extends Activity {
                 switch (i){
                     case 0:
                         //跳数据导出
-                        intent = new Intent(MoreActivity.this, Derive.class);
+                        intent = new Intent(getActivity(), Derive.class);
                         startActivity(intent);
                         break;
                     case 1:
                         //跳关于我们
-                        intent = new Intent(MoreActivity.this, RespectInsranraneoous.class);
+                        intent = new Intent(getActivity(), RespectInsranraneoous.class);
                         startActivity(intent);
                         break;
                 }
             }
         });
+        return view;
     }
-
 
     AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-
             Log.i("adapterView", "=====>" + adapterView);
-            Log.i("view", "=====>" + view);
-            switch (view.getId()){
-                case R.id.more_user_list:
-                    switch (position){
-                        case 0:
-                            Intent intent = new Intent(MoreActivity.this,ZhuceActivity.class);
-                            startActivity(intent);
-                            break;
-                    }
-
-                    break;
-                case R.id.more_data_list:
-
-                    break;
-            }
-
 
         }
     };
     public void getUserListData(){
         //数据库没建立之前的死数据
-        String[] strings = {"个人资料","记账提醒","背景皮肤","意见反馈"};
+        String[] strings = {"个人资料","记账提醒","个人设置","意见反馈"};
         for (int i = 0 ; i < 4 ; i++){
             MoreData data = new MoreData();
             //data.setUrl("");
