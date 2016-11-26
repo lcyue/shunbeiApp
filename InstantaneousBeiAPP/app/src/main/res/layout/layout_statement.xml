@@ -64,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+
                 <RadioButton
                     android:id="@+id/week_btton"
                     android:layout_width="0dp"
@@ -78,20 +79,22 @@
                     android:textColor="@color/black_word"
                     android:textSize="18sp" />
 
+
                 <RadioButton
                     android:id="@+id/moth_btton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:button="@null"
-                    android:drawableBottom="@drawable/rounded_rectangle_select"
                     android:checked="true"
+                    android:drawableBottom="@drawable/rounded_rectangle_select"
                     android:drawablePadding="18dp"
                     android:gravity="center"
                     android:paddingTop="12dp"
                     android:text="@string/month"
                     android:textColor="@color/green"
                     android:textSize="18sp" />
+
 
                 <RadioButton
                     android:id="@+id/year_btton"
@@ -106,6 +109,7 @@
                     android:text="@string/year"
                     android:textColor="@color/black_word"
                     android:textSize="18sp" />
+
 
                 <RadioButton
                     android:id="@+id/day_btton"

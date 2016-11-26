@@ -49,30 +49,23 @@ public class MoreFragment extends android.support.v4.app.Fragment {
         imageView = (ImageView) view.findViewById(R.id.more_img);
         userName = (TextView) view.findViewById(R.id.more_user_name);
         userlist = (ListView) view.findViewById(R.id.more_user_list);
-        datalist = (ListView) view.findViewById(R.id.more_data_list);
+
+        LayoutInflater layoutinflater = LayoutInflater.from(getActivity());
+        View view1 = layoutinflater.inflate(R.layout.layout_more_list_top,null);
+        userlist.addHeaderView(view1);
 
         getUserListData();
         mMoreAdapter mMoreAdapter = new mMoreAdapter(getActivity(),list);
         userlist.setAdapter(mMoreAdapter);
-
-        getDataListData();
-        mMoreAdapter mMoreAdapter1 = new mMoreAdapter(getActivity(),dalist);
-        datalist.setAdapter(mMoreAdapter1);
-
 
         userlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent;
                 switch (i){
-                    case 0:
+                    case 1:
                         //跳用户资料
                         intent = new Intent(getActivity(), UseAccount.class);
-                        startActivity(intent);
-                        break;
-                    case 1:
-                        //跳记账提醒
-                        intent = new Intent(getActivity(), WalletRemindActivity.class);
                         startActivity(intent);
                         break;
                     case 2:
@@ -85,24 +78,17 @@ public class MoreFragment extends android.support.v4.app.Fragment {
                         intent = new Intent(getActivity(), SuggestionActivity.class);
                         startActivity(intent);
                         break;
-                }
-            }
-        });
-        datalist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent;
-                switch (i){
-                    case 0:
+                    case 4:
                         //跳数据导出
                         intent = new Intent(getActivity(), Derive.class);
                         startActivity(intent);
                         break;
-                    case 1:
+                    case 5:
                         //跳关于我们
                         intent = new Intent(getActivity(), RespectInsranraneoous.class);
                         startActivity(intent);
                         break;
+
                 }
             }
         });
@@ -118,8 +104,8 @@ public class MoreFragment extends android.support.v4.app.Fragment {
     };
     public void getUserListData(){
         //数据库没建立之前的死数据
-        String[] strings = {"个人资料","记账提醒","个人设置","意见反馈"};
-        for (int i = 0 ; i < 4 ; i++){
+        String[] strings = {"个人资料","个人设置","意见反馈","数据导出","关于我们"};
+        for (int i = 0 ; i < strings.length ; i++){
             MoreData data = new MoreData();
             //data.setUrl("");
             data.setContent(""+strings[i]);

@@ -19,8 +19,8 @@ public class GuideTransitionOne extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guide_transition_one_layout);
         imageView = (ImageView) findViewById(R.id.guide_image);
-        ScaleAnimator();
 
+        ScaleAnimator();
 
     }
 

@@ -73,6 +73,7 @@ public class HomeMainActivity extends FragmentActivity {
         fragmentArrayList.add(walletFragment);
         fragmentArrayList.add(statementFragment);
         fragmentArrayList.add(moreFragment);
+
         InstantaneousPagerAdapter instantaneousPagerAdapter = new InstantaneousPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(instantaneousPagerAdapter);
 

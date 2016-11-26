@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <!--.Guide.GuideMainTransition主入口-->
-        <activity android:name=".MainActivity">
+        <activity android:name=".HomePage.HomeMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
