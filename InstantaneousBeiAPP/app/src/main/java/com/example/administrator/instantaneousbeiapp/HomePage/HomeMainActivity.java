@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
+import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.MoreFragment;
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.StatementFragment;
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.R;
@@ -67,9 +68,11 @@ public class HomeMainActivity extends FragmentActivity {
         DetailFragment detailFragment = new DetailFragment();
         WalletFragment walletFragment = new WalletFragment();
         StatementFragment statementFragment = new StatementFragment();
+        MoreFragment moreFragment = new MoreFragment();
         fragmentArrayList.add(detailFragment);
         fragmentArrayList.add(walletFragment);
         fragmentArrayList.add(statementFragment);
+        fragmentArrayList.add(moreFragment);
         InstantaneousPagerAdapter instantaneousPagerAdapter = new InstantaneousPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(instantaneousPagerAdapter);
 
@@ -115,45 +118,6 @@ public class HomeMainActivity extends FragmentActivity {
 
         @Override
         public void onPageSelected(int position) {
-            switch (position) {
-                case 0:
-                    Drawable top = getResources().getDrawable(R.mipmap.icon_detail_on);
-                    iconDetailText.setCompoundDrawablesWithIntrinsicBounds(null, top, null, null);
-                    Drawable top1 = getResources().getDrawable(R.mipmap.icon_wallet_off);
-                    iconWalleText.setCompoundDrawablesWithIntrinsicBounds(null, top1, null, null);
-                    Drawable top2 = getResources().getDrawable(R.mipmap.icon_statistical_off);
-                    iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top2, null, null);
-
-
-                    iconDetailText.setTextColor(getResources().getColor(R.color.green_btn));
-                    iconWalleText.setTextColor(getResources().getColor(R.color.gery_btn));
-                    iconStatisticalText.setTextColor(getResources().getColor(R.color.gery_btn));
-                    break;
-                case 1:
-                    Drawable top3 = getResources().getDrawable(R.mipmap.icon_wallet_on);
-                    iconWalleText.setCompoundDrawablesWithIntrinsicBounds(null, top3, null, null);
-                    Drawable top4 = getResources().getDrawable(R.mipmap.icon_detail_off);
-                    iconDetailText.setCompoundDrawablesWithIntrinsicBounds(null, top4, null, null);
-                    Drawable top5 = getResources().getDrawable(R.mipmap.icon_statistical_off);
-                    iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top5, null, null);
-
-                    iconWalleText.setTextColor(getResources().getColor(R.color.green_btn));
-                    iconDetailText.setTextColor(getResources().getColor(R.color.gery_btn));
-                    iconStatisticalText.setTextColor(getResources().getColor(R.color.gery_btn));
-                    break;
-                case 2:
-                    Drawable top6 = getResources().getDrawable(R.mipmap.icon_statistical_on);
-                    iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top6, null, null);
-                    Drawable top7 = getResources().getDrawable(R.mipmap.icon_detail_off);
-                    iconDetailText.setCompoundDrawablesWithIntrinsicBounds(null, top7, null, null);
-                    Drawable top8 = getResources().getDrawable(R.mipmap.icon_wallet_off);
-                    iconWalleText.setCompoundDrawablesWithIntrinsicBounds(null, top8, null, null);
-
-                    iconStatisticalText.setTextColor(getResources().getColor(R.color.green_btn));
-                    iconDetailText.setTextColor(getResources().getColor(R.color.gery_btn));
-                    iconWalleText.setTextColor(getResources().getColor(R.color.gery_btn));
-                    break;
-            }
 
         }
 
@@ -244,10 +208,12 @@ public class HomeMainActivity extends FragmentActivity {
                         }
                     break;
                 case R.id.dudget_type:
+                    //对收入支出分类的跳转
                     intent = new Intent(HomeMainActivity.this, ShouRu.class);
                     startActivity(intent);
                     break;
                 case R.id.account_type:
+                    //账户类型选择的跳转
                     intent = new Intent(HomeMainActivity.this, WalletChangeActivity.class);
                     startActivity(intent);
                     break;

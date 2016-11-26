@@ -1,6 +1,7 @@
 package com.example.administrator.instantaneousbeiapp.jizhang;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,6 +11,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,7 +24,12 @@ public class ShouRu extends Activity implements AdapterView.OnItemClickListener{
     GridView gridView;
     ImageView jizhang_xuanzhe_image;
     TextView jizhang_xuanzhe_text;
+    TextView incomeBtton;
+    TextView  expendBtton;
+
     List<HashMap<String,Object>> list;
+    ImageView returnBtton;
+    ImageView voiceButton;
     int[] image ={R.mipmap.salary,R.mipmap.job,R.mipmap.red_packet,R.mipmap.alimony,R.mipmap.pin,R.mipmap.investment,
             R.mipmap.bonus, R.mipmap.apply,R.mipmap.cash,R.mipmap.refund,R.mipmap.alipay,R.mipmap.rest,R.mipmap.compile};
     String[] text={"工资","兼职","红包","生活费","零花钱","投资",
@@ -35,6 +42,11 @@ public class ShouRu extends Activity implements AdapterView.OnItemClickListener{
         jizhang_xuanzhe_image = (ImageView) findViewById(R.id.jizhang_xuanzhe_image);
         jizhang_xuanzhe_text = (TextView) findViewById(R.id.jizhang_xuanzhe_text);
         gridView= (GridView) findViewById(R.id.gridview);
+        returnBtton = (ImageView) findViewById(R.id.return_btton);
+        voiceButton = (ImageView) findViewById(R.id.voice_button);
+        incomeBtton = (TextView) findViewById(R.id.income_btton);
+        expendBtton = (TextView) findViewById(R.id.expend_btton);
+
 
         /**
          * 简单适配器
@@ -43,8 +55,13 @@ public class ShouRu extends Activity implements AdapterView.OnItemClickListener{
         String[] from ={"shunbei_image","shunbei_text"};
         int[] to = {R.id.shunbei_image,R.id.shunbei_text};
         SimpleAdapter simpleAdapter = new SimpleAdapter(this,list,R.layout.gridview_layout,from,to);
+
         gridView.setAdapter(simpleAdapter);
         gridView.setOnItemClickListener(this);//设置点击事件
+        returnBtton.setOnClickListener(onClickListener);
+        voiceButton.setOnClickListener(onClickListener);
+        incomeBtton.setOnClickListener(onClickListener);
+        expendBtton.setOnClickListener(onClickListener);
     }
 
     //数据源
@@ -68,4 +85,30 @@ public class ShouRu extends Activity implements AdapterView.OnItemClickListener{
         jizhang_xuanzhe_image.setImageResource(image[position]);
         jizhang_xuanzhe_text.setText(text[position]);
     }
+
+    //点击事件
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent;
+            switch (view.getId()){
+                case R.id.return_btton:
+                    finish();
+                    break;
+                case R.id.voice_button:
+                    intent = new Intent(ShouRu.this, VoiceActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.income_btton:
+                    incomeBtton.setTextColor(getResources().getColor(R.color.green_btn));
+                    expendBtton.setTextColor(getResources().getColor(R.color.black_nomal));
+                    break;
+                case R.id.expend_btton:
+                    expendBtton.setTextColor(getResources().getColor(R.color.green_btn));
+                    incomeBtton.setTextColor(getResources().getColor(R.color.black_nomal));
+                    break;
+
+            }
+        }
+    };
 }
