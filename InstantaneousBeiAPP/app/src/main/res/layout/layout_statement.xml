@@ -61,6 +61,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/week"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -73,6 +74,7 @@
                     android:drawablePadding="18dp"/>
 
                 <TextView
+                    android:id="@+id/mouth"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -85,6 +87,7 @@
                     android:drawablePadding="18dp"/>
 
                 <TextView
+                    android:id="@+id/year"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -97,6 +100,7 @@
                     android:drawablePadding="18dp"/>
 
                 <TextView
+                    android:id="@+id/day"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"

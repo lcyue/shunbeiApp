@@ -10,9 +10,8 @@ import com.example.administrator.instantaneousbeiapp.R;
  */
 public class WalletRemindActivity extends Activity {
     @Override
-    //不需要的一个Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wallet_remind_layout);//账户的添加和修改
+        setContentView(R.layout.wallet_remind_layout);
     }
 }
