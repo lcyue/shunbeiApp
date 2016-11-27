@@ -44,11 +44,7 @@ public class HomeMainActivity extends FragmentActivity {
     DemoCeHua menu;
     ViewPager viewPager;
     ArrayList<Fragment> fragmentArrayList;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,9 +80,6 @@ public class HomeMainActivity extends FragmentActivity {
         viewPager.setOnPageChangeListener(onPageChangeListener);
         typeSelectButton.setOnClickListener(onClickListener);
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     public void move() {
