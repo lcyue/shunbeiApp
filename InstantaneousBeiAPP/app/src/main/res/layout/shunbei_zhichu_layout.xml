@@ -74,7 +74,7 @@
                 android:layout_height="80dp"
                 android:padding="5dp"
                 android:gravity="center"
-                android:background="#FFD0D0D0">
+                android:background="@color/white">
                 <ImageView
                     android:id="@+id/jizhang_xuanzhe_image"
                     android:layout_width="wrap_content"
@@ -112,7 +112,7 @@
                 android:numColumns="5"
                 android:horizontalSpacing="5dp"
                 android:verticalSpacing="10dp"
-                android:background="#FFBCBCBC"
+                android:background="#F2F2F2"
                 android:paddingTop="5dp"/>
             <LinearLayout
                 android:id="@+id/xuanzhe"

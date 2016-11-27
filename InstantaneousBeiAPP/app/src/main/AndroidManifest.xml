@@ -8,7 +8,7 @@
         android:label="@string/app_name1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Guide.GuideMainTransition">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,7 +30,6 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity"/>><!--钱包更改账户-->
 
         <!--<activity android:name=".guide.Shunbei"/>-->
-        <activity android:name=".Shunbei"/>
 
 
 
@@ -60,9 +59,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Calendar"/><!--明细日历-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/><!--没用的-->
 
-        <activity android:name="com.example.administrator.instantaneousbeiapp.Homepage.HomeMainActivity"/><!--首页-->
-        <activity android:name=".Homepage.HomePageAcivity"/>
-
+        <activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity"/><!--首页-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/><!--数据导出-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/><!--选择时间-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.ChangeDeadline"/><!--选择时间2-->
@@ -72,7 +69,6 @@
 
         <!--<activity android:name=".Guide.GuideMainTransition"/>&lt;!&ndash;引导页开始&ndash;&gt;-->
         <activity android:name=".Menu.RespectInsranraneoous"/><!--关于我们-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity"/>&lt;!&ndash;首页&ndash;&gt;-->
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.RegisterActivity"/><!--签名-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity"/><!--手势页面-->

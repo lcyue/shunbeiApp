@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Homepage;
+package com.example.administrator.instantaneousbeiapp.HomePage;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -18,19 +18,15 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.DetailFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.MoreFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.StatementFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.WalletFragment;
+
+import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
+import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.MoreFragment;
+import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.StatementFragment;
+import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
-<<<<<<< HEAD
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
-=======
-import com.example.administrator.instantaneousbeiapp.jizhang.ShouRu;
->>>>>>> 1f6f1bf9dbe45969d6de34dcffe7c939ec72977c
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
+
 
 import java.util.ArrayList;
 

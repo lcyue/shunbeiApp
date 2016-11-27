@@ -12,6 +12,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,6 +42,8 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
     ImageView jizhang_gou1;
     ImageView jizhang_gou2;
     ImageView jizhang_gou3;
+    ImageView jizhang_yuyin_btn;
+
     LinearLayout one;
     LinearLayout two;
     LinearLayout three;
@@ -79,6 +82,7 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
         two = (LinearLayout) findViewById(R.id.two);
         three = (LinearLayout) findViewById(R.id.three);
         fore = (LinearLayout) findViewById(R.id.fore);
+        jizhang_yuyin_btn = (ImageView) findViewById(R.id.jizhang_yuyin_btn);
 
         /**
          * 简单适配器
@@ -102,6 +106,7 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
         two.setOnClickListener(onClickListener);
         three.setOnClickListener(onClickListener);
         fore.setOnClickListener(onClickListener);
+        jizhang_yuyin_btn.setOnClickListener(onClickListener);
     }
 
     //数据源
@@ -213,6 +218,10 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
                         jizhang_gou2.setVisibility(View.GONE);
                         jizhang_gou1.setVisibility(View.GONE);
                     }
+                    break;
+                case R.id.jizhang_yuyin_btn:
+                    intent = new Intent(XuanzheShijianActivity.this, VoiceActivity.class);
+                    startActivity(intent);
                     break;
             }
         }
