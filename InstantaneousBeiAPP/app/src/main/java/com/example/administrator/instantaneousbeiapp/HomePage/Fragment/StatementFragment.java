@@ -1,9 +1,4 @@
-
-<<<<<<< HEAD
-package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
-=======
-package com.example.administrator.instantaneousbeiapp.Homepage.fragment;
->>>>>>> feature/puzuhui
+package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

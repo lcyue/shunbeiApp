@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ViewFlipper;
 
-public class Shunbei extends AppCompatActivity implements View.OnTouchListener{
+class Shunbei extends AppCompatActivity implements View.OnTouchListener{
 
     private float startX;
     ViewFlipper guide_flipper;
