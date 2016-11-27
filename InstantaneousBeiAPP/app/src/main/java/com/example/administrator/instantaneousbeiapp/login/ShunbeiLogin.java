@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.homepage.HomePageAcivity;
-import com.example.administrator.instantaneousbeiapp.homepage.fragment.WalletFragment;
-import com.example.administrator.instantaneousbeiapp.wallet.WalletRemindActivity;
+import com.example.administrator.instantaneousbeiapp.Homepage.HomePageAcivity;
 
 
 /**

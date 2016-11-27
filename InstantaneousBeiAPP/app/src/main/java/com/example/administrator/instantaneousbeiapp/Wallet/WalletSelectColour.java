@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.wallet;
+package com.example.administrator.instantaneousbeiapp.Wallet;
 
 import android.app.Activity;
 import android.os.Bundle;

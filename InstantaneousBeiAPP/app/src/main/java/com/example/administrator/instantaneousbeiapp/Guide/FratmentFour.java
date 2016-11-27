@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.guide;
+package com.example.administrator.instantaneousbeiapp.Guide;
 
 import android.content.Intent;
 import android.os.Bundle;
