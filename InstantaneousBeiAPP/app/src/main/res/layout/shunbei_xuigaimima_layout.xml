@@ -3,17 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <!--导航栏-->
-    <ImageView
-        android:id="@+id/back_btn"
-        android:layout_width="wrap_content"
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/menu_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@mipmap/left"
-        android:layout_margin="16dp" />
+        android:background="@color/blue_cyan">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/ico_aleft" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="修改密码"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

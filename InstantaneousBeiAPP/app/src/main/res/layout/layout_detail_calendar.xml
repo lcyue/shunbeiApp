@@ -9,14 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/green">
-        <TextView
+        <ImageView
+            android:id="@+id/return_btton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/datail"
-            android:drawableLeft="@mipmap/icon_detail_return"
-            android:gravity="center_vertical"
-            android:textSize="20sp"
-            android:textColor="@color/white"
+            android:src="@mipmap/icon_detail_return"
             android:drawablePadding="8dp"
             android:padding="12dp"
             android:layout_centerVertical="true"/>
@@ -28,6 +25,7 @@
             android:textColor="@color/white"
             android:layout_centerInParent="true"/>
         <ImageView
+            android:id="@+id/add_btton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/icon_detail_more"

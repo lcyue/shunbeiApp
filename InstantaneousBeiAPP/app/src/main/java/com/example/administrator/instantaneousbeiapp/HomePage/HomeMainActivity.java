@@ -2,7 +2,6 @@ package com.example.administrator.instantaneousbeiapp.HomePage;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -26,7 +25,6 @@ import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFra
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
 import com.example.administrator.instantaneousbeiapp.jizhang.ShouRu;
-import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
@@ -77,6 +75,7 @@ public class HomeMainActivity extends FragmentActivity {
         iconWalleText.setOnClickListener(onClickListener);
         iconStatisticalText.setOnClickListener(onClickListener);
         iconMoretext.setOnClickListener(onClickListener);
+
         viewPager.setOnPageChangeListener(onPageChangeListener);
         typeSelectButton.setOnClickListener(onClickListener);
 
@@ -112,7 +111,6 @@ public class HomeMainActivity extends FragmentActivity {
 
         @Override
         public void onPageSelected(int position) {
-
 
         }
 
@@ -203,10 +201,12 @@ public class HomeMainActivity extends FragmentActivity {
                         }
                     break;
                 case R.id.dudget_type:
+                    //对收入支出分类的跳转
                     intent = new Intent(HomeMainActivity.this, ShouRu.class);
                     startActivity(intent);
                     break;
                 case R.id.account_type:
+                    //账户类型选择的跳转
                     intent = new Intent(HomeMainActivity.this, WalletChangeActivity.class);
                     startActivity(intent);
                     break;

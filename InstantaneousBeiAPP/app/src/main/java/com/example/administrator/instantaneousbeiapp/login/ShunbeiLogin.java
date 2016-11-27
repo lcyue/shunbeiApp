@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.administrator.instantaneousbeiapp.HomePage.HomePageAcivity;
+import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.R;
 
 
@@ -18,7 +18,7 @@ import com.example.administrator.instantaneousbeiapp.R;
 public class ShunbeiLogin extends Activity {
     TextView shunbei_login_btn;
     TextView shunbei_zhuce_btn;
-    TextView shunbei_xuigai_btn;
+    TextView shunbei_xiugai_btn;
 
 
     @Override
@@ -28,9 +28,9 @@ public class ShunbeiLogin extends Activity {
 
         shunbei_login_btn = (TextView) findViewById(R.id.shunbei_login_btn);
         shunbei_zhuce_btn = (TextView) findViewById(R.id.shunbei_zhuce_btn);
-        shunbei_xuigai_btn = (TextView) findViewById(R.id.shunbei_xuigai_btn);
+        shunbei_xiugai_btn = (TextView) findViewById(R.id.shunbei_xiugai_btn);
 
-        shunbei_xuigai_btn.setOnClickListener(onClickListener);
+        shunbei_xiugai_btn.setOnClickListener(onClickListener);
         shunbei_login_btn.setOnClickListener(onClickListener);
         shunbei_zhuce_btn.setOnClickListener(onClickListener);
 
@@ -41,14 +41,14 @@ public class ShunbeiLogin extends Activity {
             Intent intent;
             switch (v.getId()){
                 case R.id.shunbei_login_btn:
-                    intent = new Intent(ShunbeiLogin.this, HomePageAcivity.class);
+                    intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.shunbei_zhuce_btn:
                     intent = new Intent(ShunbeiLogin.this,ZhuceActivity.class);
                     startActivity(intent);
                     break;
-                case R.id.shunbei_xuigai_btn:
+                case R.id.shunbei_xiugai_btn:
                     intent = new Intent(ShunbeiLogin.this,XuigaiMimaActivity.class);
                     startActivity(intent);
                     break;

@@ -8,153 +8,207 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:background="@color/green"
         android:gravity="center_vertical"
-        android:background="@color/green">
+        android:orientation="horizontal">
+
         <ImageView
             android:id="@+id/wallet_guide_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/icon_left_white"
-            android:padding="12dp"/>
+            android:padding="12dp"
+            android:src="@mipmap/icon_left_white" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="@string/menu_use_accout"
-            android:textSize="22sp"
             android:textColor="@color/white"
-            android:layout_centerInParent="true" />
+            android:textSize="22sp" />
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/use_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@mipmap/icon_rabbit_off"
-        android:layout_marginTop="37dp"/>
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/nickname"
+        <ImageView
+            android:id="@+id/use_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="62dp"
-            android:textSize="18sp"
-            android:textColor="@color/black_word"
-            android:text="@string/nickname"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="37dp"
+            android:src="@mipmap/icon_rabbit_off" />
+        <!--昵称-->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/black_word"
-            android:text="@string/app_name1"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/textView" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/nickname"
+                android:textColor="@color/black_word"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/app_name1"
+                android:textColor="@color/black_word"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!--线条-->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/grey_view"
-            android:layout_below="@id/nickname"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-        <TextView
-            android:id="@+id/signature"
-            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@color/grey_view" />
+        <!--签名-->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="62dp"
-            android:textSize="18sp"
-            android:textColor="@color/black_word"
-            android:text="@string/signature"
-            android:layout_below="@id/nickname"
-            android:layout_marginTop="32dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/black_word"
-            android:text="@string/use_signature"
-            android:layout_alignTop="@+id/signature"
-            android:layout_alignLeft="@+id/textView"
-            android:layout_alignStart="@+id/textView"
-            android:id="@+id/textView2" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/signature"
+                android:textColor="@color/black_word"
+                android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/signature_btton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:hint="暂时没有签名"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/black_word"
+                android:textSize="18sp"
+                android:drawableRight="@mipmap/icon_right_grey"/>
+        </LinearLayout>
+        <!--线条-->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/grey_view"
-            android:layout_below="@id/signature"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-        <TextView
-            android:id="@+id/birthday"
-            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@color/grey_view" />
+        <!--生日-->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="62dp"
-            android:textSize="18sp"
-            android:textColor="@color/black_word"
-            android:text="@string/birthday"
-            android:layout_below="@id/signature"
-            android:layout_marginTop="32dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/black_word"
-            android:text="2016.10.29"
-            android:layout_alignTop="@+id/birthday"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_alignStart="@+id/textView2"
-            android:id="@+id/textView3" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/birthday"
+                android:textColor="@color/black_word"
+                android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/birthday_btton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="请设置生日"
+                android:textColor="@color/black_word"
+                android:textSize="18sp"
+                android:drawableRight="@mipmap/icon_right_grey"/>
+        </LinearLayout>
+        <!--线条-->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/grey_view"
-            android:layout_below="@id/birthday"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-        <TextView
-            android:id="@+id/phone"
-            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@color/grey_view" />
+        <!--手机-->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="62dp"
-            android:textSize="18sp"
-            android:textColor="@color/black_word"
-            android:text="@string/phone"
-            android:layout_below="@id/birthday"
-            android:layout_marginTop="32dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/black_word"
-            android:text="@string/unbound"
-            android:layout_alignTop="@+id/phone"
-            android:layout_alignLeft="@+id/textView3"
-            android:layout_alignStart="@+id/textView3" />
-    </RelativeLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/phone"
+                android:textColor="@color/black_word"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/phone_binding_btton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/unbound"
+                android:textColor="@color/black_word"
+                android:textSize="18sp"
+                android:drawableRight="@mipmap/icon_right_grey"/>
+        </LinearLayout>
+        <!--线条-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/grey_view" />
+
+
+    </LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/saveing_btton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@mipmap/rounded_rectangle_on"
         android:text="@string/saveing"
         android:textColor="@color/white"
-        android:textSize="22sp"
-        android:background="@mipmap/rounded_rectangle_on"
-        android:layout_margin="10dp"/>
+        android:textSize="22sp" />
 </LinearLayout>

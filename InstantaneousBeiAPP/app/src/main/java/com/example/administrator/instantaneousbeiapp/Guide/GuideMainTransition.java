@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin;
 
 /**
  * Created by Administrator on 2016/11/10.
@@ -45,7 +46,7 @@ public class GuideMainTransition extends Activity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(GuideMainTransition.this,GuideTransitionOne.class);
+                Intent intent = new Intent(GuideMainTransition.this,ShunbeiLogin.class);
                 startActivity(intent);
             }
         });

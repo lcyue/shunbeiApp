@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,50 +14,59 @@
             <!--导航栏-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:background="#FFD0D0D0">
+                android:layout_height="wrap_content">
                 <ImageView
+                    android:id="@+id/return_btton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:src="@mipmap/back"
-                    android:layout_centerVertical="true"/>
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:background="@drawable/kuang_banyuan">
                     <TextView
+                        android:id="@+id/income_btton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/income"
                         android:textSize="20sp"
                         android:textColor="#FF28A7A8"
-                        android:layout_marginRight="30dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:paddingRight="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_gravity="center_vertical"/>
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
                         android:background="@color/grey_view"/>
                     <TextView
+                        android:id="@+id/expend_btton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/expenditure"
                         android:textSize="20sp"
                         android:textColor="@color/black_nomal"
-                        android:layout_marginRight="30dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:paddingRight="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_gravity="center_vertical"/>
                 </LinearLayout>
                 <ImageView
+                    android:id="@+id/voice_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/yuyin"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"/>
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"/>
 
             </RelativeLayout>
             <View
@@ -68,8 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:padding="5dp"
-                android:gravity="center"
-                android:background="#FFD0D0D0">
+                android:gravity="center">
                 <ImageView
                     android:id="@+id/jizhang_xuanzhe_image"
                     android:layout_width="wrap_content"
@@ -105,7 +114,6 @@
                 android:numColumns="5"
                 android:horizontalSpacing="5dp"
                 android:verticalSpacing="10dp"
-                android:background="#FFBCBCBC"
                 android:paddingTop="5dp"/>
             <RelativeLayout
                 android:layout_width="match_parent"
