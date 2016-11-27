@@ -13,6 +13,7 @@ import com.example.administrator.instantaneousbeiapp.R;
  * Created by Administrator on 2016/10/31.
  */
 public class FragmentOne extends Fragment {
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

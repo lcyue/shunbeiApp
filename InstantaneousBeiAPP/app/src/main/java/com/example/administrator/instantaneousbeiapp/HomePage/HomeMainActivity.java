@@ -2,7 +2,6 @@ package com.example.administrator.instantaneousbeiapp.HomePage;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -26,7 +25,6 @@ import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFra
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
 import com.example.administrator.instantaneousbeiapp.jizhang.ShouRu;
-import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
@@ -81,6 +79,7 @@ public class HomeMainActivity extends FragmentActivity {
         iconWalleText.setOnClickListener(onClickListener);
         iconStatisticalText.setOnClickListener(onClickListener);
         iconMoretext.setOnClickListener(onClickListener);
+
         viewPager.setOnPageChangeListener(onPageChangeListener);
         typeSelectButton.setOnClickListener(onClickListener);
 

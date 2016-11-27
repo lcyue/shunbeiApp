@@ -36,6 +36,7 @@
         android:layout_marginTop="26dp">
 
         <ImageView
+            android:id="@+id/user_image"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -43,6 +44,7 @@
             />
 
         <TextView
+            android:id="@+id/user_name"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -63,28 +65,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="36dp">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/phonenumb"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:layout_gravity="center_vertical"
             android:textColor="@color/grey"
             android:textSize="25sp"/>
 
         <TextView
+            android:id="@+id/phone_binding_btton"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/onbound"
             android:layout_gravity="center_vertical"
             android:textColor="@color/black_word"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"/>
     </LinearLayout>
     <!--分割线-->
     <View
@@ -95,30 +98,66 @@
         android:layout_marginRight="15dp" />
     <!--手势密码-->
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="36dp">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/gestures_password"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:layout_gravity="center_vertical"
             android:textColor="@color/grey"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/hand_paswrod_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/unset"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black_word"
+            android:textSize="25sp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"/>
+    </LinearLayout>
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gery"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+    <!--修改密码-->
+    <LinearLayout
+        android:id="@+id/change_password_btton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/unset"
+            android:text="修改密码"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/grey"
+            android:textSize="25sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:textColor="@color/black_word"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"/>
     </LinearLayout>
     <!--分割线-->
     <View
@@ -129,11 +168,12 @@
         android:layout_marginRight="15dp" />
     <!--关于瞬贝-->
     <LinearLayout
+        android:id="@+id/as_regards_btton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="36dp">
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
 
         <TextView
             android:layout_width="0dp"

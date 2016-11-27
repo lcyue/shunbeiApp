@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/menu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_cyan">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/ico_aleft" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="绑定手机号"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+     <!--输入手机号-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"
+            android:textColorHint="#BBBBBB"
+            android:background="@drawable/kuang_shuru_grey"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取验证码"
+            android:textSize="20sp"
+            android:textColor="@color/green_nomal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="45dp"/>
+    </RelativeLayout>
+    <!--验证码-->
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="输入验证码"
+    android:textColorHint="#BBBBBB"
+    android:background="@drawable/kuang_shuru_grey"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:padding="15dp"/>
+    <!--绑定成功-->
+    <TextView
+        android:id="@+id/shunbei_xuigai_wancheng_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绑定"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@mipmap/yuanjiaojuxing"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="15dp"/>
+
+
+</LinearLayout>
