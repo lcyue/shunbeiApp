@@ -7,11 +7,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
 import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.R;
 

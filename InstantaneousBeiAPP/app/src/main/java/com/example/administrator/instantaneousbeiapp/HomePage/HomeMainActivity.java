@@ -17,31 +17,21 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
 import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-<<<<<<< HEAD
-
-=======
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.MoreFragment;
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.StatementFragment;
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFragment;
-<<<<<<< HEAD
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
-
-=======
 import com.example.administrator.instantaneousbeiapp.Menu.MenuSet;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
 import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
-
 import java.util.ArrayList;
-import java.util.Calendar;
+
 
 /**
  * Created by Administrator on 2016/11/11.

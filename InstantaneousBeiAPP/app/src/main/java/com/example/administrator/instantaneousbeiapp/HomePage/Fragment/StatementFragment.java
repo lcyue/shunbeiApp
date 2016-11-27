@@ -1,9 +1,4 @@
 package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
-<<<<<<< HEAD
-
-=======
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
-
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
