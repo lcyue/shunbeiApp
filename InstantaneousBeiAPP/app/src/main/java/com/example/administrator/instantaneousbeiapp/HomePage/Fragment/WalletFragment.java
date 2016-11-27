@@ -1,55 +1,76 @@
-package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
+package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
+import com.example.administrator.instantaneousbeiapp.adapter.WalletTypeAdapter;
+import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
+
+import java.util.ArrayList;
 
 
 /**
  * Created by Administrator on 2016/11/1.
  */
 public class WalletFragment extends Fragment {
-    TextView walletAddText;
-    RelativeLayout walletCashRelativelayout;
+    ListView walletTypelistView;
+    ArrayList<WalletTypeItem> list;
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.wallet_remind_layout, null);//钱包页面的视图化
-        walletAddText = (TextView) view.findViewById(R.id.wallet_add_text);
-        walletCashRelativelayout = (RelativeLayout) view.findViewById(R.id.wallet_cash_relativelayout);
+        walletTypelistView = (ListView) view.findViewById(R.id.wallet_type_listview);
 
-        walletAddText.setOnClickListener(onClickListener);
-        walletCashRelativelayout.setOnClickListener(onClickListener);
+        ArrayList<WalletTypeItem> list = getData();
+        WalletTypeAdapter walletTypeAdapter = new WalletTypeAdapter(getActivity(), list);
+
+        LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
+        View view1 = layoutInflater.inflate(R.layout.wallet_type_head, null);
+
+        walletTypelistView.setAdapter(walletTypeAdapter);
+        walletTypelistView.addHeaderView(view1);
+        walletTypelistView.setOnItemClickListener(onItemClickListener);
 
         return view;
     }
 
     //    点击事件
-    View.OnClickListener onClickListener = new View.OnClickListener() {
+    AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
-        public void onClick(View view) {
-            Intent intent;
-            switch (view.getId()) {
-                case R.id.wallet_add_text:
-                    intent = new Intent(getActivity(), WalletChangeActivity.class);//跳转到添加页面
-                    startActivity(intent);
-                    break;
-                case R.id.wallet_cash_relativelayout:
-                    intent = new Intent(getActivity(), WalletDepositCardActivity.class);//跳转到消费和支出的详细页面
-                    startActivity(intent);
-                    break;
-            }
+        public void onItemClick(AdapterView<?> adapterView, View view, int i, long item) {
+            Log.i("onItemClick", "i====>" + i);
+            Log.i("onItemClick", "item=====>" + item);
+
+            Intent intent = new Intent(getActivity(), WalletDepositCardActivity.class);
+            startActivity(intent);
+
         }
     };
+
+
+    //适配器
+    public ArrayList<WalletTypeItem> getData() {
+        list = new ArrayList<WalletTypeItem>();
+        for (int i = 0; i < 6; i++) {
+            WalletTypeItem walletTypeItem = new WalletTypeItem();
+            walletTypeItem.setType("hahah");
+            walletTypeItem.setBalance("hahha余额");
+            walletTypeItem.setMoney(500.00);
+            walletTypeItem.setColor("");
+            list.add(walletTypeItem);
+        }
+        return list;
+    }
 }

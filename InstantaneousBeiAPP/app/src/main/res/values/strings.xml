@@ -43,7 +43,8 @@
     <string name="wallet_change_Title_btn">更改账户</string>
     <string name="wallet_oval_loge">账户余额\n580.00</string>
     <string name="wallet_cash_text">现金\n现金余额</string>
-    <string name="wallet_deposit_card_text">储蓄卡\n储蓄卡余额</string>
+    <string name="wallet_deposit_card_text">储蓄卡</string>
+    <string name="wallet_deposit_card_text_balance">储蓄卡余额</string>
     <string name="wallet_blue_card_text">信用卡\n信用卡余额</string>
     <string name="wallet_alipay_text">支付宝\n支付宝余额</string>
     <string name="wallet_add_text">+添加账户</string>
@@ -61,7 +62,7 @@
     <string name="with_respect_insranraneoous">关于瞬贝</string>
     <string name="design_introduce">瞬贝记账APP是重庆隔壁工作室设计开发</string>
     <string name="designer">设计人员：王攀、蒋松、陈珊、尹梽旭</string>
-    <string name="developer">开发人员：王鹏、蒲祖辉、冉娱鑫</string>
+    <string name="developer">开发人员：王鹏、冉娱鑫、蒲祖辉</string>
     <string name="design_permission">隔壁工作室许可及服务协议</string>
     <string name="design_copyrighr">Copyright @ 2016.隔壁工作室 版权所有</string>
     <string name="menu_remind_charge_accout">记账提醒</string>

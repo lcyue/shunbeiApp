@@ -17,6 +17,7 @@ public class VoiceActivity extends Activity {
     LinearLayout yuyin_linearlayout;
     TextView yuyin_test;
     TextView yuyin_test1;
+    ImageView returnBtton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +28,13 @@ public class VoiceActivity extends Activity {
         yuyin_linearlayout = (LinearLayout) findViewById(R.id.yuyin_linearlayout);
         yuyin_test = (TextView) findViewById(R.id.yuyin_test);
         yuyin_test1 = (TextView) findViewById(R.id.yuyin_test1);
+        returnBtton = (ImageView) findViewById(R.id.return_btton);
 
         yuyin_btn.setOnClickListener(onClickListener);
+        returnBtton.setOnClickListener(onClickListener);
     }
 
+    //点击事件
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -46,8 +50,11 @@ public class VoiceActivity extends Activity {
                         yuyin_test.setVisibility(View.GONE);
                     }
                     break;
+                case R.id.return_btton:
+                    finish();
+                    break;
             }
-
         }
     };
+
 }
