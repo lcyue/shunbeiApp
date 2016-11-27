@@ -100,8 +100,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/more"
-                    android:drawableTop="@mipmap/icon_more_off"
-                    />
+                    android:drawableTop="@mipmap/icon_more_off" />
             </LinearLayout>
         </LinearLayout>
 

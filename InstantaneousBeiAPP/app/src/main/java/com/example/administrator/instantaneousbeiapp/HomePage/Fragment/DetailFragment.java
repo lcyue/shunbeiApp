@@ -16,8 +16,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.administrator.instantaneousbeiapp.Detail.Calendar;
+<<<<<<< HEAD
 import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
 import com.example.administrator.instantaneousbeiapp.Homepage.HomeMainActivity;
+=======
+import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
+>>>>>>> 1f6f1bf9dbe45969d6de34dcffe7c939ec72977c
 import com.example.administrator.instantaneousbeiapp.R;
 
 /**

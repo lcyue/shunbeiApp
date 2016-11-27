@@ -1,10 +1,9 @@
 package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
 
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,24 +17,22 @@ import com.example.administrator.instantaneousbeiapp.Menu.RespectInsranraneoous;
 import com.example.administrator.instantaneousbeiapp.Menu.UseAccount;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Register.Derive;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletRemindActivity;
 import com.example.administrator.instantaneousbeiapp.login.MoreData;
 import com.example.administrator.instantaneousbeiapp.login.SuggestionActivity;
-import com.example.administrator.instantaneousbeiapp.login.mMoreAdapter;
+import com.example.administrator.instantaneousbeiapp.adapter.mMoreAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/26.
  */
-public class MoreFragment extends android.support.v4.app.Fragment {
+public class MoreFragment extends Fragment {
     ImageView imageView;
     TextView userName;
     ListView userlist;
-    ListView datalist;
-    List<MoreData> list = new ArrayList<MoreData>();
-    List<MoreData> dalist = new ArrayList<MoreData>();
+
+
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,7 +51,8 @@ public class MoreFragment extends android.support.v4.app.Fragment {
         View view1 = layoutinflater.inflate(R.layout.layout_more_list_top,null);
         userlist.addHeaderView(view1);
 
-        getUserListData();
+        ArrayList<MoreData> list = getUserListData();
+
         mMoreAdapter mMoreAdapter = new mMoreAdapter(getActivity(),list);
         userlist.setAdapter(mMoreAdapter);
 
@@ -95,14 +93,9 @@ public class MoreFragment extends android.support.v4.app.Fragment {
         return view;
     }
 
-    AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-            Log.i("adapterView", "=====>" + adapterView);
 
-        }
-    };
-    public void getUserListData(){
+    public  ArrayList<MoreData> getUserListData(){
+        ArrayList<MoreData> list = new ArrayList<MoreData>();
         //数据库没建立之前的死数据
         String[] strings = {"个人资料","个人设置","意见反馈","数据导出","关于我们"};
         for (int i = 0 ; i < strings.length ; i++){
@@ -111,16 +104,8 @@ public class MoreFragment extends android.support.v4.app.Fragment {
             data.setContent(""+strings[i]);
             list.add(data);
         }
+        return list;
     }
 
-    public void getDataListData(){
-        //数据库没建立之前的死数据
-        String[] strings = {"数据导出","关于我们"};
-        for (int i = 0 ; i < 2 ; i++){
-            MoreData data = new MoreData();
-            //data.setUrl("");
-            data.setContent(""+strings[i]);
-            dalist.add(data);
-        }
-    }
+
 }

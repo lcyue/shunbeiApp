@@ -24,7 +24,11 @@ import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.Statement
 import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
+<<<<<<< HEAD
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
+=======
+import com.example.administrator.instantaneousbeiapp.jizhang.ShouRu;
+>>>>>>> 1f6f1bf9dbe45969d6de34dcffe7c939ec72977c
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
@@ -42,11 +46,7 @@ public class HomeMainActivity extends FragmentActivity {
     DemoCeHua menu;
     ViewPager viewPager;
     ArrayList<Fragment> fragmentArrayList;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,12 +79,10 @@ public class HomeMainActivity extends FragmentActivity {
         iconWalleText.setOnClickListener(onClickListener);
         iconStatisticalText.setOnClickListener(onClickListener);
         iconMoretext.setOnClickListener(onClickListener);
+
         viewPager.setOnPageChangeListener(onPageChangeListener);
         typeSelectButton.setOnClickListener(onClickListener);
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     public void move() {
