@@ -1,8 +1,7 @@
-package com.example.administrator.instantaneousbeiapp.HomePage;
+package com.example.administrator.instantaneousbeiapp.Homepage;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -19,14 +18,13 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.MoreFragment;
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.StatementFragment;
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFragment;
+import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.DetailFragment;
+import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.MoreFragment;
+import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.StatementFragment;
+import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
-import com.example.administrator.instantaneousbeiapp.jizhang.ShouRu;
-import com.google.android.gms.appindexing.Action;
+import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
@@ -210,7 +208,7 @@ public class HomeMainActivity extends FragmentActivity {
                     break;
                 case R.id.dudget_type:
                     //对收入支出分类的跳转
-                    intent = new Intent(HomeMainActivity.this, ShouRu.class);
+                    intent = new Intent(HomeMainActivity.this,XuanzheShijianActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.account_type:

@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
+package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
 
 import android.app.Fragment;
 import android.content.Intent;
