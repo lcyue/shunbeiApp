@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.HomePage;
+package com.example.administrator.instantaneousbeiapp.Homepage;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;

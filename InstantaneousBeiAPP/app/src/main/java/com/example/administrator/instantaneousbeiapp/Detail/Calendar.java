@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.jizhang.ShouRu;
+import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
 
 /**
  * Created by Administrator on 2016/10/26.
@@ -37,7 +37,7 @@ public class Calendar extends Activity {
                     finish();
                     break;
                 case R.id.add_btton:
-                        intent = new Intent(Calendar.this, ShouRu.class);
+                        intent = new Intent(Calendar.this, XuanzheShijianActivity.class);
                     startActivity(intent);
                     break;
             }

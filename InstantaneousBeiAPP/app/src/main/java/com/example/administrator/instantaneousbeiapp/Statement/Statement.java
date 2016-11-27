@@ -19,9 +19,9 @@ public class Statement extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_statement);
 
-        week = (TextView) findViewById(R.id.week);
-        year = (TextView) findViewById(R.id.year);
-        day = (TextView) findViewById(R.id.day);
-        mouth = (TextView) findViewById(R.id.mouth);
+        week = (TextView) findViewById(R.id.week_btton);
+        year = (TextView) findViewById(R.id.year_btton);
+        day = (TextView) findViewById(R.id.day_btton);
+        mouth = (TextView) findViewById(R.id.moth_btton);
     }
 }

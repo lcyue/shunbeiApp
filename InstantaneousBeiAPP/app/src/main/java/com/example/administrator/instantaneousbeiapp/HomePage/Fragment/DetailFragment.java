@@ -13,7 +13,6 @@ import android.widget.ImageView;
 
 import com.example.administrator.instantaneousbeiapp.Detail.Calendar;
 import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.Homepage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.R;
 

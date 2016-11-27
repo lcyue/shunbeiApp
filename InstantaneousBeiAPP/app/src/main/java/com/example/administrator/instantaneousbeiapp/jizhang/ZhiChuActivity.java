@@ -106,7 +106,6 @@ public class ZhiChuActivity extends Activity implements AdapterView.OnItemClickL
         three.setOnClickListener(onClickListener);
         fore.setOnClickListener(onClickListener);
     }
-
     //数据源
     public List<HashMap<String,Object>> getData() {
         list = new ArrayList<HashMap<String, Object>>();
