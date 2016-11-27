@@ -1,4 +1,8 @@
 package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
+<<<<<<< HEAD
+=======
+
+>>>>>>> bead52f84f22e107d1a103633147b3043e59da71
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +23,11 @@ import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+=======
+import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
+import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
+>>>>>>> bead52f84f22e107d1a103633147b3043e59da71
 
 
 /**

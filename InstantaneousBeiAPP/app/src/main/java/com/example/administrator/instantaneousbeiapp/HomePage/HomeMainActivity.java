@@ -14,21 +14,34 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
+<<<<<<< HEAD
 
+=======
+>>>>>>> bead52f84f22e107d1a103633147b3043e59da71
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.MoreFragment;
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.StatementFragment;
 import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFragment;
+<<<<<<< HEAD
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
 
+=======
+import com.example.administrator.instantaneousbeiapp.Menu.MenuSet;
+import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
+import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
+import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
+>>>>>>> bead52f84f22e107d1a103633147b3043e59da71
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * Created by Administrator on 2016/11/11.
@@ -42,8 +55,11 @@ public class HomeMainActivity extends FragmentActivity {
     DemoCeHua menu;
     ViewPager viewPager;
     ArrayList<Fragment> fragmentArrayList;
-
-
+    LinearLayout remind;
+    LinearLayout voice;
+    LinearLayout seting;
+    LinearLayout qiandao;
+    TextView qiandaoNums;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +72,11 @@ public class HomeMainActivity extends FragmentActivity {
         iconMoretext = (TextView) findViewById(R.id.icon_more_text);
         menu = (DemoCeHua) findViewById(R.id.menu);
         typeSelectButton = (ImageView) findViewById(R.id.type_select_button);
+        remind = (LinearLayout) findViewById(R.id.remind);
+        voice = (LinearLayout) findViewById(R.id.voice);
+        seting = (LinearLayout) findViewById(R.id.setting);
+        qiandao = (LinearLayout) findViewById(R.id.qiandao);
+        qiandaoNums = (TextView) findViewById(R.id.qiandao_nums);
 
         Log.i("HomeMainActivity", "" + this.getTaskId());
         fragmentArrayList = new ArrayList<Fragment>();
@@ -75,6 +96,10 @@ public class HomeMainActivity extends FragmentActivity {
         iconWalleText.setOnClickListener(onClickListener);
         iconStatisticalText.setOnClickListener(onClickListener);
         iconMoretext.setOnClickListener(onClickListener);
+        remind.setOnClickListener(onClickListener);
+        voice.setOnClickListener(onClickListener);
+        seting.setOnClickListener(onClickListener);
+        qiandao.setOnClickListener(onClickListener);
 
         viewPager.setOnPageChangeListener(onPageChangeListener);
         typeSelectButton.setOnClickListener(onClickListener);
@@ -122,6 +147,7 @@ public class HomeMainActivity extends FragmentActivity {
 
     //点击事件
     View.OnClickListener onClickListener = new View.OnClickListener() {
+        int i = 1;
         @Override
         public void onClick(View view) {
             Intent intent;
@@ -211,6 +237,26 @@ public class HomeMainActivity extends FragmentActivity {
                     startActivity(intent);
                     break;
 
+                case R.id.remind:
+                    //记账提醒
+                    intent = new Intent(HomeMainActivity.this, com.example.administrator.instantaneousbeiapp.Detail.Calendar.class);
+                    startActivity(intent);
+                    break;
+                case R.id.voice:
+                    //语音记账
+                    intent = new Intent(HomeMainActivity.this,VoiceActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.setting:
+                    //设置
+                    intent = new Intent(HomeMainActivity.this,MenuSet.class);
+                    startActivity(intent);
+                    break;
+
+                case R.id.qiandao:
+                    qiandaoNums.setText("+" + i);
+                    i++;
+                    break;
             }
         }
     };

@@ -53,6 +53,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/qiandao"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="40dp"
@@ -70,32 +71,34 @@
                         android:textSize="19sp"/>
 
                     <TextView
+                        android:id="@+id/qiandao_nums"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="19sp"
-                        android:text="+1"
+                        android:text=""
                         android:textColor="@color/black_word"
                         android:layout_margin="5dp"/>
                 </LinearLayout>
             </LinearLayout>
             <!--记账提醒-->
             <LinearLayout
+                android:id="@+id/remind"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="36dp"
-                android:layout_marginBottom="36dp">
+                android:padding="36dp"
+                >
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:src="@mipmap/icon_remind_blue"
-                    android:layout_marginLeft="37dp"/>
+                    />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/bill_renind"
                     android:layout_gravity="center_vertical"
                     android:textColor="@color/black_word"
@@ -104,21 +107,22 @@
             </LinearLayout>
             <!--语音记账-->
             <LinearLayout
+                android:id="@+id/voice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="36dp">
+                android:padding="36dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/icon_voice_blue"
-                    android:layout_marginLeft="40dp"/>
+                    android:layout_marginLeft="4dp"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/voice_of_account"
                     android:layout_gravity="center_vertical"
                     android:textColor="@color/black_word"
@@ -127,21 +131,22 @@
             </LinearLayout>
             <!--设置-->
             <LinearLayout
+                android:id="@+id/setting"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_marginBottom="30dp">
+                android:padding="30dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:src="@mipmap/icon_setting_blue"
-                    android:layout_marginLeft="37dp"/>
+                    android:layout_marginLeft="4dp"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/set"
                     android:layout_gravity="center_vertical"
                     android:textColor="@color/black_word"
