@@ -8,7 +8,7 @@
         android:label="@string/app_name1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".login.ShunbeiLogin">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +24,12 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity"/>><!--钱包储蓄卡页面*复用*-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletRemindActivity"/>><!--钱包记账提醒-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity"/>><!--钱包更改账户-->
+
+        <!--<activity android:name=".guide.Shunbei"/>-->
+        <activity android:name=".Shunbei"/>
+
+
+
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.TianjiaoshouruActivity"/>
@@ -61,6 +67,8 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+
 
     </application>
 

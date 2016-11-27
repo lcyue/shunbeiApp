@@ -15,6 +15,12 @@ import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.DetailFra
 import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.StatementFragment;
 import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.R;
+<<<<<<< HEAD
+=======
+import com.example.administrator.instantaneousbeiapp.Homepage.fragment.DetailFragment;
+import com.example.administrator.instantaneousbeiapp.Homepage.fragment.StatementFragment;
+import com.example.administrator.instantaneousbeiapp.Homepage.fragment.WalletFragment;
+>>>>>>> feature/puzuhui
 
 import java.util.ArrayList;
 

@@ -8,8 +8,12 @@ import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.Homepage.HomePageAcivity;
 import com.example.administrator.instantaneousbeiapp.R;
+<<<<<<< HEAD
 
 
+=======
+import com.example.administrator.instantaneousbeiapp.Homepage.HomePageAcivity;
+>>>>>>> feature/puzuhui
 
 
 /**

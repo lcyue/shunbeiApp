@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
+=======
+package com.example.administrator.instantaneousbeiapp.Homepage.fragment;
+>>>>>>> feature/puzuhui
 
 
 import android.content.Intent;
