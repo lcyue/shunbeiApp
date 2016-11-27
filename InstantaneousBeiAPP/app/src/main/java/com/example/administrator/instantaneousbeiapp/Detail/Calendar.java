@@ -7,7 +7,10 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.administrator.instantaneousbeiapp.R;
+<<<<<<< HEAD
+=======
 import com.example.administrator.instantaneousbeiapp.jizhang.ShouRu;
+>>>>>>> 1f6f1bf9dbe45969d6de34dcffe7c939ec72977c
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
 
 /**

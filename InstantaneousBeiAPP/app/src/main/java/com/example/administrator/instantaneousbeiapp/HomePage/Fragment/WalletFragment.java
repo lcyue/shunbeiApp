@@ -1,4 +1,8 @@
-package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
+<<<<<<< HEAD
+package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
+=======
+package com.example.administrator.instantaneousbeiapp.Homepage.fragment;
+>>>>>>> feature/puzuhui
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,12 +16,17 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.administrator.instantaneousbeiapp.R;
+<<<<<<< HEAD
 import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
 import com.example.administrator.instantaneousbeiapp.adapter.WalletTypeAdapter;
 import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
 
 import java.util.ArrayList;
 
+=======
+import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
+import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
+>>>>>>> feature/puzuhui
 
 /**
  * Created by Administrator on 2016/11/1.
