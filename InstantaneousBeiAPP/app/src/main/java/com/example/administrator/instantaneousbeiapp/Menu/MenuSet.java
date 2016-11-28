@@ -1,9 +1,8 @@
-package com.example.administrator.instantaneousbeiapp.Menu;
+package com.example.administrator.instantaneousbeiapp.menu;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity;
 import com.example.administrator.instantaneousbeiapp.login.PhoneBindingActivity;
-import com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity;
 import com.example.administrator.instantaneousbeiapp.login.XuigaiMimaActivity;
 
 /**

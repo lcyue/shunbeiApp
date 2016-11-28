@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
+=======
+package com.example.administrator.instantaneousbeiapp.homePage.Fragment;
+>>>>>>> 37280b3161b9597bce3c01053b7d6f0cd9e05f7d
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +16,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.administrator.instantaneousbeiapp.Menu.MenuSet;
-import com.example.administrator.instantaneousbeiapp.Menu.RespectInsranraneoous;
-import com.example.administrator.instantaneousbeiapp.Menu.UseAccount;
+import com.example.administrator.instantaneousbeiapp.menu.MenuSet;
+import com.example.administrator.instantaneousbeiapp.menu.RespectInsranraneoous;
+import com.example.administrator.instantaneousbeiapp.menu.UseAccount;
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.Register.Derive;
+import com.example.administrator.instantaneousbeiapp.register.Derive;
 import com.example.administrator.instantaneousbeiapp.login.MoreData;
 import com.example.administrator.instantaneousbeiapp.login.SuggestionActivity;
 import com.example.administrator.instantaneousbeiapp.adapter.mMoreAdapter;
@@ -30,9 +34,6 @@ public class MoreFragment extends Fragment {
     ImageView imageView;
     TextView userName;
     ListView userlist;
-
-
-
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

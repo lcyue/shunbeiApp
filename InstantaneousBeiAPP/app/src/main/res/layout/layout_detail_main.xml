@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua
+    <com.example.administrator.instantaneousbeiapp.detail.DemoCeHua
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/menu"
@@ -19,6 +19,6 @@
 
             <include layout="@layout/homepage_layout"/>
         </LinearLayout>
-    </com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua>
+    </com.example.administrator.instantaneousbeiapp.detail.DemoCeHua>
 
 </LinearLayout>

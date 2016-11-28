@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Menu;
+package com.example.administrator.instantaneousbeiapp.menu;
 
 /**
  * Created by Administrator on 2016/10/30.
