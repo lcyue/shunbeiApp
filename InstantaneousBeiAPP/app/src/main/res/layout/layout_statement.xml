@@ -146,19 +146,19 @@
                     android:layout_marginTop="45dp"
                     android:text="@string/total_expenditure"
                     android:textColor="@color/green"
-                    android:textSize="22sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/total_expenditure_text"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="30dp"
                     android:drawableBottom="@mipmap/icon_arrow"
                     android:drawablePadding="27dp"
                     android:text="4918.2"
                     android:textColor="@color/green"
-                    android:textSize="24sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -176,25 +176,25 @@
                     android:gravity="center"
                     android:text="@string/total"
                     android:textColor="@color/black_word"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="4918.2"
                     android:textColor="@color/black_word"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="100%"
                     android:textColor="@color/black_word"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -211,25 +211,25 @@
                     android:gravity="center"
                     android:text="@string/clothes"
                     android:textColor="@color/black_word"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="346.00"
                     android:textColor="@color/black_word"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="7.04%"
                     android:textColor="@color/black_word"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -246,25 +246,25 @@
                     android:gravity="center"
                     android:text="@string/eating_and_drinking"
                     android:textColor="@color/black_word"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="1346.00"
                     android:textColor="@color/black_word"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="27.37%"
                     android:textColor="@color/black_word"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
         </LinearLayout>

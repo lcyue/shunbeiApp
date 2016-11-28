@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:background="@mipmap/round_rectangle_pink">
+        android:background="@mipmap/round_rectangle_yellow">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
                 android:layout_marginLeft="24dp"
                 android:text="@string/wallet_deposit_card_text"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/wallet_deposit_card_text_balance"
@@ -33,7 +33,7 @@
                 android:text="@string/wallet_deposit_card_text_balance"
                 android:layout_marginLeft="24dp"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </RelativeLayout>
 
         <TextView

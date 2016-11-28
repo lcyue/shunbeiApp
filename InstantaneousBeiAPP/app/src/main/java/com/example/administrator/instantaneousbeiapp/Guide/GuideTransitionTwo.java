@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Guide;
+package com.example.administrator.instantaneousbeiapp.guide;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
-import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
+import com.example.administrator.instantaneousbeiapp.homePage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.R;
 
 /**

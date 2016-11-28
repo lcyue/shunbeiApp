@@ -58,7 +58,7 @@
                 android:layout_gravity="center"
                 android:text="@string/detail_income"
                 android:textColor="@color/black_gery"
-                android:textSize="22sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
                 android:layout_marginTop="5dp"
                 android:text="4600.00"
                 android:textColor="@color/black_gery"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <FrameLayout
@@ -90,7 +90,7 @@
                     android:layout_gravity="center"
                     android:text="@string/detail_budget"
                     android:textColor="@color/black_gery"
-                    android:textSize="22sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
                     android:layout_marginTop="5dp"
                     android:text="4600.00"
                     android:textColor="@color/black_gery"
-                    android:textSize="20sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
         </FrameLayout>
 
@@ -116,7 +116,7 @@
                 android:layout_gravity="center"
                 android:text="@string/detail_expend"
                 android:textColor="@color/black_gery"
-                android:textSize="22sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                 android:layout_marginTop="5dp"
                 android:text="5200.00"
                 android:textColor="@color/black_gery"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
     <FrameLayout
