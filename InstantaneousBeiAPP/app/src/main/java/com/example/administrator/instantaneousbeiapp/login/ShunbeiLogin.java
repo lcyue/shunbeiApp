@@ -6,18 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-<<<<<<< HEAD
-import com.example.administrator.instantaneousbeiapp.Homepage.HomePageAcivity;
-=======
-import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
->>>>>>> 1f6f1bf9dbe45969d6de34dcffe7c939ec72977c
+
+import com.example.administrator.instantaneousbeiapp.Homepage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.R;
-<<<<<<< HEAD
 
-
-=======
-import com.example.administrator.instantaneousbeiapp.Homepage.HomePageAcivity;
->>>>>>> feature/puzuhui
 
 
 /**

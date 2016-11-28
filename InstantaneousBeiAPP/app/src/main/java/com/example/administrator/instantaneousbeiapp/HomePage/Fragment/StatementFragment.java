@@ -1,9 +1,4 @@
-
-<<<<<<< HEAD
 package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
-=======
-package com.example.administrator.instantaneousbeiapp.Homepage.fragment;
->>>>>>> feature/puzuhui
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
-import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.R;
 

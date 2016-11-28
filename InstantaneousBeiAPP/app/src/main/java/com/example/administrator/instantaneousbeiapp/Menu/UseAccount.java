@@ -13,11 +13,10 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.MoreFragment;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.login.PhoneBindingActivity;
 import com.example.administrator.instantaneousbeiapp.login.RegisterActivity;
-import com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity;
+
 
 /**
  * Created by Administrator on 2016/10/25.

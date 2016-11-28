@@ -8,7 +8,7 @@
         android:label="@string/app_name1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".login.ShunbeiLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,12 +17,7 @@
         </activity>
         <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionOne"/><!--引导页过渡页1-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Guide.GuideTransitionTwo"/><!--引导页过渡页2-->
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.Statement"/><!--报表页-->
-
-
-        <!--报表页-->
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.Statement.StatementChoiceTimeActivity"/><!--报表选择时间-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletAccountType"/><!--钱包选择账户类型-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletSelectColour"/><!--钱包选择颜色类型-->
@@ -30,9 +25,6 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity"/>><!--钱包更改账户-->
 
         <!--<activity android:name=".guide.Shunbei"/>-->
-        <activity android:name=".Shunbei"/>
-
-
 
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
@@ -46,7 +38,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity"/><!--修改成功-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XuigaiMimaActivity"/><!--修改密码（有短信验证）-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/><!--注册（有短信验证）-->
-        <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/><!--登录页面-->
+        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/>&lt;!&ndash;登录页面&ndash;&gt;-->
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/><!--断网页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/><!--语音页面-->
@@ -61,7 +53,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.Detail.Particulars"/><!--没用的-->
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Homepage.HomeMainActivity"/><!--首页-->
-        <activity android:name=".Homepage.HomePageAcivity"/>
+
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Derive"/><!--数据导出-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.Register.Deadline"/><!--选择时间-->
