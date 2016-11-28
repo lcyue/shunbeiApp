@@ -14,13 +14,13 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp">
+                android:background="@color/white">
                 <ImageView
                     android:id="@+id/jizhang_back_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/back"
-                    android:padding="10dp"
+                    android:padding="13dp"
                     android:layout_centerVertical="true"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -34,10 +34,11 @@
                         android:text="@string/income"
                         android:textSize="20sp"
                         android:textColor="#FF28A7A8"
-                        android:layout_marginRight="30dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:paddingRight="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:gravity="center"/>
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
@@ -49,10 +50,11 @@
                         android:text="@string/expenditure"
                         android:textSize="20sp"
                         android:textColor="@color/black_nomal"
-                        android:layout_marginRight="30dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:paddingRight="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:gravity="center"/>
                 </LinearLayout>
                 <ImageView
                     android:id="@+id/jizhang_yuyin_btn"
@@ -60,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:src="@mipmap/yuyin"
                     android:layout_alignParentRight="true"
-                    android:padding="5dp"
+                    android:padding="10dp"
                     android:layout_centerVertical="true"/>
 
             </RelativeLayout>
@@ -73,7 +75,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:padding="5dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@color/white">
                 <ImageView
                     android:id="@+id/jizhang_xuanzhe_image"
                     android:layout_width="wrap_content"
@@ -109,7 +112,7 @@
                 android:numColumns="5"
                 android:horizontalSpacing="5dp"
                 android:verticalSpacing="10dp"
-                android:background="#FFBCBCBC"
+                android:background="#F2F2F2"
                 android:paddingTop="5dp"/>
 
             <LinearLayout

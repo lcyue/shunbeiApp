@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    >
+    android:id="@+id/gridview_linear">
     <ImageView
         android:id="@+id/shunbei_image"
         android:layout_width="wrap_content"
