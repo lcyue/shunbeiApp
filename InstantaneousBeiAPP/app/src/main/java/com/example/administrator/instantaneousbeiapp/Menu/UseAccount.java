@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Menu;
+package com.example.administrator.instantaneousbeiapp.menu;
 
 import android.app.Activity;
 import android.content.Intent;

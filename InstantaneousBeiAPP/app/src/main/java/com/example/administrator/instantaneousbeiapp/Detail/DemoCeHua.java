@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Detail;
+package com.example.administrator.instantaneousbeiapp.detail;
 
 import android.content.Context;
 import android.util.AttributeSet;

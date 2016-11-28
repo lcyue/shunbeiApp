@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Homepage;
+package com.example.administrator.instantaneousbeiapp.homepage;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -17,19 +17,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.DetailFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.MoreFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.StatementFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.WalletFragment;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
+
+import com.example.administrator.instantaneousbeiapp.detail.Calendar;
+import com.example.administrator.instantaneousbeiapp.detail.DemoCeHua;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.DetailFragment;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.MoreFragment;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.StatementFragment;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
 
-import com.example.administrator.instantaneousbeiapp.Menu.MenuSet;
+import com.example.administrator.instantaneousbeiapp.menu.MenuSet;
 import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
+import com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity;
 
 import java.util.ArrayList;
 
@@ -230,7 +231,7 @@ public class HomeMainActivity extends FragmentActivity {
 
                 case R.id.remind:
                     //记账提醒
-                    intent = new Intent(HomeMainActivity.this, com.example.administrator.instantaneousbeiapp.Detail.Calendar.class);
+                    intent = new Intent(HomeMainActivity.this, Calendar.class);
                     startActivity(intent);
                     break;
                 case R.id.voice:

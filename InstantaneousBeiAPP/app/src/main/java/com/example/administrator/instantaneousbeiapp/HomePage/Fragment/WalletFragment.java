@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
+package com.example.administrator.instantaneousbeiapp.homepage.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,14 +11,16 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
+
 import com.example.administrator.instantaneousbeiapp.adapter.WalletTypeAdapter;
 import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
+import com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity;
+
 import java.util.ArrayList;
 
 
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
+
+
 
 
 

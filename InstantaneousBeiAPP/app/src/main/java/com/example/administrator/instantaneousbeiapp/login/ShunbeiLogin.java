@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.administrator.instantaneousbeiapp.Homepage.HomeMainActivity;
-import com.example.administrator.instantaneousbeiapp.R;
 
+import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
 
 
 /**

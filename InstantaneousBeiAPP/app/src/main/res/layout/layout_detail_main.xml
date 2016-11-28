@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua
+    <com.example.administrator.instantaneousbeiapp.detail.DemoCeHua
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/menu"
         android:scrollbars="none">
 
-        <LinearLayout
+        <LinearLayou
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -18,7 +18,7 @@
             <include layout="@layout/layout_mode_sideslipping" />
 
             <include layout="@layout/homepage_layout"/>
-        </LinearLayout>
-    </com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua>
+        </LinearLayou>
+    </com.example.administrator.instantaneousbeiapp.detail.DemoCeHua>
 
 </LinearLayout>

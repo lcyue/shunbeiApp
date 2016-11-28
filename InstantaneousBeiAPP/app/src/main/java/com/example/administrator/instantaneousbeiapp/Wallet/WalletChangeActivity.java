@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Wallet;
+package com.example.administrator.instantaneousbeiapp.wallet;
 
 import android.app.Activity;
 import android.content.Intent;
