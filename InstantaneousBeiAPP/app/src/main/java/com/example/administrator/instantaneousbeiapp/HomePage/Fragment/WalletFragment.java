@@ -12,15 +12,13 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import com.example.administrator.instantaneousbeiapp.R;
 
-import com.example.administrator.instantaneousbeiapp.adapter.WalletTypeAdapter;
-import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
 import com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity;
 
+import com.example.administrator.instantaneousbeiapp.adapter.WalletTypeAdapter;
+import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
+
+
 import java.util.ArrayList;
-
-
-
-
 
 
 
@@ -68,7 +66,7 @@ public class WalletFragment extends Fragment {
     //适配器
     public ArrayList<WalletTypeItem> getData() {
         list = new ArrayList<WalletTypeItem>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 4; i++) {
             WalletTypeItem walletTypeItem = new WalletTypeItem();
             walletTypeItem.setType("hahah");
             walletTypeItem.setBalance("hahha余额");

@@ -18,7 +18,10 @@
             <include layout="@layout/layout_mode_sideslipping" />
 
             <include layout="@layout/homepage_layout"/>
+
         </LinearLayou>
+
+
     </com.example.administrator.instantaneousbeiapp.detail.DemoCeHua>
 
 </LinearLayout>

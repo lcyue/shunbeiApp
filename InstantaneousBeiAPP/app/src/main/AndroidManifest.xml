@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.instantaneousbeiapp">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
         android:allowBackup="true"
@@ -9,12 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".guide.GuideMainTransition">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionOne"/><!--引导页过渡页1-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionTwo"/><!--引导页过渡页2-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.statement.Statement"/><!--报表页-->
@@ -26,15 +31,17 @@
 
         <!--<activity android:name=".guide.Shunbei"/>-->
 
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.TianjiaoshouruActivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.ZhiChuActivity"/>
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity"/><!--修改成功-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XuigaiMimaActivity"/><!--修改密码（有短信验证）-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/><!--注册（有短信验证）-->
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"
             android:launchMode="singleTask"/><!--登录页面-->
         <activity android:name=".homepage.HomeMainActivity"
@@ -54,6 +61,10 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Derive"/><!--数据导出-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Deadline"/><!--选择时间-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.ChangeDeadline"/><!--选择时间2-->
+
+        <activity android:name="com.example.administrator.instantaneousbeiapp.guide.ActivityShunBei"/>
+
+
         <!--自定义ViewGroup做的一个HorizontalScrollView  完成侧滑效果-->
         <activity android:name=".detail.DemoCehuaActivity"/>
 
@@ -66,6 +77,22 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <!--qq登录-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent1105853108" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            />
 
     </application>
 

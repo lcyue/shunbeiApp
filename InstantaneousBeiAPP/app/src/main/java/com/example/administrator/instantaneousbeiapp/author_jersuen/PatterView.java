@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,6 +21,8 @@ import java.util.List;
  * Created by Administrator on 2016/11/28.
  */
 public class PatterView extends View {
+    //监听器
+    OnPatterChangeListener onPatterChangeListener;
     //矩阵
     public Matrix matrix = new Matrix();
     //按下的点的集合
@@ -129,12 +132,14 @@ public class PatterView extends View {
             height = width;
         }
 
-        //图片资源
-        pointNormal = BitmapFactory.decodeResource(getResources(), R.mipmap.oval_pressed);//正常
+        //3.图片资源
+        pointNormal = BitmapFactory.decodeResource(getResources(), R.mipmap.grey);//正常
         pointPressed = BitmapFactory.decodeResource(getResources(), R.mipmap.wallet_solid_round_green_cyan);//划过
         pointError = BitmapFactory.decodeResource(getResources(), R.mipmap.wallet_concentric_circles_blue_gery);//错误
         linePressed = BitmapFactory.decodeResource(getResources(), R.mipmap.ddd);//划过
         lineError = BitmapFactory.decodeResource(getResources(), R.mipmap.qqq);//错误
+
+        //4.点的坐标
         points[0][0] = new Point(offsetsX + width / 4, offsetsY + width / 4);
         points[0][1] = new Point(offsetsX + width / 2, offsetsY + width / 4);
         points[0][2] = new Point(offsetsX + width - width / 4, offsetsY + width / 4);
@@ -149,7 +154,16 @@ public class PatterView extends View {
 
         //图片资源的半径
         bitmapR = pointNormal.getHeight() / 2;
-        //初始化完成
+
+        //6.设置密码
+        int index =1;
+        for(Point[] points :this.points){
+            for(Point point :points){
+                point.index = index;
+                index ++;
+            }
+        }
+        //7.初始化完成
         isInit = true;
     }
 
@@ -160,8 +174,13 @@ public class PatterView extends View {
         movingX = event.getX();
         movingY = event.getY();
         Point point = null;
+
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN://鼠标按下
+                //重新绘制
+                if(onPatterChangeListener != null){
+                    onPatterChangeListener.onPatterStart(true);
+                }
                 resetPoint();
                 point = checkSelectPoint();
                 if (point != null) {
@@ -201,8 +220,23 @@ public class PatterView extends View {
             if (pointList.size() == 1) {
                 resetPoint();
                 //绘制错误
-            } else if (pointList.size() < 5 && pointList.size() > 2) {
+            } else if (pointList.size() < 5 && pointList.size() > 0) {
                 errorPoint();
+                if(onPatterChangeListener != null){
+                    onPatterChangeListener.onPatterChange(null);
+                }
+                //绘制成功
+            }else {
+                if(onPatterChangeListener != null){
+                    String passwordStr ="";
+                    for(int i=0;i<pointList.size();i++){
+                        passwordStr = passwordStr + pointList.get(i).index;
+                    }
+                    if(!TextUtils.isEmpty(passwordStr)){
+
+                    }
+                    onPatterChangeListener.onPatterChange(passwordStr);
+                }
             }
         }
 
@@ -336,7 +370,7 @@ public class PatterView extends View {
         return degrees;
     }
 
-    //自定义的点
+    //1.自定义的点
     public static class Point{
         //正常
         public static int STATE_NORMAL = 0;
@@ -369,6 +403,24 @@ public class PatterView extends View {
         public static boolean with(float pointX,float pointY,float r,float movingX,float movingY){
             //开方（勾股定理）
             return  Math.sqrt((pointX-movingX)*(pointX-movingX)+(pointY-movingY)*(pointY-movingY))<r;
+        }
+    }
+
+    /**
+     * 图案监听器
+     */
+    public static interface OnPatterChangeListener{
+        //图案改变
+        void onPatterChange(String passwordStr);
+        //开始图案绘制
+        void onPatterStart(boolean isStart);
+    }
+    /**
+     * 设置图案监听器
+     */
+    public void setPatterChangeListener(OnPatterChangeListener onPatterChangeListener){
+        if(onPatterChangeListener != null){
+            this.onPatterChangeListener = onPatterChangeListener;
         }
     }
 }

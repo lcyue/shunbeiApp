@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.login.MoreData;
 import com.example.administrator.instantaneousbeiapp.login.SuggestionActivity;
@@ -30,9 +31,6 @@ public class MoreFragment extends Fragment {
     ImageView imageView;
     TextView userName;
     ListView userlist;
-
-
-
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
