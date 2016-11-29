@@ -3,25 +3,17 @@ package com.example.administrator.instantaneousbeiapp.login;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.administrator.instantaneousbeiapp.MainActivity;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
-import com.tencent.connect.UserInfo;
 import com.tencent.connect.common.Constants;
-import com.tencent.open.utils.Util;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
-
-import org.json.JSONException;
 import org.json.JSONObject;
 
 
