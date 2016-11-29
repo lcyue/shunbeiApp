@@ -13,6 +13,8 @@ import android.widget.ViewFlipper;
 
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin;
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
 
 /**
  * Created by Administrator on 2016/11/10.
@@ -27,6 +29,7 @@ public class GuideMainTransition extends Activity {
         setContentView(R.layout.activity_shunbei_ryx);
         viewFlipper = (ViewFlipper) findViewById(R.id.guide_flipper);
         textView= (TextView) findViewById(R.id.guide_btn);
+
 
         viewFlipper.startFlipping();
         gestureDetector = new GestureDetector(this,gestureListener);
