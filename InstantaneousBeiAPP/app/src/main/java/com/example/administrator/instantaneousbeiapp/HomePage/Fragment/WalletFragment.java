@@ -21,7 +21,6 @@ import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
 import java.util.ArrayList;
 
 
-
 /**
  * Created by Administrator on 2016/11/1.
  */

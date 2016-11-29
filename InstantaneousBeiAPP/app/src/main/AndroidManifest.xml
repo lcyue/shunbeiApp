@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.instantaneousbeiapp">
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+    <!--连接网络权限，用于执行云端语音能力 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!--读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!--摄相头权限，拍照需要用到 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--注：如需在打包或者生成APK的时候进行混淆，请在proguard.cfg中添加如下代码
+          -keep class com.iflytek.**{*;}  -->
 
     <application
         android:allowBackup="true"
@@ -28,46 +43,31 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletSelectColour"/><!--钱包选择颜色类型-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity"/>><!--钱包储蓄卡页面*复用*-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity"/>><!--钱包更改账户-->
-
-        <!--<activity android:name=".guide.Shunbei"/>-->
-
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.TianjiaoshouruActivity"/>
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.ZhiChuActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity"/><!--修改成功-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XuigaiMimaActivity"/><!--修改密码（有短信验证）-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/><!--注册（有短信验证）-->
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"
             android:launchMode="singleTask"/><!--登录页面-->
         <activity android:name=".homepage.HomeMainActivity"
             android:launchMode="singleTask"/>
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/><!--断网页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/><!--语音页面-->
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.menu.UseAccount"/><!--用户资料-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.menu.MenuSet"/><!--菜单设置-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.menu.GesturesPassWord"/><!--菜单手势密码-->
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.SuggestionActivity"/><!--意见反馈-->
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Calendar"/><!--明细日历-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Particulars"/><!--没用的-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Derive"/><!--数据导出-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Deadline"/><!--选择时间-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.ChangeDeadline"/><!--选择时间2-->
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.ActivityShunBei"/>
-
-
         <!--自定义ViewGroup做的一个HorizontalScrollView  完成侧滑效果-->
         <activity android:name=".detail.DemoCehuaActivity"/>
-
         <!--<activity android:name=".Guide.GuideMainTransition"/>&lt;!&ndash;引导页开始&ndash;&gt;-->
         <activity android:name=".menu.RespectInsranraneoous"/><!--关于我们-->
 

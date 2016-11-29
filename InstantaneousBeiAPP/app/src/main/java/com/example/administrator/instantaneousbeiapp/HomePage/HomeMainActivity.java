@@ -2,7 +2,6 @@ package com.example.administrator.instantaneousbeiapp.homepage;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -19,21 +18,19 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.detail.Calendar;
 import com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu;
 import com.example.administrator.instantaneousbeiapp.detail.DemoCeHua;
-import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.DetailFragment;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.MoreFragment;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.StatementFragment;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.WalletFragment;
-import com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin;
-import com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity;
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
+import com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin;
 import com.example.administrator.instantaneousbeiapp.menu.MenuSet;
 import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
-
-
+import com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity;
 import java.util.ArrayList;
 
 

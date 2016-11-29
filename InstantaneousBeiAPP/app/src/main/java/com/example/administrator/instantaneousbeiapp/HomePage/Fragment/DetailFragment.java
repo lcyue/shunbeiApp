@@ -8,12 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
-
-
-import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.detail.Calendar;
-
+import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
 
 /**
