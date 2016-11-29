@@ -37,11 +37,11 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XuigaiMimaActivity"/><!--修改密码（有短信验证）-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/><!--注册（有短信验证）-->
 
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/>&lt;!&ndash;登录页面&ndash;&gt;-->
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"
             android:launchMode="singleTask"/><!--登录页面-->
-
+        <activity android:name=".homePage.HomeMainActivity"
+            android:launchMode="singleTask"/><!--首页-->
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/><!--断网页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/><!--语音页面-->
@@ -66,7 +66,7 @@
         <activity android:name=".menu.RespectInsranraneoous"/><!--关于我们-->
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.RegisterActivity"/><!--签名-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity"/>&lt;!&ndash;手势页面&ndash;&gt;-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity"/><!--手势页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.PhoneBindingActivity"/><!--绑定手机页面-->
         <meta-data
             android:name="com.google.android.gms.version"

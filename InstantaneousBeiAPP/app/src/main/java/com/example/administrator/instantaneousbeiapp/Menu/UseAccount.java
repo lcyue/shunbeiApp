@@ -16,10 +16,7 @@ import android.widget.Toast;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.login.PhoneBindingActivity;
 import com.example.administrator.instantaneousbeiapp.login.RegisterActivity;
-<<<<<<< HEAD
 
-=======
->>>>>>> 37280b3161b9597bce3c01053b7d6f0cd9e05f7d
 
 /**
  * Created by Administrator on 2016/10/25.

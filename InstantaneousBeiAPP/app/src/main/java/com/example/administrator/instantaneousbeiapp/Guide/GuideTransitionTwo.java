@@ -7,13 +7,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
-<<<<<<< HEAD
 
-import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
-=======
-import com.example.administrator.instantaneousbeiapp.homePage.HomeMainActivity;
->>>>>>> 37280b3161b9597bce3c01053b7d6f0cd9e05f7d
+
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.homePage.HomeMainActivity;
 
 /**
  * 要求第2次进入App显示这个页面，然后跳转

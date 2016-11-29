@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
+package com.example.administrator.instantaneousbeiapp.homePage.fragment;
 
-
-=======
-package com.example.administrator.instantaneousbeiapp.homePage.Fragment;
->>>>>>> 37280b3161b9597bce3c01053b7d6f0cd9e05f7d
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
