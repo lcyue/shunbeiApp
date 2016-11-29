@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
-=======
-package com.example.administrator.instantaneousbeiapp.homePage.Fragment;
->>>>>>> 37280b3161b9597bce3c01053b7d6f0cd9e05f7d
+package com.example.administrator.instantaneousbeiapp.homepage.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,14 +16,7 @@ import com.example.administrator.instantaneousbeiapp.adapter.WalletTypeAdapter;
 import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
 import java.util.ArrayList;
 
-<<<<<<< HEAD
 
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
-
-
-=======
->>>>>>> 37280b3161b9597bce3c01053b7d6f0cd9e05f7d
 
 /**
  * Created by Administrator on 2016/11/1.

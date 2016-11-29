@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.instantaneousbeiapp">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
         android:allowBackup="true"
@@ -25,23 +28,21 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletSelectColour"/><!--钱包选择颜色类型-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity"/>><!--钱包储蓄卡页面*复用*-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity"/>><!--钱包更改账户-->
-        <!--<activity android:name=".guide.Shunbei"/>-->
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.TianjiaoshouruActivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.ZhiChuActivity"/>
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity"/><!--修改成功-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.XuigaiMimaActivity"/><!--修改密码（有短信验证）-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/><!--注册（有短信验证）-->
 
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"/>&lt;!&ndash;登录页面&ndash;&gt;-->
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"
             android:launchMode="singleTask"/><!--登录页面-->
-
+        <activity android:name=".homepage.HomeMainActivity"
+            android:launchMode="singleTask"/>
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/><!--断网页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/><!--语音页面-->
@@ -66,11 +67,27 @@
         <activity android:name=".menu.RespectInsranraneoous"/><!--关于我们-->
 
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.RegisterActivity"/><!--签名-->
-        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity"/>&lt;!&ndash;手势页面&ndash;&gt;-->
+        <activity android:name="com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity"/><!--手势页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.PhoneBindingActivity"/><!--绑定手机页面-->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <!--qq登录-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent1105853108" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            />
 
     </application>
 

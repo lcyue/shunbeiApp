@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package com.example.administrator.instantaneousbeiapp.Homepage.Fragment;
-=======
-package com.example.administrator.instantaneousbeiapp.homePage.Fragment;
->>>>>>> 37280b3161b9597bce3c01053b7d6f0cd9e05f7d
+package com.example.administrator.instantaneousbeiapp.homepage.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package com.example.administrator.instantaneousbeiapp.Homepage;
-=======
-package com.example.administrator.instantaneousbeiapp.homePage;
->>>>>>> 37280b3161b9597bce3c01053b7d6f0cd9e05f7d
+package com.example.administrator.instantaneousbeiapp.homepage;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -21,36 +17,23 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+
 import android.widget.TextView;
-<<<<<<< HEAD
-import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.DetailFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.MoreFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.StatementFragment;
-import com.example.administrator.instantaneousbeiapp.Homepage.Fragment.WalletFragment;
-
-import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
-import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
-
-import com.example.administrator.instantaneousbeiapp.Menu.MenuSet;
-=======
 import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.detail.Calendar;
 import com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu;
 import com.example.administrator.instantaneousbeiapp.detail.DemoCeHua;
-import com.example.administrator.instantaneousbeiapp.homePage.Fragment.DetailFragment;
-import com.example.administrator.instantaneousbeiapp.homePage.Fragment.MoreFragment;
-import com.example.administrator.instantaneousbeiapp.homePage.Fragment.StatementFragment;
-import com.example.administrator.instantaneousbeiapp.homePage.Fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.DetailFragment;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.MoreFragment;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.StatementFragment;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.WalletFragment;
 import com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin;
 import com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity;
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
 import com.example.administrator.instantaneousbeiapp.menu.MenuSet;
->>>>>>> 37280b3161b9597bce3c01053b7d6f0cd9e05f7d
+
 import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
 
 import java.util.ArrayList;
