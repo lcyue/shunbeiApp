@@ -29,6 +29,9 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity"/>><!--钱包储蓄卡页面*复用*-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity"/>><!--钱包更改账户-->
 
+        <!--<activity android:name=".guide.Shunbei"/>-->
+
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.BijiShouruActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.TianjiaoshouruActivity"/>
 
@@ -58,7 +61,9 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Derive"/><!--数据导出-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Deadline"/><!--选择时间-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.ChangeDeadline"/><!--选择时间2-->
+
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.ActivityShunBei"/>
+
 
         <!--自定义ViewGroup做的一个HorizontalScrollView  完成侧滑效果-->
         <activity android:name=".detail.DemoCehuaActivity"/>

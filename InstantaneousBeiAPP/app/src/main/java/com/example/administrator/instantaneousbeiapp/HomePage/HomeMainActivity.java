@@ -17,10 +17,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.administrator.instantaneousbeiapp.detail.Calendar;
 import com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu;
 import com.example.administrator.instantaneousbeiapp.detail.DemoCeHua;
@@ -33,8 +31,8 @@ import com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin;
 import com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity;
 import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
 import com.example.administrator.instantaneousbeiapp.menu.MenuSet;
-
 import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
+
 
 import java.util.ArrayList;
 
@@ -287,6 +285,7 @@ public class HomeMainActivity extends FragmentActivity {
 
                 case R.id.remind:
                     //记账提醒
+                    intent = new Intent(HomeMainActivity.this, Calendar.class);
                     intent = new Intent(HomeMainActivity.this, com.example.administrator.instantaneousbeiapp.detail.Calendar.class);
                     startActivity(intent);
                     break;
