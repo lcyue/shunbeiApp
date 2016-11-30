@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="#FFFFFF">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
             <!--导航栏-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp">
+                android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/jizhang_back_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/back"
-                    android:padding="10dp"
+                    android:padding="15dp"
                     android:layout_centerVertical="true"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -34,10 +28,11 @@
                         android:text="@string/income"
                         android:textSize="20sp"
                         android:textColor="@color/black_nomal"
-                        android:layout_marginRight="30dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:gravity="center"
+                        android:paddingRight="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"/>
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
@@ -48,11 +43,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/expenditure"
                         android:textSize="20sp"
+                        android:gravity="center"
                         android:textColor="#FF28A7A8"
-                        android:layout_marginRight="30dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"/>
+                        android:paddingRight="30dp"
+                        android:paddingLeft="30dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"/>
                 </LinearLayout>
                 <ImageView
                     android:id="@+id/jizhang_yuyin_btn"
@@ -60,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:src="@mipmap/yuyin"
                     android:layout_alignParentRight="true"
-                    android:padding="5dp"
+                    android:padding="10dp"
                     android:layout_centerVertical="true"/>
 
             </RelativeLayout>
@@ -68,24 +64,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/grey_view"/>
+
             <!--选择栏-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:padding="5dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:background="@color/white">
                 <ImageView
                     android:id="@+id/jizhang_xuanzhe_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/salary"/>
+                    android:src="@mipmap/salary"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"/>
                 <TextView
                     android:id="@+id/jizhang_xuanzhe_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/salary"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textColor="@color/black_nomal"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"/>
@@ -98,12 +97,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0.00"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
+                    android:padding="10dp"
                     android:textColor="@color/black"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="15dp"/>
         </LinearLayout>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#FFFFFF">
 
             <GridView
                 android:id="@+id/gridview"
@@ -114,6 +121,7 @@
                 android:verticalSpacing="10dp"
                 android:background="#F2F2F2"
                 android:paddingTop="5dp"/>
+
             <LinearLayout
                 android:id="@+id/xuanzhe"
                 android:layout_width="match_parent"
@@ -591,24 +599,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:visibility="gone">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="选择账户"
-                        android:textSize="20sp"
-                        android:textColor="@color/black_nomal"
-                        android:layout_centerInParent="true"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp" />
-                </RelativeLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/grey_view"/>
                 <LinearLayout
                     android:id="@+id/one"
                     android:layout_width="match_parent"
@@ -925,24 +915,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:visibility="gone">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="选择时间"
-                        android:textSize="20sp"
-                        android:textColor="@color/black_nomal"
-                        android:layout_centerInParent="true"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="16dp" />
-                </RelativeLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/grey_view"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1230,13 +1203,6 @@
                     android:layout_height="1dp"
                     android:background="@color/grey_view"/>
             </LinearLayout>
-
-
-
-
-
-
-
 
         </LinearLayout>
     </ScrollView>

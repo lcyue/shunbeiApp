@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
-import com.example.administrator.instantaneousbeiapp.view.Calendar;
+import com.example.administrator.instantaneousbeiapp.view.MyCalendard;
 
 
 /**
@@ -44,7 +44,7 @@ public class DetailFragment extends Fragment {
                     homeMainActivity.move();
                     break;
                 case R.id.cancel_button:
-                    intent = new Intent(getActivity(), Calendar.class);//挑战到日历页面
+                    intent = new Intent(getActivity(), MyCalendard.class);//挑战到日历页面
                     startActivity(intent);
                     break;
             }

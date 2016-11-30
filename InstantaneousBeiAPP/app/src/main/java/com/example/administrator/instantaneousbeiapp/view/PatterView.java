@@ -6,14 +6,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
-import android.graphics.Point;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-
 import com.example.administrator.instantaneousbeiapp.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +18,7 @@ import java.util.List;
  * Created by Administrator on 2016/11/28.
  */
 public class PatterView extends View {
+
     //监听器
     OnPatterChangeListener onPatterChangeListener;
     //矩阵
@@ -132,6 +130,7 @@ public class PatterView extends View {
             height = width;
         }
 
+
         //3.图片资源
         pointNormal = BitmapFactory.decodeResource(getResources(), R.mipmap.grey);//正常
         pointPressed = BitmapFactory.decodeResource(getResources(), R.mipmap.wallet_solid_round_green_cyan);//划过
@@ -181,6 +180,7 @@ public class PatterView extends View {
                 if(onPatterChangeListener != null){
                     onPatterChangeListener.onPatterStart(true);
                 }
+
                 resetPoint();
                 point = checkSelectPoint();
                 if (point != null) {
@@ -220,6 +220,10 @@ public class PatterView extends View {
             if (pointList.size() == 1) {
                 resetPoint();
                 //绘制错误
+
+            } else if (pointList.size() < 5 && pointList.size() > 2) {
+                errorPoint();
+
             } else if (pointList.size() < 5 && pointList.size() > 0) {
                 errorPoint();
                 if(onPatterChangeListener != null){
@@ -237,6 +241,7 @@ public class PatterView extends View {
                     }
                     onPatterChangeListener.onPatterChange(passwordStr);
                 }
+
             }
         }
 
@@ -370,7 +375,10 @@ public class PatterView extends View {
         return degrees;
     }
 
-    //1.自定义的点
+
+    //自定义的点
+
+
     public static class Point{
         //正常
         public static int STATE_NORMAL = 0;
@@ -406,6 +414,7 @@ public class PatterView extends View {
         }
     }
 
+
     /**
      * 图案监听器
      */
@@ -423,4 +432,5 @@ public class PatterView extends View {
             this.onPatterChangeListener = onPatterChangeListener;
         }
     }
+
 }

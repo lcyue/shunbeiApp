@@ -56,7 +56,7 @@ public class JizhangBaseAdapter extends BaseAdapter {
         Log.i("jizhangView","========"+jizhangView.getJizhang_xuanzhe_text());
         viewHolder.jizhang_xuanzhe_text.setText(jizhangView.getJizhang_xuanzhe_text());
         viewHolder.jizhang_xuanzhe_image.setImageResource(jizhangView.getJizhang_xuanzhe_image());
-        XuanzheShijianActivity xuanzheShijianActivity = new XuanzheShijianActivity();
+
 
         return convertView;
     }

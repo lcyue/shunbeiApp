@@ -12,6 +12,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,6 +39,7 @@ public class ZhiChuActivity extends Activity implements AdapterView.OnItemClickL
     ImageView jizhang_gou1;
     ImageView jizhang_gou2;
     ImageView jizhang_gou3;
+    ImageView jizhang_yu_yin;
     LinearLayout one;
     LinearLayout two;
     LinearLayout three;
@@ -78,10 +80,12 @@ public class ZhiChuActivity extends Activity implements AdapterView.OnItemClickL
         jizhang_gou1= (ImageView) findViewById(R.id.jizhang_gou1);
         jizhang_gou2= (ImageView) findViewById(R.id.jizhang_gou2);
         jizhang_gou3= (ImageView) findViewById(R.id.jizhang_gou3);
+        jizhang_yu_yin = (ImageView) findViewById(R.id.jizhang_yuyin_btn);
         one = (LinearLayout) findViewById(R.id.one);
         two = (LinearLayout) findViewById(R.id.two);
         three = (LinearLayout) findViewById(R.id.three);
         fore = (LinearLayout) findViewById(R.id.fore);
+
 
         /**
          * 简单适配器
@@ -101,6 +105,7 @@ public class ZhiChuActivity extends Activity implements AdapterView.OnItemClickL
         jizhang_shouru_btn.setOnClickListener(onClickListener);
         jizhang_zhichu_btn.setOnClickListener(onClickListener);
         jizhang_money_btn.setOnClickListener(onClickListener);
+        jizhang_yu_yin.setOnClickListener(onClickListener);
         one.setOnClickListener(onClickListener);
         two.setOnClickListener(onClickListener);
         three.setOnClickListener(onClickListener);
@@ -165,8 +170,12 @@ public class ZhiChuActivity extends Activity implements AdapterView.OnItemClickL
                     break;
                 //点击收入
                 case R.id.jizhang_shouru_btn:
-                    intent = new Intent(ZhiChuActivity.this,XuanzheShijianActivity.class);
-                    startActivity(intent);
+                    jizhang_shouru_btn.setTextColor(getResources().getColor(R.color.green_btn));
+                    jizhang_zhichu_btn.setTextColor(getResources().getColor(R.color.black_gery));
+                    break;
+                case R.id.jizhang_zhichu_btn:
+                    jizhang_shouru_btn.setTextColor(getResources().getColor(R.color.black_gery));
+                    jizhang_zhichu_btn.setTextColor(getResources().getColor(R.color.green_btn));
                     break;
                 //点击返回
                 case R.id.jizhang_back_btn:
@@ -213,6 +222,10 @@ public class ZhiChuActivity extends Activity implements AdapterView.OnItemClickL
                         jizhang_gou2.setVisibility(View.GONE);
                         jizhang_gou1.setVisibility(View.GONE);
                     }
+                    break;
+                case R.id.jizhang_yuyin_btn:
+                    intent = new Intent(ZhiChuActivity.this, VoiceActivity.class);
+                    startActivity(intent);
                     break;
             }
         }

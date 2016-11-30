@@ -15,15 +15,13 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-
             <include layout="@layout/layout_mode_sideslipping" />
 
             <include layout="@layout/homepage_layout"/>
 
-
         </LinearLayout>
 
-
     </com.example.administrator.instantaneousbeiapp.view.DemoCeHua>
+
 
 </LinearLayout>
