@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--&lt;!&ndash;这里写的是背景层的样式&ndash;&gt;-->
+    <!--<item android:id="@android:id/background">-->
+        <!--<shape>-->
+            <!--<corners android:radius="5dp"/>-->
+            <!--<solid android:color="@color/common_white"/>-->
+            <!--<stroke-->
+                <!--android:color="@color/common_grey"-->
+                <!--android:dashWidth="5dp"-->
+                <!--android:dashGap="3dp"-->
+                <!--android:width="1dp"/>-->
+        <!--</shape>-->
+    <!--</item>-->
+
+    <!--&lt;!&ndash;中间一层的样式&ndash;&gt;-->
+    <!--<item android:id="@android:id/secondaryProgress">-->
+        <!--<clip>-->
+            <!--<shape>-->
+                <!--<corners android:radius="5dp"/>-->
+                <!--<solid android:color="@color/common_blue"/>-->
+                <!--<padding android:bottom="1dp"-->
+                    <!--android:top="1dp"-->
+                    <!--android:left="1dp"-->
+                    <!--android:right="1dp"/>-->
+            <!--</shape>-->
+        <!--</clip>-->
+    <!--</item>-->
+
+    <!--&lt;!&ndash;最上面一层的样式&ndash;&gt;-->
+    <!--<item android:id="@android:id/progress">-->
+        <!--<clip>-->
+            <!--<shape>-->
+                <!--<corners android:radius="5dp"/>-->
+                <!--<solid android:color="@color/yello"/>-->
+                <!--<padding android:bottom="1dp"-->
+                    <!--android:top="1dp"-->
+                    <!--android:left="1dp"-->
+                    <!--android:right="1dp"/>-->
+            <!--</shape>-->
+        <!--</clip>-->
+    <!--</item>-->
+</layer-list>

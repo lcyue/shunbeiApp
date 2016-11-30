@@ -1,6 +1,7 @@
-package com.example.administrator.instantaneousbeiapp.Detail;
+package com.example.administrator.instantaneousbeiapp.detail;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -112,8 +113,8 @@ public class DemoArcMenu extends ViewGroup implements View.OnClickListener{
                 int cWidth = child.getMeasuredWidth();
                 int cHeight = child.getMeasuredHeight();
 
-                int cl = (getMeasuredWidth() -width)/2-(int)(mRadius*Math.cos(Math.PI/(count - 2)*k));
-                int ct =(getMeasuredHeight() - height)/2 -(int)(mRadius*Math.sin(Math.PI/(count - 2)*k));
+                int cl = (getMeasuredWidth() -cWidth)/2-(int)(mRadius*Math.cos(Math.PI/(count - 2)*k));
+                int ct = (getMeasuredHeight() - cHeight)/2 -(int)(mRadius*Math.sin(Math.PI/(count - 2)*k));
 
                 if (mPosition == Position.RIGHT_BTN){
                     ct = getMeasuredHeight()- cHeight - ct;
@@ -179,8 +180,8 @@ public class DemoArcMenu extends ViewGroup implements View.OnClickListener{
             final View childView = getChildAt(i+1);
             childView.setVisibility(VISIBLE);
 
-            int cl = (getMeasuredWidth() -width)/2-(int)(mRadius*Math.cos(Math.PI/(count - 2)*i));
-            int ct =(getMeasuredHeight() - height)/2 -(int)(mRadius*Math.sin(Math.PI/(count - 2)*i));
+            int cl = (int)(mRadius*Math.cos(Math.PI/(count - 2)*i));
+            int ct = (int)(mRadius*Math.sin(Math.PI/(count - 2)*i));
 
             AnimationSet anumset = new AnimationSet(true);
             Animation tranAnim = null;
@@ -196,7 +197,13 @@ public class DemoArcMenu extends ViewGroup implements View.OnClickListener{
             }
             tranAnim.setFillAfter(true);
             tranAnim.setDuration(duration);
-            tranAnim.setAnimationListener(new Animation.AnimationListener() {
+
+            RotateAnimation anim = new RotateAnimation(0,720, Animation.RELATIVE_TO_SELF,
+                    0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+            anim.setDuration(duration*2);
+            anim.setFillAfter(true);
+
+            anim.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {
 
@@ -214,13 +221,7 @@ public class DemoArcMenu extends ViewGroup implements View.OnClickListener{
 
                 }
             });
-
-            RotateAnimation anim = new RotateAnimation(0,720, Animation.RELATIVE_TO_SELF,
-                    0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-            anim.setDuration(duration);
-            anim.setFillAfter(true);
-
-            anumset.addAnimation(tranAnim);
+            //anumset.addAnimation(tranAnim);
             anumset.addAnimation(anim);
             childView.startAnimation(anumset);
 

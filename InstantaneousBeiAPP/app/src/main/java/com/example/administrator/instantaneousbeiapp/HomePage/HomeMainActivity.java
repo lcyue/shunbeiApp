@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.HomePage;
+package com.example.administrator.instantaneousbeiapp.homepage;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -17,31 +17,25 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-<<<<<<< HEAD
-
-=======
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.DetailFragment;
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.MoreFragment;
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.StatementFragment;
-import com.example.administrator.instantaneousbeiapp.HomePage.Fragment.WalletFragment;
-<<<<<<< HEAD
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
-import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
+import com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu;
+import com.example.administrator.instantaneousbeiapp.detail.DemoCeHua;
 
-=======
-import com.example.administrator.instantaneousbeiapp.Menu.MenuSet;
-import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
-import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.DetailFragment;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.MoreFragment;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.StatementFragment;
+import com.example.administrator.instantaneousbeiapp.homepage.fragment.WalletFragment;
+import com.example.administrator.instantaneousbeiapp.jizhang.ZhiChuActivity;
+import com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin;
+import com.example.administrator.instantaneousbeiapp.menu.MenuSet;
 import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
+import com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity;
 
 import java.util.ArrayList;
-import java.util.Calendar;
+
+
 
 /**
  * Created by Administrator on 2016/11/11.
@@ -60,6 +54,11 @@ public class HomeMainActivity extends FragmentActivity {
     LinearLayout seting;
     LinearLayout qiandao;
     TextView qiandaoNums;
+    Button outBtn;
+    ImageView clock_btn;
+    ImageView card_btn;
+    ImageView class_btn;
+    DemoArcMenu ArcMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,12 +70,42 @@ public class HomeMainActivity extends FragmentActivity {
         iconStatisticalText = (TextView) findViewById(R.id.icon_statistical_text);
         iconMoretext = (TextView) findViewById(R.id.icon_more_text);
         menu = (DemoCeHua) findViewById(R.id.menu);
-        typeSelectButton = (ImageView) findViewById(R.id.type_select_button);
         remind = (LinearLayout) findViewById(R.id.remind);
         voice = (LinearLayout) findViewById(R.id.voice);
         seting = (LinearLayout) findViewById(R.id.setting);
         qiandao = (LinearLayout) findViewById(R.id.qiandao);
         qiandaoNums = (TextView) findViewById(R.id.qiandao_nums);
+        outBtn = (Button) findViewById(R.id.out_btn);
+
+        ArcMenu = (DemoArcMenu) findViewById(R.id.DemoArcmenu);
+        clock_btn= (ImageView) ArcMenu.getChildAt(2);
+        clock_btn.setTag(new Tag(Tag.BUTTON_TYPE_A));
+        clock_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(HomeMainActivity.this, "1111111111", Toast.LENGTH_SHORT).show();
+            }
+        });
+        card_btn = (ImageView) ArcMenu.getChildAt(3);
+        card_btn.setTag(new Tag(Tag.BUTTON_TYPE_B));
+        card_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(HomeMainActivity.this, "2222222222", Toast.LENGTH_SHORT).show();
+            }
+        });
+        class_btn = (ImageView) ArcMenu.getChildAt(4);
+        class_btn.setTag(new Tag(Tag.BUTTON_TYPE_C));
+        class_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(HomeMainActivity.this, "3333333333", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+//        clock_btn = (ImageView) findViewById(R.id.clock_btn);
+//        card_btn = (ImageView) findViewById(R.id.card_btn);
+//        class_btn = (ImageView) findViewById(R.id.classification);
 
         Log.i("HomeMainActivity", "" + this.getTaskId());
         fragmentArrayList = new ArrayList<Fragment>();
@@ -100,11 +129,12 @@ public class HomeMainActivity extends FragmentActivity {
         voice.setOnClickListener(onClickListener);
         seting.setOnClickListener(onClickListener);
         qiandao.setOnClickListener(onClickListener);
-
+        outBtn.setOnClickListener(onClickListener);
         viewPager.setOnPageChangeListener(onPageChangeListener);
-        typeSelectButton.setOnClickListener(onClickListener);
+
 
     }
+
 
     public void move() {
         menu.togleMenu();
@@ -145,12 +175,25 @@ public class HomeMainActivity extends FragmentActivity {
         }
     };
 
+    public class Tag {
+        public static final int BUTTON_TYPE_A = 0;
+        public static final int BUTTON_TYPE_B = 1;
+        public static final int BUTTON_TYPE_C = 2;
+
+        public final int mType;
+        public Tag(int type) {
+            mType = type;
+        }
+    }
+
     //点击事件
     View.OnClickListener onClickListener = new View.OnClickListener() {
         int i = 1;
         @Override
         public void onClick(View view) {
             Intent intent;
+            Tag type = (Tag)view.getTag();
+
             switch (view.getId()) {
                 case R.id.icon_detail_text:
                     viewPager.setCurrentItem(0);
@@ -162,7 +205,6 @@ public class HomeMainActivity extends FragmentActivity {
                     iconStatisticalText.setCompoundDrawablesWithIntrinsicBounds(null, top2, null, null);
                     Drawable top15 = getResources().getDrawable(R.mipmap.icon_more_off);
                     iconMoretext.setCompoundDrawablesWithIntrinsicBounds(null, top15, null, null);
-
 
                     iconDetailText.setTextColor(getResources().getColor(R.color.green_btn));
                     iconWalleText.setTextColor(getResources().getColor(R.color.gery_btn));
@@ -217,18 +259,22 @@ public class HomeMainActivity extends FragmentActivity {
                     iconStatisticalText.setTextColor(getResources().getColor(R.color.gery_btn));
                     iconMoretext.setTextColor(getResources().getColor(R.color.green_btn));
                     break;
-                case R.id.type_select_button:
-                        if (bool == true) {
-                            popupWindow.dismiss();
-                            bool = popupWindow.isShowing();
-                        } else {
-                            createPopupWindow();//最后需要动画进行美观 以便形成半圆的效果
-                            bool = popupWindow.isShowing();
-                        }
-                    break;
+//                case R.id.clock_btn:
+//                    //Toast.makeText(HomeMainActivity.this, "111111111", Toast.LENGTH_SHORT).show();
+//
+//                    break;
+//                case R.id.card_btn:
+//                    intent = new Intent(HomeMainActivity.this, WalletChangeActivity.class);
+//                    startActivity(intent);
+//                    break;
+//                case R.id.class_btn:
+//                    //Toast.makeText(HomeMainActivity.this, "33333333", Toast.LENGTH_SHORT).show();
+//                    intent = new Intent(HomeMainActivity.this, XuanzheShijianActivity.class);
+//                    startActivity(intent);
+//                    break;
                 case R.id.dudget_type:
                     //对收入支出分类的跳转
-                    intent = new Intent(HomeMainActivity.this,XuanzheShijianActivity.class);
+                    intent = new Intent(HomeMainActivity.this,ZhiChuActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.account_type:
@@ -239,7 +285,7 @@ public class HomeMainActivity extends FragmentActivity {
 
                 case R.id.remind:
                     //记账提醒
-                    intent = new Intent(HomeMainActivity.this, com.example.administrator.instantaneousbeiapp.Detail.Calendar.class);
+                    intent = new Intent(HomeMainActivity.this, com.example.administrator.instantaneousbeiapp.detail.Calendar.class);
                     startActivity(intent);
                     break;
                 case R.id.voice:
@@ -256,6 +302,10 @@ public class HomeMainActivity extends FragmentActivity {
                 case R.id.qiandao:
                     qiandaoNums.setText("+" + i);
                     i++;
+                    break;
+                case R.id.out_btn:
+                    intent = new Intent(HomeMainActivity.this, ShunbeiLogin.class);
+                    startActivity(intent);
                     break;
             }
         }

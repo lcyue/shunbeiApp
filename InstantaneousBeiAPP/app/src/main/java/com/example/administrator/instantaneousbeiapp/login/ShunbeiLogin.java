@@ -6,18 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
-<<<<<<< HEAD
-import com.example.administrator.instantaneousbeiapp.R;
-=======
 
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
 
-
-
-
-
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
 
 /**
  * Created by Administrator on 2016/10/22.

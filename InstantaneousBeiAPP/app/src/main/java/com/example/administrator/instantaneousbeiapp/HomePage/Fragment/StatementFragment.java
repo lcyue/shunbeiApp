@@ -1,8 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
-<<<<<<< HEAD
-
-=======
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
+package com.example.administrator.instantaneousbeiapp.homepage.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
-import android.widget.TextView;
 
 import com.example.administrator.instantaneousbeiapp.R;
 

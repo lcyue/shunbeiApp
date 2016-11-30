@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.Guide;
+package com.example.administrator.instantaneousbeiapp.guide;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,12 +8,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
-import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
+
 
 /**
  * 要求第2次进入App显示这个页面，然后跳转

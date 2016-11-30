@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
+package com.example.administrator.instantaneousbeiapp.homepage.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,18 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.administrator.instantaneousbeiapp.Detail.Calendar;
-
-<<<<<<< HEAD
-
-import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
-=======
-import com.example.administrator.instantaneousbeiapp.Detail.DemoCeHua;
-
-import com.example.administrator.instantaneousbeiapp.HomePage.HomeMainActivity;
-
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
+import com.example.administrator.instantaneousbeiapp.detail.Calendar;
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
 
 /**
  * Created by Administrator on 2016/11/1.

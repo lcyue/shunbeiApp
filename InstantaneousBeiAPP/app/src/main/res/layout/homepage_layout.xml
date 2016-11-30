@@ -1,109 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <!--中间4个视图的布局-->
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         >
 
-    </android.support.v4.view.ViewPager>
-    <!--底部标题栏-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
-
-        <RelativeLayout
+        <!--中间4个视图的布局-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rootRelativeLayot">
+            android:layout_height="0dp"
+            android:layout_weight="0.36">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/green"
-                android:layout_centerVertical="true"></View>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/icon_oval_wallet_blue"
-                android:layout_centerInParent="true"/>
-
-            <ImageView
-                android:id="@+id/type_select_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/icon_more_white"
-                android:layout_centerInParent="true"/>
-        </RelativeLayout>
+        </android.support.v4.view.ViewPager>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="40dp">
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginRight="30dp">
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/icon_detail_text"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/icon_detail_on"
                     android:gravity="center"
                     android:text="@string/detail"
-                    android:textColor="@color/green_btn"
-                    android:drawableTop="@mipmap/icon_detail_on"
-                    android:layout_below="@id/rootRelativeLayot"
-                    />
+                    android:textColor="@color/green_btn" />
+
                 <TextView
                     android:id="@+id/icon_wallet_text"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/wallet"
+                    android:layout_weight="1"
                     android:drawableTop="@mipmap/icon_wallet_off"
-                    />
+                    android:gravity="center"
+                    android:text="@string/wallet" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/icon_statistical_text"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/icon_statistical_off"
                     android:gravity="center"
-                    android:text="@string/statistical"
-                    android:drawableTop="@mipmap/icon_statistical_off" />
+                    android:text="@string/statistical" />
+
                 <TextView
                     android:id="@+id/icon_more_text"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/icon_more_off"
                     android:gravity="center"
-                    android:text="@string/more"
-                    android:drawableTop="@mipmap/icon_more_off" />
+                    android:text="@string/more" />
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
+    <!--底部标题栏-->
+    <RelativeLayout
+        android:id="@+id/rootRelativeLayot"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="bottom">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/green"></View>
+
+        <com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:position="center_btn"
+            app:radius="50dp"
+            android:id="@+id/DemoArcmenu">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_oval_wallet_blue"
+                android:src="@mipmap/icon_more_white" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <ImageView
+                android:id="@+id/clock_btn"
+                android:tag="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_clock_blue" />
+
+            <ImageView
+                android:id="@+id/card_btn"
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_card" />
+
+            <ImageView
+                android:id="@+id/classification"
+                android:tag="2"
+                android:onClick="classClickListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_classification_blue" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu>
     </RelativeLayout>
-
-</LinearLayout>
+</FrameLayout>

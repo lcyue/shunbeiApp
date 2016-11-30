@@ -1,8 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.HomePage.Fragment;
-<<<<<<< HEAD
-=======
-
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
+package com.example.administrator.instantaneousbeiapp.homepage.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,21 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import com.example.administrator.instantaneousbeiapp.R;
-
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
+import com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity;
 import com.example.administrator.instantaneousbeiapp.adapter.WalletTypeAdapter;
 import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
-
 import java.util.ArrayList;
-
-<<<<<<< HEAD
-=======
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletChangeActivity;
-import com.example.administrator.instantaneousbeiapp.Wallet.WalletDepositCardActivity;
->>>>>>> bead52f84f22e107d1a103633147b3043e59da71
-
 
 /**
  * Created by Administrator on 2016/11/1.
@@ -74,7 +60,7 @@ public class WalletFragment extends Fragment {
     //适配器
     public ArrayList<WalletTypeItem> getData() {
         list = new ArrayList<WalletTypeItem>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 4; i++) {
             WalletTypeItem walletTypeItem = new WalletTypeItem();
             walletTypeItem.setType("hahah");
             walletTypeItem.setBalance("hahha余额");

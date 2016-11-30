@@ -68,13 +68,13 @@
                         android:layout_height="wrap_content"
                         android:text="@string/check_in_time"
                         android:textColor="@color/black_word"
-                        android:textSize="19sp"/>
+                        android:textSize="16sp"/>
 
                     <TextView
                         android:id="@+id/qiandao_nums"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="19sp"
+                        android:textSize="16sp"
                         android:text=""
                         android:textColor="@color/black_word"
                         android:layout_margin="5dp"/>
@@ -162,6 +162,7 @@
                 android:layout_marginRight="23dp"/>
             <!--退出账户-->
             <Button
+                android:id="@+id/out_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:text="@string/exit_account"
