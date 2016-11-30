@@ -1,6 +1,8 @@
 package com.example.administrator.instantaneousbeiapp.homepage;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,7 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.detail.Calendar;
+import com.example.administrator.instantaneousbeiapp.detail.Calendard;
 import com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu;
 import com.example.administrator.instantaneousbeiapp.detail.DemoCeHua;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.DetailFragment;
@@ -34,10 +36,7 @@ import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
 import com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity;
 
 import java.util.ArrayList;
-
-
-
-
+import java.util.Calendar;
 
 
 /**
@@ -62,6 +61,7 @@ public class HomeMainActivity extends FragmentActivity {
     ImageView card_btn;
     ImageView class_btn;
     DemoArcMenu ArcMenu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,7 +81,7 @@ public class HomeMainActivity extends FragmentActivity {
         outBtn = (Button) findViewById(R.id.out_btn);
 
         ArcMenu = (DemoArcMenu) findViewById(R.id.DemoArcmenu);
-        clock_btn= (ImageView) ArcMenu.getChildAt(2);
+        clock_btn = (ImageView) ArcMenu.getChildAt(2);
         clock_btn.setTag(new Tag(Tag.BUTTON_TYPE_A));
         clock_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,6 +184,7 @@ public class HomeMainActivity extends FragmentActivity {
         public static final int BUTTON_TYPE_C = 2;
 
         public final int mType;
+
         public Tag(int type) {
             mType = type;
         }
@@ -192,10 +193,11 @@ public class HomeMainActivity extends FragmentActivity {
     //点击事件
     View.OnClickListener onClickListener = new View.OnClickListener() {
         int i = 1;
+
         @Override
         public void onClick(View view) {
             Intent intent;
-            Tag type = (Tag)view.getTag();
+            Tag type = (Tag) view.getTag();
 
             switch (view.getId()) {
                 case R.id.icon_detail_text:
@@ -277,7 +279,7 @@ public class HomeMainActivity extends FragmentActivity {
 //                    break;
                 case R.id.dudget_type:
                     //对收入支出分类的跳转
-                    intent = new Intent(HomeMainActivity.this,ZhiChuActivity.class);
+                    intent = new Intent(HomeMainActivity.this, ZhiChuActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.account_type:
@@ -289,25 +291,29 @@ public class HomeMainActivity extends FragmentActivity {
                 case R.id.remind:
                     //记账提醒
 
-                    intent = new Intent(HomeMainActivity.this, Calendar.class);
+                    intent = new Intent(HomeMainActivity.this, Calendard.class);
 
-                    intent = new Intent(HomeMainActivity.this, com.example.administrator.instantaneousbeiapp.detail.Calendar.class);
+                    intent = new Intent(HomeMainActivity.this, Calendard.class);
                     startActivity(intent);
                     break;
                 case R.id.voice:
                     //语音记账
-                    intent = new Intent(HomeMainActivity.this,VoiceActivity.class);
+                    intent = new Intent(HomeMainActivity.this, VoiceActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.setting:
                     //设置
-                    intent = new Intent(HomeMainActivity.this,MenuSet.class);
+                    intent = new Intent(HomeMainActivity.this, MenuSet.class);
                     startActivity(intent);
                     break;
 
                 case R.id.qiandao:
-                    qiandaoNums.setText("+" + i);
-                    i++;
+                    signData();
+                    if (sign ==true) {
+                        qiandaoNums.setText("+" + i);
+                        i++;
+                        sign = false;
+                    }
                     break;
                 case R.id.out_btn:
                     intent = new Intent(HomeMainActivity.this, ShunbeiLogin.class);
@@ -317,6 +323,30 @@ public class HomeMainActivity extends FragmentActivity {
         }
     };
 
+    // 签到逻辑判断
+    boolean sign = false; //进行对每天签到的判断
+    String signstring = "kkkk";
+    SharedPreferences day;// 用于缓存签到的日期
+    public void signData() {
+        day = getSharedPreferences("day" , Context.MODE_WORLD_READABLE);
+        SharedPreferences.Editor editor=day.edit();
+        editor.putString("day", signstring);
+
+        Calendar calendar = Calendar.getInstance();
+        int nowYear = calendar.get(Calendar.YEAR);
+        String nowDay = calendar.get(Calendar.YEAR) + "年" + (calendar.get(Calendar.MONTH) + 1) + "月" + calendar.get(Calendar.DAY_OF_MONTH) + "日";
+        int nowHour = calendar.get(Calendar.MONTH) + 1;
+        Log.i("signstring", "66666666>" + day.getString("day", signstring).toString());
+        if (!(day.getString("day", signstring).toString().equals(nowDay))){
+            signstring = nowDay;
+            sign = true;
+            Log.i("sign", "======>" + sign);
+            editor.putString("day" , signstring);
+            Log.i("signstring", "======>" + signstring);
+            Log.i("signstring", "+++++++>" + day.getString("day", signstring).toString());
+        }
+    }
+
     //选择类型的页面
     boolean bool;
     PopupWindow popupWindow;
@@ -324,6 +354,7 @@ public class HomeMainActivity extends FragmentActivity {
     Button accountType;
     View view;
     LayoutInflater layoutInflater;
+
     public void createPopupWindow() {
         layoutInflater = LayoutInflater.from(HomeMainActivity.this);
         view = layoutInflater.inflate(R.layout.type_select_button_layout, null);
@@ -335,7 +366,7 @@ public class HomeMainActivity extends FragmentActivity {
         popupWindow.showAtLocation(view, Gravity.CENTER | Gravity.BOTTOM, 0, 400);
 
         dudgetType = (Button) view.findViewById(R.id.dudget_type);
-        accountType = (Button)view.findViewById(R.id.account_type);
+        accountType = (Button) view.findViewById(R.id.account_type);
 
         dudgetType.setOnClickListener(onClickListener);
         accountType.setOnClickListener(onClickListener);

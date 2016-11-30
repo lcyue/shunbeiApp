@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import com.example.administrator.instantaneousbeiapp.detail.Calendar;
+import com.example.administrator.instantaneousbeiapp.detail.Calendard;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
 
@@ -42,7 +42,7 @@ public class DetailFragment extends Fragment {
                     homeMainActivity.move();
                     break;
                 case R.id.cancel_button:
-                    intent = new Intent(getActivity(), Calendar.class);//挑战到日历页面
+                    intent = new Intent(getActivity(), Calendard.class);//挑战到日历页面
                     startActivity(intent);
                     break;
             }

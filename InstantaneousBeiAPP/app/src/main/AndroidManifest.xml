@@ -26,7 +26,7 @@
         android:label="@string/app_name1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".guide.GuideMainTransition">
+        <activity android:name=".homepage.HomeMainActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,8 +53,8 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ZhuceActivity"/><!--注册（有短信验证）-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"
             android:launchMode="singleTask"/><!--登录页面-->
-        <activity android:name=".homepage.HomeMainActivity"
-            android:launchMode="singleTask"/><!--首页-->
+        <!--<activity android:name=".homepage.HomeMainActivity"-->
+            <!--android:launchMode="singleTask"/>&lt;!&ndash;首页&ndash;&gt;-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/><!--断网页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/><!--语音页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.menu.UseAccount"/><!--用户资料-->
@@ -63,7 +63,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.SuggestionActivity"/><!--意见反馈-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.ZhiChuActivity"/>
         <activity android:name="com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity"/>
-        <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Calendar"/><!--明细日历-->
+        <activity android:name=".detail.Calendard"/><!--明细日历-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Particulars"/><!--没用的-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Derive"/><!--数据导出-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Deadline"/><!--选择时间-->

@@ -12,7 +12,7 @@ import com.example.administrator.instantaneousbeiapp.jizhang.ZhiChuActivity;
 /**
  * Created by Administrator on 2016/10/26.
  */
-public class Calendar extends Activity {
+public class Calendard extends Activity {
     ImageView returnBtton;
     ImageView addBtton;
     @Override
@@ -37,7 +37,7 @@ public class Calendar extends Activity {
                     finish();
                     break;
                 case R.id.add_btton:
-                        intent = new Intent(Calendar.this, ZhiChuActivity.class);
+                        intent = new Intent(Calendard.this, ZhiChuActivity.class);
                     startActivity(intent);
                     break;
             }
