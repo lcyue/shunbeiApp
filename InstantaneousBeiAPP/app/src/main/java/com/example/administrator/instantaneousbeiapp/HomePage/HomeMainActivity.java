@@ -18,40 +18,27 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
-<<<<<<< HEAD
 
-import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu;
-import com.example.administrator.instantaneousbeiapp.detail.DemoCeHua;
-
-=======
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.detail.Calendar;
 import com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu;
 import com.example.administrator.instantaneousbeiapp.detail.DemoCeHua;
->>>>>>> develop
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.DetailFragment;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.MoreFragment;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.StatementFragment;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.WalletFragment;
-<<<<<<< HEAD
 import com.example.administrator.instantaneousbeiapp.jizhang.ZhiChuActivity;
-=======
-import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
->>>>>>> develop
 import com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin;
 import com.example.administrator.instantaneousbeiapp.menu.MenuSet;
 import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
 import com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity;
-<<<<<<< HEAD
 
 import java.util.ArrayList;
 
 
-=======
-import java.util.ArrayList;
 
->>>>>>> develop
+
+
 
 /**
  * Created by Administrator on 2016/11/11.
@@ -301,10 +288,9 @@ public class HomeMainActivity extends FragmentActivity {
 
                 case R.id.remind:
                     //记账提醒
-<<<<<<< HEAD
-=======
+
                     intent = new Intent(HomeMainActivity.this, Calendar.class);
->>>>>>> develop
+
                     intent = new Intent(HomeMainActivity.this, com.example.administrator.instantaneousbeiapp.detail.Calendar.class);
                     startActivity(intent);
                     break;

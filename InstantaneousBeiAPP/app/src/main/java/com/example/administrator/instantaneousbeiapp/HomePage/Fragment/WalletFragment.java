@@ -10,25 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import com.example.administrator.instantaneousbeiapp.R;
-<<<<<<< HEAD
-import com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity;
 import com.example.administrator.instantaneousbeiapp.adapter.WalletTypeAdapter;
 import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
-import java.util.ArrayList;
-
-=======
-
 import com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity;
-
-import com.example.administrator.instantaneousbeiapp.adapter.WalletTypeAdapter;
-import com.example.administrator.instantaneousbeiapp.mvc.WalletTypeItem;
-
 
 import java.util.ArrayList;
 
 
->>>>>>> develop
 /**
  * Created by Administrator on 2016/11/1.
  */

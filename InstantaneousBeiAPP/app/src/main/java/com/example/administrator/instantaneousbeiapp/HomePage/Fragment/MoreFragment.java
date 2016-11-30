@@ -12,19 +12,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-<<<<<<< HEAD
-import com.example.administrator.instantaneousbeiapp.menu.MenuSet;
-import com.example.administrator.instantaneousbeiapp.menu.RespectInsranraneoous;
-import com.example.administrator.instantaneousbeiapp.menu.UseAccount;
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.register.Derive;
-=======
-
-import com.example.administrator.instantaneousbeiapp.R;
->>>>>>> develop
+import com.example.administrator.instantaneousbeiapp.adapter.mMoreAdapter;
 import com.example.administrator.instantaneousbeiapp.login.MoreData;
 import com.example.administrator.instantaneousbeiapp.login.SuggestionActivity;
-import com.example.administrator.instantaneousbeiapp.adapter.mMoreAdapter;
 import com.example.administrator.instantaneousbeiapp.menu.MenuSet;
 import com.example.administrator.instantaneousbeiapp.menu.RespectInsranraneoous;
 import com.example.administrator.instantaneousbeiapp.menu.UseAccount;

@@ -6,17 +6,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
-import android.graphics.Point;
-<<<<<<< HEAD
-=======
 import android.text.TextUtils;
->>>>>>> develop
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-
 import com.example.administrator.instantaneousbeiapp.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,11 +18,9 @@ import java.util.List;
  * Created by Administrator on 2016/11/28.
  */
 public class PatterView extends View {
-<<<<<<< HEAD
-=======
+
     //监听器
     OnPatterChangeListener onPatterChangeListener;
->>>>>>> develop
     //矩阵
     public Matrix matrix = new Matrix();
     //按下的点的集合
@@ -138,22 +130,15 @@ public class PatterView extends View {
             height = width;
         }
 
-<<<<<<< HEAD
-        //图片资源
-        pointNormal = BitmapFactory.decodeResource(getResources(), R.mipmap.oval_pressed);//正常
-=======
+
         //3.图片资源
         pointNormal = BitmapFactory.decodeResource(getResources(), R.mipmap.grey);//正常
->>>>>>> develop
         pointPressed = BitmapFactory.decodeResource(getResources(), R.mipmap.wallet_solid_round_green_cyan);//划过
         pointError = BitmapFactory.decodeResource(getResources(), R.mipmap.wallet_concentric_circles_blue_gery);//错误
         linePressed = BitmapFactory.decodeResource(getResources(), R.mipmap.ddd);//划过
         lineError = BitmapFactory.decodeResource(getResources(), R.mipmap.qqq);//错误
-<<<<<<< HEAD
-=======
 
         //4.点的坐标
->>>>>>> develop
         points[0][0] = new Point(offsetsX + width / 4, offsetsY + width / 4);
         points[0][1] = new Point(offsetsX + width / 2, offsetsY + width / 4);
         points[0][2] = new Point(offsetsX + width - width / 4, offsetsY + width / 4);
@@ -168,9 +153,6 @@ public class PatterView extends View {
 
         //图片资源的半径
         bitmapR = pointNormal.getHeight() / 2;
-<<<<<<< HEAD
-        //初始化完成
-=======
 
         //6.设置密码
         int index =1;
@@ -181,7 +163,6 @@ public class PatterView extends View {
             }
         }
         //7.初始化完成
->>>>>>> develop
         isInit = true;
     }
 
@@ -192,10 +173,6 @@ public class PatterView extends View {
         movingX = event.getX();
         movingY = event.getY();
         Point point = null;
-<<<<<<< HEAD
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN://鼠标按下
-=======
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN://鼠标按下
@@ -203,7 +180,7 @@ public class PatterView extends View {
                 if(onPatterChangeListener != null){
                     onPatterChangeListener.onPatterStart(true);
                 }
->>>>>>> develop
+
                 resetPoint();
                 point = checkSelectPoint();
                 if (point != null) {
@@ -243,10 +220,10 @@ public class PatterView extends View {
             if (pointList.size() == 1) {
                 resetPoint();
                 //绘制错误
-<<<<<<< HEAD
+
             } else if (pointList.size() < 5 && pointList.size() > 2) {
                 errorPoint();
-=======
+
             } else if (pointList.size() < 5 && pointList.size() > 0) {
                 errorPoint();
                 if(onPatterChangeListener != null){
@@ -264,7 +241,7 @@ public class PatterView extends View {
                     }
                     onPatterChangeListener.onPatterChange(passwordStr);
                 }
->>>>>>> develop
+
             }
         }
 
@@ -398,11 +375,10 @@ public class PatterView extends View {
         return degrees;
     }
 
-<<<<<<< HEAD
+
     //自定义的点
-=======
-    //1.自定义的点
->>>>>>> develop
+
+
     public static class Point{
         //正常
         public static int STATE_NORMAL = 0;
@@ -437,8 +413,7 @@ public class PatterView extends View {
             return  Math.sqrt((pointX-movingX)*(pointX-movingX)+(pointY-movingY)*(pointY-movingY))<r;
         }
     }
-<<<<<<< HEAD
-=======
+
 
     /**
      * 图案监听器
@@ -457,5 +432,5 @@ public class PatterView extends View {
             this.onPatterChangeListener = onPatterChangeListener;
         }
     }
->>>>>>> develop
+
 }
