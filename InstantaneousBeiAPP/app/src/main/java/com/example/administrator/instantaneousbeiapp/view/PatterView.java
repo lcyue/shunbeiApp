@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.author_jersuen;
+package com.example.administrator.instantaneousbeiapp.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;

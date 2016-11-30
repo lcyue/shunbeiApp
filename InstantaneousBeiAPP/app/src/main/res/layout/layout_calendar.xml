@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.Calendar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_left_blue"
+            android:layout_gravity="center"
+            android:padding="15dp"/>
+        <TextView
+            android:id="@+id/popupwindow_calendar_month"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:gravity="center"
+            android:textColor="#2ECCCB"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <com.example.administrator.instantaneousbeiapp.view.DemoSignCalendar
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:clickable="true"
+        android:id="@+id/popupwindow_calendar">
+
+    </com.example.administrator.instantaneousbeiapp.view.DemoSignCalendar>
+
+    <Button
+        android:id="@+id/btn_signIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_cyan"
+        android:text="点击签到"/>
+</LinearLayout>

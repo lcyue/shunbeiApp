@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
@@ -89,14 +90,33 @@ public class GuideMainTransition extends Activity {
             float start = motionEvent.getX();
             float end = motionEvent1.getX();
             float move  = end - start;
-            if (move > 0){
+            if (move > 100){
                 viewFlipper.stopFlipping();
-                viewFlipper.showPrevious();
-                viewFlipper.startFlipping();
-            }else {
+
+                if (viewFlipper.getDisplayedChild() != 0 ){
+                    viewFlipper.setInAnimation(AnimationUtils.loadAnimation(GuideMainTransition.this,
+                            R.anim.push_right_in));
+                    viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(GuideMainTransition.this,
+                            R.anim.push_right_out));
+                    viewFlipper.showPrevious();
+                    viewFlipper.startFlipping();
+                }
+
+
+
+            }
+            if (move < -100){
                 viewFlipper.stopFlipping();
-                viewFlipper.showNext();
-                viewFlipper.startFlipping();
+
+                if (viewFlipper.getDisplayedChild() != 3){
+                    viewFlipper.setInAnimation(AnimationUtils.loadAnimation(GuideMainTransition.this,
+                            R.anim.push_left_in));
+                    viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(GuideMainTransition.this,
+                            R.anim.push_left_out));
+                    viewFlipper.showNext();
+                    viewFlipper.startFlipping();
+                }
+
             }
             return false;
         }

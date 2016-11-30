@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.administrator.instantaneousbeiapp.author_jersuen.PatterView
+    <com.example.administrator.instantaneousbeiapp.view.PatterView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/patterView"/>

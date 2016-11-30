@@ -53,14 +53,14 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.ShunbeiLogin"
             android:launchMode="singleTask"/><!--登录页面-->
         <activity android:name=".homepage.HomeMainActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask"/><!--首页-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.DuanWangActivity"/><!--断网页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.voice.VoiceActivity"/><!--语音页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.menu.UseAccount"/><!--用户资料-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.menu.MenuSet"/><!--菜单设置-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.menu.GesturesPassWord"/><!--菜单手势密码-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.SuggestionActivity"/><!--意见反馈-->
-        <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Calendar"/><!--明细日历-->
+        <!--明细日历-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.detail.Particulars"/><!--没用的-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Derive"/><!--数据导出-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Deadline"/><!--选择时间-->
@@ -70,7 +70,7 @@
         <activity android:name=".detail.DemoCehuaActivity"/>
         <!--<activity android:name=".Guide.GuideMainTransition"/>&lt;!&ndash;引导页开始&ndash;&gt;-->
         <activity android:name=".menu.RespectInsranraneoous"/><!--关于我们-->
-
+        <activity android:name=".view.Calendar"/><!--日历-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.RegisterActivity"/><!--签名-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity"/><!--手势页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.PhoneBindingActivity"/><!--绑定手机页面-->

@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
 
-    <com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu
+    <com.example.administrator.instantaneousbeiapp.view.DemoArcMenu
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         hyman:position="center_btn"
@@ -50,6 +50,6 @@
            
             />
 
-    </com.example.administrator.instantaneousbeiapp.detail.DemoArcMenu>
+    </com.example.administrator.instantaneousbeiapp.view.DemoArcMenu>
 
 </LinearLayout>
