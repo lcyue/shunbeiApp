@@ -7,8 +7,12 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.administrator.instantaneousbeiapp.R;
+<<<<<<< HEAD
 import com.example.administrator.instantaneousbeiapp.jizhang.ZhiChuActivity;
 
+=======
+import com.example.administrator.instantaneousbeiapp.jizhang.XuanzheShijianActivity;
+>>>>>>> develop
 
 /**
  * Created by Administrator on 2016/10/26.
