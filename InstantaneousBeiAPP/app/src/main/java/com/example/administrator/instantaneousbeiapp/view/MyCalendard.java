@@ -21,8 +21,6 @@ import java.util.List;
  * Created by Administrator on 2016/11/30.
  */
 public class MyCalendard extends Activity {
-    private int years;
-    private String months;
     private Button btn_signIn;
     private String date = null;// 设置默认选中的日期  格式为 “2014-04-05” 标准DATE格式
     private TextView popupwindow_calendar_month;
