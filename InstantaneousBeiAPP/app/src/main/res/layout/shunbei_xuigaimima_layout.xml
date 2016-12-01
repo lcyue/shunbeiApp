@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
         <EditText
+            android:id="@+id/inputPhoneEt_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="请输入手机号"
@@ -40,6 +41,7 @@
             android:layout_marginRight="30dp"
             android:padding="15dp"/>
         <TextView
+            android:id="@+id/test_get_code_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="获取验证码"
@@ -51,6 +53,7 @@
     </RelativeLayout>
 
     <EditText
+        android:id="@+id/inputCodeEt_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="输入验证码"
