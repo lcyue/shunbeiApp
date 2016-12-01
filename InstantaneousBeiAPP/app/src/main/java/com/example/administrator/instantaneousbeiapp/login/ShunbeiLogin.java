@@ -61,7 +61,6 @@ public class ShunbeiLogin extends Activity {
         shunbei_zhuce_btn.setOnClickListener(onClickListener);
         qq_login_btn.setOnClickListener(onClickListener);
         xinlang_login_btn.setOnClickListener(onClickListener);
-
     }
 
 

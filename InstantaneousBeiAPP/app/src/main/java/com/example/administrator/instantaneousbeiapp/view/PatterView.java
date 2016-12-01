@@ -220,6 +220,8 @@ public class PatterView extends View {
             if (pointList.size() == 1) {
                 resetPoint();
                 //绘制错误
+            } else if (pointList.size() < 3 && pointList.size() > 0) {
+
 
             } else if (pointList.size() < 5 && pointList.size() > 2) {
                 errorPoint();
@@ -341,16 +343,14 @@ public class PatterView extends View {
         if ( ax == bx ) {
             if ( by > ay ) {
                 degrees = 90;
-            }
-            else {
+            } else {
                 degrees = 270;
             }
         }
         else if ( by == ay ) {
             if ( ax > bx ) {
                 degrees = 180;
-            }
-            else {
+            } else {
                 degrees = 0;
             }
         }
@@ -358,16 +358,14 @@ public class PatterView extends View {
             if ( ax > bx ) {
                 if ( ay > by ) {// 第三象限
                     degrees = 180 + ( float ) ( Math.atan2( ay - by , ax - bx ) * 180 / Math.PI );
-                }
-                else {// 第二象限
+                } else {// 第二象限
                     degrees = 180 - ( float ) ( Math.atan2( by - ay , ax - bx ) * 180 / Math.PI );
                 }
             }
             else {
                 if ( ay > by ) {// 第四象限
                     degrees = 360 - ( float ) ( Math.atan2( ay - by , bx - ax ) * 180 / Math.PI );
-                }
-                else {// 第一象限
+                } else {// 第一象限
                     degrees = ( float ) ( Math.atan2( by - ay , bx - ax ) * 180 / Math.PI );
                 }
             }
