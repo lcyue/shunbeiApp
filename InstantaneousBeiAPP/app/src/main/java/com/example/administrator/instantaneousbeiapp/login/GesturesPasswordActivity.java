@@ -10,7 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.author_jersuen.PatterView;
+import com.example.administrator.instantaneousbeiapp.view.PatterView;
+
 
 /**
  * Created by Administrator on 2016/11/27.

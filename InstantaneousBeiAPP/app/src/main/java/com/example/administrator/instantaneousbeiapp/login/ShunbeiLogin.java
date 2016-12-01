@@ -14,10 +14,8 @@ import com.tencent.connect.common.Constants;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
+
 import org.json.JSONObject;
-
-
-
 
 /**
  * Created by Administrator on 2016/10/22.
