@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".view.MyCalendard">
+    tools:context=".detail.MyCalendard">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,22 +39,87 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
         <!--添加一周的布局-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="日"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="二"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="三"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="四"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>        <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="五"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>        <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="六"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+
     </LinearLayout>
 
-    <com.example.administrator.instantaneousbeiapp.view.DemoSignCalendar
+    <!--<com.example.administrator.instantaneousbeiapp.view.DemoSignCalendar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="300dp"-->
+        <!--android:clickable="false"-->
+        <!--android:id="@+id/popupwindow_calendar">-->
+
+    <!--</com.example.administrator.instantaneousbeiapp.view.DemoSignCalendar>-->
+
+    <com.example.administrator.instantaneousbeiapp.view.SignCalendar
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:clickable="true"
+        android:clickable="false"
         android:id="@+id/popupwindow_calendar">
 
-    </com.example.administrator.instantaneousbeiapp.view.DemoSignCalendar>
+    </com.example.administrator.instantaneousbeiapp.view.SignCalendar>
 
     <Button
         android:id="@+id/btn_signIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blue_cyan"
-        android:text="点击签到"/>
+        android:text="签到"/>
 </LinearLayout>

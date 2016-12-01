@@ -1,23 +1,23 @@
 package com.example.administrator.instantaneousbeiapp.view;
 
 public class sqlit {
-	String dates;
-	String isselct;
+	public String date;
+	public String isselct;
 
 	public sqlit() {
 	}
 
 	public sqlit(String date, String isselct) {
-		this.dates = date;
+		this.date = date;
 		this.isselct = isselct;
 	}
 
 	public String getDate() {
-		return dates;
+		return date;
 	}
 
 	public void setDate(String date) {
-		this.dates = date;
+		this.date = date;
 	}
 
 	public String getIsselct() {

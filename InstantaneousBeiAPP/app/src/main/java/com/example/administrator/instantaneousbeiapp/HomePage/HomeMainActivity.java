@@ -21,7 +21,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.view.MyCalendard;
+import com.example.administrator.instantaneousbeiapp.detail.MyCalendard;
 import com.example.administrator.instantaneousbeiapp.view.DemoArcMenu;
 import com.example.administrator.instantaneousbeiapp.view.DemoCeHua;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.DetailFragment;
@@ -54,7 +54,7 @@ public class HomeMainActivity extends FragmentActivity {
     LinearLayout voice;
     LinearLayout seting;
     LinearLayout qiandao;
-    TextView qiandaoNums;
+    TextView qiandaotext;
     Button outBtn;
     ImageView clock_btn;
     ImageView card_btn;
@@ -76,7 +76,7 @@ public class HomeMainActivity extends FragmentActivity {
         voice = (LinearLayout) findViewById(R.id.voice);
         seting = (LinearLayout) findViewById(R.id.setting);
         qiandao = (LinearLayout) findViewById(R.id.qiandao);
-        qiandaoNums = (TextView) findViewById(R.id.qiandao_nums);
+        qiandaotext = (TextView) findViewById(R.id.qiandao_text);
         outBtn = (Button) findViewById(R.id.out_btn);
 
         ArcMenu = (DemoArcMenu) findViewById(R.id.DemoArcmenu);
@@ -305,11 +305,12 @@ public class HomeMainActivity extends FragmentActivity {
 
                 case R.id.qiandao:
                     signData();
-                    if (sign ==true) {
-                        qiandaoNums.setText("+" + i);
-                        i++;
-                        sign = false;
-                    }
+                    intent = new  Intent(HomeMainActivity.this, MyCalendard.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("ischeck", "fause");
+                    intent.putExtras(bundle);//在用bundle 来Put数据后必需再Put到intent里面，否则没有传递
+                    Log.i("phone_numb","");
+                    startActivityForResult(intent,1000);//第二个参数为请求码
                     break;
                 case R.id.out_btn:
                     intent = new Intent(HomeMainActivity.this, ShunbeiLogin.class);
@@ -318,6 +319,22 @@ public class HomeMainActivity extends FragmentActivity {
             }
         }
     };
+    /*当需要从第二个页面获得数据返回的时候，重写该方法*/
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //请求码      ，    结果码       ， intent对象（包含绑定的数据）
+        if (resultCode == 1001){
+            if (data != null){//判断是否为空是未来避免强制返回时，第二个页面没有返回数据而导致的空指针
+                Log.i("intent",data.toString());
+                Bundle bundle = data.getExtras();
+                String Text=bundle.getString("Text");//第二个页面新传的数据
+                qiandaotext.setText(""+Text);
+                String ischeck =bundle.getString("ischeck");//从第一个页面传递给第二个页面的数据，没有修改然后原装返回
+                super.onActivityResult(requestCode, resultCode, data);
+            }
+        }
+
+    }
 
     // 签到逻辑判断
     boolean sign = false; //进行对每天签到的判断

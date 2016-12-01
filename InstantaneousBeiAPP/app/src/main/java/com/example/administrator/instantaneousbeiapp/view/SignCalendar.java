@@ -33,9 +33,9 @@ import com.example.administrator.instantaneousbeiapp.R;
  * @author sxc 类说明：
  */
 @SuppressWarnings("deprecation")
-public class DemoSignCalendar extends ViewFlipper implements
+public class SignCalendar extends ViewFlipper implements
     GestureDetector.OnGestureListener {
-  public static final int COLOR_BG_WEEK_TITLE = Color.parseColor("#2ECCCB"); // 星期标题背景颜色
+  public static final int COLOR_BG_WEEK_TITLE = Color.parseColor("#FF4167"); // 星期标题背景颜色
   public static final int COLOR_TX_WEEK_TITLE = Color.parseColor("#FFFFFF"); // 星期标题文字颜色
   public static final int BEFORE_TODAY_BACKGROUND = Color.parseColor("#FFE4E4E4"); // 星期标题文字颜色
   // public static final int COLOR_TX_THIS_MONTH_DAY = Color.parseColor("#aa564b4b"); // 当前月日历数字颜色
@@ -76,12 +76,12 @@ public class DemoSignCalendar extends ViewFlipper implements
   // id)
   private Map<String, Integer> dayBgColorMap = new HashMap<String, Integer>(); // 储存某个日子的背景色
 
-  public DemoSignCalendar(Context context, AttributeSet attrs) {
+  public SignCalendar(Context context, AttributeSet attrs) {
     super(context, attrs);
     init();
   }
 
-  public DemoSignCalendar(Context context) {
+  public SignCalendar(Context context) {
     super(context);
     init();
   }
@@ -126,27 +126,28 @@ public class DemoSignCalendar extends ViewFlipper implements
     title.setOrientation(LinearLayout.HORIZONTAL);
     LinearLayout.LayoutParams layout =
         new LinearLayout.LayoutParams(MarginLayoutParams.MATCH_PARENT,
-                0);
+            0);
+    Resources res = getResources();
+    tb = res.getDimension(R.dimen.historyscore_tb);
+    // layout.setMargins(0, 0, 0, (int) (tb * 1.2));
     title.setLayoutParams(layout);
-    title.setGravity(Gravity.CENTER);
     oneCalendar.addView(title);
 
-     //添加周末TextView
+    // 添加周末TextView
     for (int i = 0; i < COLS_TOTAL; i++) {
       TextView view = new TextView(getContext());
       view.setGravity(Gravity.CENTER);
       view.setPadding(0, 10, 0, 10);
-//      view.setText(weekday[i]);
+      //view.setText(weekday[i]);
       view.setTextColor(Color.WHITE);
       view.setLayoutParams(new LinearLayout.LayoutParams(0, -1, 1));
-//      title.addView(view);
+      //title.addView(view);
     }
 
     // 添加日期布局
     LinearLayout content = new LinearLayout(getContext());
     content.setOrientation(LinearLayout.VERTICAL);
     content.setLayoutParams(new LinearLayout.LayoutParams(-1, 0, 7f));
-    content.setGravity(Gravity.CENTER);
     oneCalendar.addView(content);
 
     // 添加日期TextView
@@ -154,12 +155,13 @@ public class DemoSignCalendar extends ViewFlipper implements
       LinearLayout row = new LinearLayout(getContext());
       row.setOrientation(LinearLayout.HORIZONTAL);
       row.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 0, 1));
-      row.setGravity(Gravity.CENTER);
       content.addView(row);
       // 绘制日历上的列
       for (int j = 0; j < COLS_TOTAL; j++) {
         RelativeLayout col = new RelativeLayout(getContext());
         col.setLayoutParams(new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1));
+        //col.setBackgroundResource(R.mipmap.gou);
+        // col.setBackgroundResource(R.drawable.sign_dialog_day_bg);
         col.setClickable(false);
         row.addView(col);
         // 给每一个日子加上监听
@@ -292,8 +294,8 @@ public class DemoSignCalendar extends ViewFlipper implements
             // 上面首先设置了一下默认的"当天"背景色，当有特殊需求时，才给当日填充背景色
             // 设置日期背景色
             if (dayBgColorMap.get(dates[i][j]) != null) {
-               view.setTextColor(getResources().getColor(R.color.black));
-               view.setBackgroundResource(dayBgColorMap.get(dates[i][j]));
+              // view.setTextColor(Color.WHITE);
+              //view.setBackgroundResource(dayBgColorMap.get(dates[i][j]));
             }
             // 设置标记
             setMarker(group, i, j);
@@ -311,8 +313,8 @@ public class DemoSignCalendar extends ViewFlipper implements
             view.setTextColor(COLOR_TX_OTHER_MONTH_DAY);
             // 设置日期背景色
             if (dayBgColorMap.get(dates[i][j]) != null) {
-               view.setBackgroundResource(dayBgColorMap
-               .get(dates[i][j]));
+              // view.setBackgroundResource(dayBgColorMap
+              // .get(dates[i][j]));
             } else {
               view.setBackgroundColor(Color.TRANSPARENT);
             }
@@ -354,7 +356,9 @@ public class DemoSignCalendar extends ViewFlipper implements
 
   /**
    * 根据当前月，展示一个日历
-   *
+   * 
+   * @param year
+   * @param month
    */
   public void showCalendar() {
     Date now = new Date();
@@ -626,14 +630,14 @@ public class DemoSignCalendar extends ViewFlipper implements
       if (childCount < 2) {
         RelativeLayout.LayoutParams params =
             new RelativeLayout.LayoutParams((int) (tb *2), (int) (tb *2));
-        //params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        //params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
         params.setMargins(0, 0, 1, 1);
-        params.addRule(RelativeLayout.CENTER_IN_PARENT);
+        //params.addRule(RelativeLayout.CENTER_IN_PARENT);
         ImageView markView = new ImageView(getContext());
         markView.setImageResource(marksMap.get(dates[i][j]));
         markView.setLayoutParams(params);
-        markView.setBackgroundResource(R.mipmap.gou);
+        markView.setBackgroundResource(R.mipmap.icon_qindao);
         group.addView(markView);
       }
     } else {

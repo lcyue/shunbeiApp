@@ -17,6 +17,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <!--摄相头权限，拍照需要用到 -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!--注：如需在打包或者生成APK的时候进行混淆，请在proguard.cfg中添加如下代码
           -keep class com.iflytek.**{*;}  -->
     <!--短信验证码权限-->
@@ -83,7 +84,8 @@
         <activity android:name=".detail.DemoCehuaActivity"/>
         <!--<activity android:name=".Guide.GuideMainTransition"/>&lt;!&ndash;引导页开始&ndash;&gt;-->
         <activity android:name=".menu.RespectInsranraneoous"/><!--关于我们-->
-        <activity android:name=".view.MyCalendard"/><!--日历-->
+        <activity android:name=".detail.MyCalendard"
+            android:launchMode="singleTop"/><!--日历-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.RegisterActivity"/><!--签名-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity"/><!--手势页面-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.PhoneBindingActivity"/><!--绑定手机页面-->
@@ -112,6 +114,15 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
 
+        <!--微博登录导的Activity与Service-->
+        <activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" >
+        </activity>
+        <service android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false">
+        </service>
     </application>
 
 </manifest>
