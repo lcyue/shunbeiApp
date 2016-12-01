@@ -292,8 +292,8 @@ public class DemoSignCalendar extends ViewFlipper implements
             // 上面首先设置了一下默认的"当天"背景色，当有特殊需求时，才给当日填充背景色
             // 设置日期背景色
             if (dayBgColorMap.get(dates[i][j]) != null) {
-              // view.setTextColor(Color.WHITE);
-              //view.setBackgroundResource(dayBgColorMap.get(dates[i][j]));
+               view.setTextColor(getResources().getColor(R.color.black));
+               view.setBackgroundResource(dayBgColorMap.get(dates[i][j]));
             }
             // 设置标记
             setMarker(group, i, j);
@@ -311,8 +311,8 @@ public class DemoSignCalendar extends ViewFlipper implements
             view.setTextColor(COLOR_TX_OTHER_MONTH_DAY);
             // 设置日期背景色
             if (dayBgColorMap.get(dates[i][j]) != null) {
-              // view.setBackgroundResource(dayBgColorMap
-              // .get(dates[i][j]));
+               view.setBackgroundResource(dayBgColorMap
+               .get(dates[i][j]));
             } else {
               view.setBackgroundColor(Color.TRANSPARENT);
             }
