@@ -4,17 +4,20 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
-import com.tencent.connect.common.Constants;
+import com.sina.weibo.sdk.auth.AuthInfo;
+import com.sina.weibo.sdk.auth.Oauth2AccessToken;
+import com.sina.weibo.sdk.auth.WeiboAuthListener;
+import com.sina.weibo.sdk.auth.sso.SsoHandler;
+import com.sina.weibo.sdk.exception.WeiboException;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
-
 import org.json.JSONObject;
 
 /**
@@ -30,6 +33,16 @@ public class ShunbeiLogin extends Activity {
     // Tencent类是SDK的主要实现类，开发者可通过Tencent类访问腾讯开放的OpenAPI。
     private static Tencent tencent;
     boolean isServerSideLogin;
+    //以下三个参数是新浪登录接口需要
+    SsoHandler mSsoHandler;
+    AuthInfo mAuthInfo;
+    Oauth2AccessToken mAccessToken;
+
+    @Override
+    protected void onDestroy() {
+        Log.i("onDestroy","===========onDestroy");
+        super.onDestroy();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +60,46 @@ public class ShunbeiLogin extends Activity {
         shunbei_login_btn.setOnClickListener(onClickListener);
         shunbei_zhuce_btn.setOnClickListener(onClickListener);
         qq_login_btn.setOnClickListener(onClickListener);
+        xinlang_login_btn.setOnClickListener(onClickListener);
+
     }
 
+
+
+    class AuthListener  implements WeiboAuthListener {
+
+        @Override
+        public void onComplete(Bundle values) {
+            // 从 Bundle 中解析 Token
+            mAccessToken = Oauth2AccessToken.parseAccessToken(values);
+            Log.i("mAccessToken","==="+mAccessToken);
+            if (mAccessToken.isSessionValid()) {
+                // 保存 Token 到 SharedPreferences
+                AccessTokenKeeper.writeAccessToken(ShunbeiLogin.this, mAccessToken);
+            } else {
+                // 当您注册的应用程序签名不正确时，就会收到 Code，请确保签名正确
+                String code = values.getString("code", "");
+            }
+        }
+
+
+        @Override
+        public void onCancel() {
+        }
+
+        @Override
+        public void onWeiboException(WeiboException e) {
+        }
+    }
+    //weibo授权需要在Activity的onActivityResult函数中，调用以下方法：
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (mSsoHandler != null) {
+            mSsoHandler.authorizeCallBack(requestCode, resultCode, data);
+
+        }
+    }
 
     IUiListener loginListener = new BaseUiListener(){
         @Override
@@ -147,9 +198,9 @@ public class ShunbeiLogin extends Activity {
     /** QQ登录第二步：存储token和openid */
     public  void initOpenidAndToken(JSONObject jsonObject) {
         try {
-            String token = jsonObject.getString(Constants.PARAM_ACCESS_TOKEN);
-            String expires = jsonObject.getString(Constants.PARAM_EXPIRES_IN);
-            String openId = jsonObject.getString(Constants.PARAM_OPEN_ID);
+            String token = jsonObject.getString(com.tencent.connect.common.Constants.PARAM_ACCESS_TOKEN);
+            String expires = jsonObject.getString(com.tencent.connect.common.Constants.PARAM_EXPIRES_IN);
+            String openId = jsonObject.getString(com.tencent.connect.common.Constants.PARAM_OPEN_ID);
             if (!TextUtils.isEmpty(token) && !TextUtils.isEmpty(expires)
                     && !TextUtils.isEmpty(openId)) {
                 tencent.setAccessToken(token, expires);
@@ -186,6 +237,14 @@ public class ShunbeiLogin extends Activity {
                     }else {
                         tencent.logout(ShunbeiLogin.this);
                     }
+                    break;
+
+                case R.id.xinlang_login_btn:
+                    mAuthInfo = new AuthInfo(ShunbeiLogin.this, Constants.APP_KEY, Constants.REDIRECT_URL, Constants.SCOPE);
+                    mSsoHandler = new SsoHandler(ShunbeiLogin.this, mAuthInfo);
+                    mSsoHandler.authorize(new AuthListener());
+//                  intent = new Intent(ShunbeiLogin.this,HomeMainActivity.class);
+//                  startActivity(intent);
                     break;
             }
         }

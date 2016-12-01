@@ -7,7 +7,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 public class DBManager
 {
@@ -25,7 +24,7 @@ public class DBManager
 
     /**
      * add persons
-     * 
+     *
      * @param persons
      */
     public void add(List<sqlit> persons)
@@ -37,7 +36,7 @@ public class DBManager
             for (sqlit person : persons)
             {
                 db.execSQL("INSERT INTO " + DatabaseHelper.TABLE_NAME
-                        + " VALUES(?, ?)", new Object[] { person.dates,
+                        + " VALUES(?, ?)", new Object[] { person.date,
                         person.isselct});
                 // 带两个参数的execSQL()方法，采用占位符参数？，把参数值放在后面，顺序对应
                 // 一个参数的execSQL()方法中，用户输入特殊字符时需要转义
@@ -53,7 +52,7 @@ public class DBManager
 
     /**
      * update person's age
-     * 
+     *
      * @param person
      */
     public void updateAge(sqlit person)
@@ -66,7 +65,7 @@ public class DBManager
 
     /**
      * delete old person
-     * 
+     *
      * @param person
      */
     public void deleteOldPerson(sqlit person)
@@ -77,7 +76,7 @@ public class DBManager
 
     /**
      * query all persons, return list
-     * 
+     *
      * @return List<Person>
      */
     public List<sqlit> query()
@@ -86,8 +85,8 @@ public class DBManager
         Cursor c = queryTheCursor();
         while (c.moveToNext())
         {
-        	sqlit person = new sqlit();
-            person.dates = c.getString(c.getColumnIndex("date1"));
+            sqlit person = new sqlit();
+            person.date = c.getString(c.getColumnIndex("date1"));
             person.isselct = c.getString(c.getColumnIndex("isselct"));
             persons.add(person);
         }
@@ -97,7 +96,7 @@ public class DBManager
 
     /**
      * query all persons, return cursor
-     * 
+     *
      * @return Cursor
      */
     public Cursor queryTheCursor()

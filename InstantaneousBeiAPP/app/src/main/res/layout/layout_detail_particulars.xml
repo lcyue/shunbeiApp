@@ -9,33 +9,15 @@
         android:layout_height="wrap_content"
         android:background="@color/green">
 
-        <ImageView
-            android:id="@+id/detail_menu_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:drawableLeft="@mipmap/icon_detail_return"
-            android:drawablePadding="8dp"
-            android:gravity="center_vertical"
-            android:padding="12dp"
-            android:src="@mipmap/icon_detail_navigation" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/datail"
             android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:padding="10dp"/>
 
-        <ImageView
-            android:id="@+id/cancel_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:padding="12dp"
-            android:src="@mipmap/icon_detail_date" />
     </RelativeLayout>
     <!--本月收入支出预算总数-->
 

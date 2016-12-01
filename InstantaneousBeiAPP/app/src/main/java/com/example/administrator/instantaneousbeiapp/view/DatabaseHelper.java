@@ -10,7 +10,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper// 继承SQLiteOpenHelper类
 {
-
     // 数据库版本号
     private static final int DATABASE_VERSION = 1;
     // 数据库名
@@ -21,14 +20,14 @@ public class DatabaseHelper extends SQLiteOpenHelper// 继承SQLiteOpenHelper类
 
     // 构造函数，调用父类SQLiteOpenHelper的构造函数
     public DatabaseHelper(Context context, String name, CursorFactory factory,
-            int version, DatabaseErrorHandler errorHandler)
+                          int version, DatabaseErrorHandler errorHandler)
     {
         super(context, name, factory, version, errorHandler);
 
     }
 
     public DatabaseHelper(Context context, String name, CursorFactory factory,
-            int version)
+                          int version)
     {
         super(context, name, factory, version);
         // SQLiteOpenHelper的构造函数参数：
@@ -57,7 +56,7 @@ public class DatabaseHelper extends SQLiteOpenHelper// 继承SQLiteOpenHelper类
 
         // 构建创建表的SQL语句（可以从SQLite Expert工具的DDL粘贴过来加进StringBuffer中）
         StringBuffer sBuffer = new StringBuffer();
- 
+
         sBuffer.append("CREATE TABLE [" + TABLE_NAME + "] (");
         sBuffer.append("[date1] TEXT,");
         sBuffer.append("[isselct] TEXT)");
@@ -91,5 +90,6 @@ public class DatabaseHelper extends SQLiteOpenHelper// 继承SQLiteOpenHelper类
         super.onOpen(db);
         // 每次打开数据库之后首先被执行
     }
+
 
 }

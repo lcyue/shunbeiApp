@@ -1,14 +1,16 @@
-package com.example.administrator.instantaneousbeiapp.view;
+package com.example.administrator.instantaneousbeiapp.detail;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.view.DBManager;
-import com.example.administrator.instantaneousbeiapp.view.DemoSignCalendar;
+import com.example.administrator.instantaneousbeiapp.view.SignCalendar;
 import com.example.administrator.instantaneousbeiapp.view.sqlit;
 
 import java.text.SimpleDateFormat;
@@ -20,13 +22,11 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/11/30.
  */
-public class Calendar extends Activity {
-    private int years;
-    private String months;
+public class MyCalendard extends Activity {
     private Button btn_signIn;
     private String date = null;// 设置默认选中的日期  格式为 “2014-04-05” 标准DATE格式
     private TextView popupwindow_calendar_month;
-    private DemoSignCalendar calendar;
+    private SignCalendar calendar;
     private List<String> list = new ArrayList<String>(); //设置标记列表
     DBManager dbManager;
     boolean isinput = false;
@@ -46,7 +46,7 @@ public class Calendar extends Activity {
         back_btn = (ImageView) findViewById(R.id.back_btn);
         popupwindow_calendar_month = (TextView) findViewById(R.id.popupwindow_calendar_month);
         btn_signIn = (Button) findViewById(R.id.btn_signIn);
-        calendar = (DemoSignCalendar) findViewById(R.id.popupwindow_calendar);
+        calendar = (SignCalendar) findViewById(R.id.popupwindow_calendar);
         popupwindow_calendar_month.setText(calendar.getCalendarYear() + "年"
                 + calendar.getCalendarMonth() + "月");
         if (null != date) {
@@ -57,17 +57,20 @@ public class Calendar extends Activity {
             popupwindow_calendar_month.setText(years + "年" + month + "月");
 
             calendar.showCalendar(years, month);
-            calendar.setCalendarDayBgColor(date,
-                    R.color.blue_cyan);
         }
-
+        add("2016-11-30");
+        Log.i("list1","========="+list.toString());
+        query();
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent backIntentBtn = getIntent();
+                backIntentBtn.putExtra("Text",""+btn_signIn.getText());//将签到情况回传给签到按钮
+                setResult(1001,backIntentBtn);
                 finish();
             }
         });
-        query();
+
         if(isinput){
             btn_signIn.setText("今日已签");
             btn_signIn.setEnabled(false);
@@ -82,44 +85,19 @@ public class Calendar extends Activity {
            calendar.addMarks(list, 0);*/
                 //将当前日期标示出来
                 add(df.format(today));
+                Log.i("list2","========="+list.toString());
                 //calendar.addMark(today, 0);
                 query();
                 HashMap<String, Integer> bg = new HashMap<String, Integer>();
 
-                calendar.setCalendarDayBgColor(today, R.mipmap.gou);
+                calendar.setCalendarDayBgColor(today, R.mipmap.icon_qindao);
                 btn_signIn.setText("今日已签");
                 btn_signIn.setEnabled(false);
             }
         });
-        //监听所选中的日期
-		calendar.setOnCalendarClickListener(new DemoSignCalendar.OnCalendarClickListener() {
-
-			public void onCalendarClick(int row, int col, String dateFormat) {
-				int month = Integer.parseInt(dateFormat.substring(
-						dateFormat.indexOf("-") + 1,
-						dateFormat.lastIndexOf("-")));
-
-				if (calendar.getCalendarMonth() - month == 1//跨年跳转
-						|| calendar.getCalendarMonth() - month == -11) {
-					calendar.lastMonth();
-
-				} else if (month - calendar.getCalendarMonth() == 1 //跨年跳转
-						|| month - calendar.getCalendarMonth() == -11) {
-					calendar.nextMonth();
-
-				} else {
-					list.add(dateFormat);
-					calendar.addMarks(list, 0);
-					calendar.removeAllBgColor();
-					calendar.setCalendarDayBgColor(dateFormat,
-							R.mipmap.gou);
-					date = dateFormat;//最后返回给全局 date
-				}
-			}
-		});
 
         //监听当前月份
-        calendar.setOnCalendarDateChangedListener(new DemoSignCalendar.OnCalendarDateChangedListener() {
+        calendar.setOnCalendarDateChangedListener(new SignCalendar.OnCalendarDateChangedListener() {
             public void onCalendarDateChanged(int year, int month) {
                 popupwindow_calendar_month
                         .setText(year + "年" + month + "月");
@@ -127,14 +105,10 @@ public class Calendar extends Activity {
         });
     }
 
-    public void add(String date)
-    {
+    public void add(String date) {
         ArrayList<sqlit> persons = new ArrayList<sqlit>();
-
         sqlit person1 = new sqlit(date,"true");
-
         persons.add(person1);
-
         dbManager.add(persons);
     }
 
@@ -143,7 +117,7 @@ public class Calendar extends Activity {
         List<sqlit> persons = dbManager.query();
         for (sqlit person : persons)
         {
-            list.add(person.dates);
+            list.add(person.date);
             if(date1.equals(person.getDate())){
                 isinput=true;
             }

@@ -39,5 +39,5 @@ dependencies {
     compile files('lib/open_sdk_r5756.jar')
     compile files('libs/Msc.jar')
     compile files('libs/gson-2.3.1.jar')
-
+    compile files('libs/weiboSDKCore_3.1.4.jar')
 }

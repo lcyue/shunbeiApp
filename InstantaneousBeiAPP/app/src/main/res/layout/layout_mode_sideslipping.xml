@@ -64,18 +64,11 @@
                     android:layout_marginRight="20dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/check_in_time"
-                        android:textColor="@color/black_word"
-                        android:textSize="16sp"/>
-
-                    <TextView
-                        android:id="@+id/qiandao_nums"
+                        android:id="@+id/qiandao_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="16sp"
-                        android:text=""
+                        android:text="@string/check_in_time"
                         android:textColor="@color/black_word"
                         android:layout_margin="5dp"/>
                 </LinearLayout>
