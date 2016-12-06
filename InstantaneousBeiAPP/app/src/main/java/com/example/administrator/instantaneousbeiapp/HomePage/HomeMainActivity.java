@@ -22,6 +22,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.detail.MyCalendard;
+import com.example.administrator.instantaneousbeiapp.menu.RenmidChargeAccountDelete;
+import com.example.administrator.instantaneousbeiapp.menu.RenmidChargeAccoutSave;
 import com.example.administrator.instantaneousbeiapp.view.DemoArcMenu;
 import com.example.administrator.instantaneousbeiapp.view.DemoCeHua;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.DetailFragment;
@@ -289,7 +291,7 @@ public class HomeMainActivity extends FragmentActivity {
 
                 case R.id.remind:
                     //记账提醒
-                    intent = new Intent(HomeMainActivity.this, MyCalendard.class);
+                    intent = new Intent(HomeMainActivity.this, RenmidChargeAccountDelete.class);
                     startActivity(intent);
                     break;
                 case R.id.voice:
@@ -383,7 +385,6 @@ public class HomeMainActivity extends FragmentActivity {
 
         dudgetType.setOnClickListener(onClickListener);
         accountType.setOnClickListener(onClickListener);
-
 
     }
 }

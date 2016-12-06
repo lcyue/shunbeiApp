@@ -20,9 +20,10 @@
         android:layout_marginTop="15dp"
         android:textColor="@color/black_nomal"/>
     <EditText
+        android:id="@+id/login_nums"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="手机号/用户名"
+        android:hint="手机号"
         android:textColorHint="#BBBBBB"
         android:background="@drawable/kuang_shuru_grey"
         android:layout_marginTop="20dp"
@@ -30,6 +31,7 @@
         android:layout_marginRight="30dp"
         android:padding="10dp"/>
     <EditText
+        android:id="@+id/login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="密码"

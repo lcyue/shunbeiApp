@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
     <!--标题-->
     <RelativeLayout
         android:id="@+id/menu_title"
@@ -11,11 +12,11 @@
         android:background="@color/blue_cyan">
 
         <ImageView
+            android:id="@+id/back_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
+            android:padding="10dp"
             android:src="@mipmap/ico_aleft" />
 
         <TextView
@@ -26,100 +27,17 @@
             android:textColor="@color/white"
             android:textSize="25sp" />
     </RelativeLayout>
-    <!--提醒-->
     <TextView
-        android:id="@+id/menu_remind"
-        android:layout_below="@id/menu_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/menu_remind_character"
-        android:layout_marginLeft="15dp"
-        android:textColor="@color/gery_white"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp"/>
-    <!--线-->
-    <View
-        android:id="@+id/menu_view2"
-        android:layout_below="@id/menu_remind"
+        android:hint="向左滑动可删除"/>
+    <ListView
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/menu_view"/>
-    <!--时间详情-->
-    <LinearLayout
-        android:id="@+id/menu_liner_time"
-        android:layout_below="@id/menu_view2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginLeft="30dp">
-        <TextView
-            android:id="@+id/menu_time1"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="08:30"
-            android:textColor="@color/black"
-            android:textSize="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-        <TextView
-            android:id="@+id/menu_on_text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@mipmap/icon_menu_delete"
-            android:text="@string/menu_delete"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-    </LinearLayout>
-    <!--线-->
-    <View
-        android:id="@+id/menu_view3"
-        android:layout_below="@id/menu_liner_time"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/menu_view"/>
-    <LinearLayout
-        android:id="@+id/menu_liner_time1"
-        android:layout_below="@id/menu_view3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginLeft="30dp">
-        <TextView
-            android:id="@+id/menu_time"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="08:30"
-            android:textColor="@color/black"
-            android:textSize="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-        <TextView
-            android:id="@+id/menu_on_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@mipmap/icon_menu_delete"
-            android:text="@string/menu_delete"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-    </LinearLayout>
-    <!--线-->
-    <View
-        android:id="@+id/menu_view1"
-        android:layout_below="@id/menu_liner_time1"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/menu_view"/>
-    <!--编辑-->
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/menu_view"
+        android:dividerHeight="1dp"></ListView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -130,6 +48,7 @@
         android:layout_marginBottom="5dp">
 
         <Button
+            android:id="@+id/addRemind"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -138,18 +57,7 @@
             android:textSize="20sp"
             android:textColor="@color/black_gery"/>
 
-        <View
-            android:layout_width="5dp"
-            android:layout_height="match_parent"
-            android:background="@color/white" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/menu_comile"
-            android:text="@string/menu_compile_name"
-            android:textSize="20sp"
-            android:textColor="@color/white"/>
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

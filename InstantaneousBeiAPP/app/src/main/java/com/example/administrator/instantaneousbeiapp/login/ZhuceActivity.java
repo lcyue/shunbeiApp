@@ -21,6 +21,16 @@ import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -40,6 +50,7 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
     private EditText inputPhoneEt;
     // 验证码输入框
     private EditText inputCodeEt;
+    EditText repassword_edit;
     EditText password_edit;
     int i = 60;
 
@@ -54,6 +65,7 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
         inputCodeEt = (EditText) findViewById(R.id.inputCodeEt_edit);
         inputPhoneEt = (EditText) findViewById(R.id.inputPhoneEt_edit);
         password_edit = (EditText) findViewById(R.id.password_edit);
+        repassword_edit = (EditText) findViewById(R.id.repassword_edit);
 
         signInbtton.setOnClickListener(this);
         registerBtton.setOnClickListener(this);
@@ -72,12 +84,74 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
 
             @Override
             public void afterTextChanged(Editable s) {
+                password = s.toString();
+            }
+        });
+        repassword_edit.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                repassword = editable.toString();
             }
         });
 
         init();
     }
+    String phoneNums;
+    String password;
+    String repassword;
+    public void register(){
+        String httpurl = "http://10.0.2.2/index.php/home/index/register?" + "user_name="+phoneNums+"&user_password="
+                +password+"&user_repassword="+repassword;
+
+        Log.i("============",""+phoneNums+" "+password+" "+repassword);
+        try {
+            URL url = new URL(httpurl);
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+            httpURLConnection.setRequestMethod("GET");
+            httpURLConnection.setConnectTimeout(5000);
+            httpURLConnection.connect();
+            if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK){
+                StringBuilder stringBuilder = new StringBuilder();
+                InputStream inputStream = httpURLConnection.getInputStream();//获得返回的数据流对象
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream,"UTF-8");
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String s;
+                while ((s=bufferedReader.readLine()) != null) {
+                    stringBuilder.append(s);
+                }
+                String data = stringBuilder.toString();
+                Log.i("data====>",""+data);
+
+                JSONObject jsonObject = new JSONObject(data);
+                int status = jsonObject.getInt("status");
+                String message = jsonObject.getString("message");
+                if(aBoolean = true && status == 200){
+                    Intent intent = new Intent(ZhuceActivity.this,
+                            XugaiChenggongActivity.class);
+                    startActivity(intent);
+                }
+            }else {
+                Log.i("getResponseCode()",""+httpURLConnection.getResponseCode());
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void init(){
 
@@ -101,7 +175,8 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        String phoneNums = inputPhoneEt.getText().toString();
+        phoneNums = inputPhoneEt.getText().toString();
+        Intent intent;
         switch (v.getId()) {
             case R.id.test_get_code_text:
                 // 1. 通过规则判断手机号
@@ -134,16 +209,25 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
 
             case R.id.sign_in_btton:
                 //将收到的验证码和手机号提交再次核对
-                SMSSDK.submitVerificationCode("86", phoneNums, inputCodeEt
-                        .getText().toString());
+//                SMSSDK.submitVerificationCode("86", phoneNums, inputCodeEt
+//                        .getText().toString());
+                new Thread(){
+                    @Override
+                    public void run() {
+                        register();
+                    }
+                }.start();
+
+
                 break;
             case R.id.register_btton:
-                    Intent intent = new Intent(ZhuceActivity.this, ShunbeiLogin.class);//登录页面
+                    intent = new Intent(ZhuceActivity.this, ShunbeiLogin.class);//登录页面
                     startActivity(intent);
                     break;
         }
     }
 
+    Boolean aBoolean = false;
 
     Handler handler = new Handler() {
         public void handleMessage(Message msg) {
@@ -174,16 +258,15 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
 //                    }
 //                }
                 if(result==SMSSDK.RESULT_COMPLETE){
-                    HashMap<String,Object> maps = (HashMap<String, Object>) data;
-                    String country = (String) maps.get("country");
-                    String phone = (String) maps.get("phone");
-                    submitUserInfo(country,phone);
+//                    HashMap<String,Object> maps = (HashMap<String, Object>) data;
+//                    String country = (String) maps.get("country");
+//                    String phone = (String) maps.get("phone");
+//                    submitUserInfo(country,phone);
                     if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
                         Toast.makeText(getApplicationContext(), "提交验证码成功",
                                 Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(ZhuceActivity.this,
-                                XugaiChenggongActivity.class);
-                        startActivity(intent);
+                        aBoolean = true;
+
                     } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
                         Toast.makeText(getApplicationContext(), "正在获取验证码",
                                 Toast.LENGTH_SHORT).show();

@@ -3,11 +3,16 @@ package com.example.administrator.instantaneousbeiapp.login;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
 import com.sina.weibo.sdk.auth.AuthInfo;
@@ -18,7 +23,18 @@ import com.sina.weibo.sdk.exception.WeiboException;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Created by Administrator on 2016/10/22.
@@ -30,6 +46,8 @@ public class ShunbeiLogin extends Activity {
     ImageView qq_login_btn;
     ImageView xinlang_login_btn;
     ImageView weixing_login_btn;
+    EditText login_nums;
+    EditText login_password;
     // Tencent类是SDK的主要实现类，开发者可通过Tencent类访问腾讯开放的OpenAPI。
     private static Tencent tencent;
     boolean isServerSideLogin;
@@ -55,12 +73,97 @@ public class ShunbeiLogin extends Activity {
         qq_login_btn = (ImageView) findViewById(R.id.qq_login_btn);
         xinlang_login_btn = (ImageView) findViewById(R.id.xinlang_login_btn);
         weixing_login_btn = (ImageView) findViewById(R.id.weixing_login_btn);
+        login_nums = (EditText) findViewById(R.id.login_nums);
+        login_password = (EditText) findViewById(R.id.login_password);
 
         shunbei_xiugai_btn.setOnClickListener(onClickListener);
         shunbei_login_btn.setOnClickListener(onClickListener);
         shunbei_zhuce_btn.setOnClickListener(onClickListener);
         qq_login_btn.setOnClickListener(onClickListener);
         xinlang_login_btn.setOnClickListener(onClickListener);
+
+        //输入框监听
+        login_nums.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                phoneNums = editable.toString();
+            }
+        });
+        //输入密码框监听
+        login_password.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                password = editable.toString();
+            }
+        });
+    }
+
+    String phoneNums;
+    String password;
+    int status;
+    String message;
+    public void login(){
+        String httpurl = "http://10.0.2.2/index.php/home/index/login?" + "user_name="+phoneNums+"&user_password="
+                +password;
+
+        try {
+            URL url = new URL(httpurl);
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+            httpURLConnection.setRequestMethod("GET");
+            httpURLConnection.setConnectTimeout(5000);
+            httpURLConnection.connect();
+            if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK){
+                StringBuilder stringBuilder = new StringBuilder();
+                InputStream inputStream = httpURLConnection.getInputStream();//获得返回的数据流对象
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream,"UTF-8");
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String s;
+                while ((s=bufferedReader.readLine()) != null) {
+                    stringBuilder.append(s);
+                }
+                String data = stringBuilder.toString();
+                Log.i("data====>",""+data);
+
+                JSONObject jsonObject = new JSONObject(data);
+                status = jsonObject.getInt("status");
+                message = jsonObject.getString("message");
+                JSONArray jsonArray = jsonObject.getJSONArray("result");
+                for (int i = 0;i<jsonArray.length();i++){
+                    JSONObject object = jsonArray.getJSONObject(i);
+                    int user_id = jsonObject.getInt("user_id");
+                    String user_name = jsonObject.getString("user_name");
+                    String token = jsonObject.getString("token");
+                }
+            }else {
+                Log.i("getResponseCode()",""+httpURLConnection.getResponseCode());
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -107,59 +210,6 @@ public class ShunbeiLogin extends Activity {
 //            updateUserInfo();
         }
     };
-    /** QQ登录第三步：获取用户信息 */
-//    private void updateUserInfo() {
-//        if (tencent != null && tencent.isSessionValid()) {
-//            IUiListener listener = new IUiListener() {
-//                @Override
-//                public void onError(UiError e) {
-//                    Message msg = new Message();
-//                    msg.obj = "把手机时间改成获取网络时间";
-//                    msg.what = 1;
-//                    mHandler.sendMessage(msg);
-//                }
-//
-//                @Override
-//                public void onComplete(final Object response) {
-//                    Message msg = new Message();
-//                    msg.obj = response;
-//                    msg.what = 0;
-//                    mHandler.sendMessage(msg);
-//                }
-//                @Override
-//                public void onCancel() {
-//                    Message msg = new Message();
-//                    msg.obj = "获取用户信息失败";
-//                    msg.what = 2;
-//                    mHandler.sendMessage(msg);
-//                }
-//            };
-////            mInfo = new UserInfo(this, tencent.getQQToken());
-////            mInfo.getUserInfo(listener);
-//        } else {
-//
-//        }
-//    }
-//    Handler mHandler = new Handler() {
-//        @Override
-//        public void handleMessage(Message msg) {
-//            if (msg.what == 0) {
-//                JSONObject response = (JSONObject) msg.obj;
-//                if (response.has("nickname")) {
-//
-//                    Log.i("","获取用户信息成功，返回结果："+response.toString());
-////                        mThirdLoginResult.setText("登录成功\n"+"昵称:"+response.getString("nickname")+"\n头像地址:"+response.get("figureurl_qq_1"));
-//                    intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
-//                    startActivity(intent);
-//                }
-//            }else if(msg.what == 1){
-////                mThirdLoginResult.setText(msg+"");
-//            }else if(msg.what == 2){
-////                mThirdLoginResult.setText(msg+"");
-//            }
-//        }
-//
-//    };
 
     private class BaseUiListener implements IUiListener {
         @Override
@@ -215,8 +265,18 @@ public class ShunbeiLogin extends Activity {
             Intent intent;
             switch (v.getId()){
                 case R.id.shunbei_login_btn:
-                    intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
-                    startActivity(intent);
+                    new Thread(){
+                        @Override
+                        public void run() {
+                            login();
+                            if (status == 200){
+                                Intent intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
+                                startActivity(intent);
+                            }else {
+                                Toast.makeText(ShunbeiLogin.this, ""+message , Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }.start();
                     break;
                 case R.id.shunbei_zhuce_btn:
                     intent = new Intent(ShunbeiLogin.this,ZhuceActivity.class);
