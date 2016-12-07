@@ -8,6 +8,9 @@ import android.widget.ImageView;
 
 import com.example.administrator.instantaneousbeiapp.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Administrator on 2016/10/30.
  */
@@ -22,6 +25,7 @@ public class SuggestionActivity extends Activity {
 
         backBtn.setOnClickListener(onClickListener);
     }
+
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override

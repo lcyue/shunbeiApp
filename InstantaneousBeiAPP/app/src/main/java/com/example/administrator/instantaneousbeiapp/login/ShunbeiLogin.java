@@ -209,6 +209,7 @@ public class ShunbeiLogin extends Activity {
         }
     }
 
+
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -231,7 +232,7 @@ public class ShunbeiLogin extends Activity {
                     /** 判断是否登陆过 */
                     if(!tencent.isSessionValid()){
                         tencent.login(ShunbeiLogin.this,"all",loginListener);
-                        isServerSideLogin =false;
+                        isServerSideLogin = false;
                     /** 登陆过注销之后在登录 */
                     }else {
                         tencent.logout(ShunbeiLogin.this);

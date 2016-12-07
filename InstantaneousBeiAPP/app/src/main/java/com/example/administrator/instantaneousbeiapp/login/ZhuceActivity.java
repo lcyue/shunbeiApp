@@ -42,6 +42,7 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
     private EditText inputCodeEt;
     EditText password_edit;
     int i = 60;
+    String numb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,7 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                 numb = s.toString();//获得密码
             }
 
             @Override
@@ -174,12 +175,14 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
 //                    }
 //                }
                 if(result==SMSSDK.RESULT_COMPLETE){
-                    HashMap<String,Object> maps = (HashMap<String, Object>) data;
-                    String country = (String) maps.get("country");
-                    String phone = (String) maps.get("phone");
-                    submitUserInfo(country,phone);
+//                    HashMap<String,Object> maps = (HashMap<String, Object>) data;
+//                    String country = (String) maps.get("country");
+//                    String phone = (String) maps.get("phone");
+//                    submitUserInfo(country,phone);
                     if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
                         Toast.makeText(getApplicationContext(), "提交验证码成功",
+                                Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ZhuceActivity.this, ""+numb,
                                 Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(ZhuceActivity.this,
                                 XugaiChenggongActivity.class);

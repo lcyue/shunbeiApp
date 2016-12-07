@@ -39,7 +39,9 @@
             android:background="@drawable/kuang_shuru_grey"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:padding="15dp"/>
+            android:padding="15dp"
+            android:inputType="phone"
+            android:maxLength="11"/>
         <TextView
             android:id="@+id/test_get_code_text"
             android:layout_width="wrap_content"
@@ -62,7 +64,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:padding="15dp"/>
+        android:padding="15dp"
+        android:inputType="phone"
+        android:maxLength="6"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,7 +76,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:padding="15dp"/>
+        android:padding="15dp"
+        android:inputType="text"
+        android:maxLength="18"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,7 +88,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:padding="15dp"/>
+        android:padding="15dp"
+        android:inputType="text"
+        android:maxLength="18"/>
 
     <TextView
         android:id="@+id/shunbei_xuigai_wancheng_btn"

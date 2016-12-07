@@ -51,9 +51,9 @@ public class XuigaiMimaActivity extends Activity implements View.OnClickListener
 
         requestCode.setOnClickListener(this);
         back_btn.setOnClickListener(this);
+        shunbei_xuigai_wancheng_btn.setOnClickListener(this);
     }
     public void init(){
-
         // 启动短信验证sdk
         SMSSDK.initSDK(this, APPKEY, APPSECRETE);
         EventHandler eventHandler = new EventHandler(){
@@ -64,8 +64,6 @@ public class XuigaiMimaActivity extends Activity implements View.OnClickListener
                 msg.arg2 = result;
                 msg.obj = data;
                 handler.sendMessage(msg);
-
-
             }
         };
         //注册回调监听接口
@@ -105,7 +103,7 @@ public class XuigaiMimaActivity extends Activity implements View.OnClickListener
                 }).start();
                 break;
 
-            case R.id.sign_in_btton:
+            case R.id.shunbei_xuigai_wancheng_btn:
                 //将收到的验证码和手机号提交再次核对
                 SMSSDK.submitVerificationCode("86", phoneNums, inputCodeEt
                         .getText().toString());
@@ -146,10 +144,10 @@ public class XuigaiMimaActivity extends Activity implements View.OnClickListener
 //                    }
 //                }
                 if(result==SMSSDK.RESULT_COMPLETE){
-                    HashMap<String,Object> maps = (HashMap<String, Object>) data;
-                    String country = (String) maps.get("country");
-                    String phone = (String) maps.get("phone");
-                    submitUserInfo(country,phone);
+//                    HashMap<String,Object> maps = (HashMap<String, Object>) data;
+//                    String country = (String) maps.get("country");
+//                    String phone = (String) maps.get("phone");
+//                    submitUserInfo(country,phone);
                     if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
                         Toast.makeText(getApplicationContext(), "提交验证码成功",
                                 Toast.LENGTH_SHORT).show();
