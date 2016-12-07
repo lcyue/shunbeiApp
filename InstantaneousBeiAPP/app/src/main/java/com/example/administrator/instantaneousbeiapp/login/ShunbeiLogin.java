@@ -1,7 +1,9 @@
 package com.example.administrator.instantaneousbeiapp.login;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -122,6 +124,10 @@ public class ShunbeiLogin extends Activity {
     String password;
     int status;
     String message;
+
+    int user_id ;
+    String user_name ;
+    String token ;
     public void login(){
         String httpurl = "http://10.0.2.2/index.php/home/index/login?" + "user_name="+phoneNums+"&user_password="
                 +password;
@@ -147,13 +153,12 @@ public class ShunbeiLogin extends Activity {
                 JSONObject jsonObject = new JSONObject(data);
                 status = jsonObject.getInt("status");
                 message = jsonObject.getString("message");
-                JSONArray jsonArray = jsonObject.getJSONArray("result");
-                for (int i = 0;i<jsonArray.length();i++){
-                    JSONObject object = jsonArray.getJSONObject(i);
-                    int user_id = jsonObject.getInt("user_id");
-                    String user_name = jsonObject.getString("user_name");
-                    String token = jsonObject.getString("token");
-                }
+                JSONObject jsonArray = jsonObject.getJSONObject("result");
+                user_id = jsonArray.getInt("user_id");
+                user_name = jsonArray.getString("user_name");
+                Log.i("========",""+user_name);
+                token = jsonArray.getString("token");
+                saveSharePreferences();//将获取的数据存储起来
             }else {
                 Log.i("getResponseCode()",""+httpURLConnection.getResponseCode());
             }
@@ -166,6 +171,15 @@ public class ShunbeiLogin extends Activity {
         }
     }
 
+    //存储到本地
+    public void saveSharePreferences(){
+        SharedPreferences sharedPreferences1 = getSharedPreferences("shunbei", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences1.edit();
+        editor.putInt("user_id",user_id);
+        editor.putString("user_name",""+user_name);
+        editor.putString("token",""+token);
+        editor.commit();
+    }
 
 
     class AuthListener  implements WeiboAuthListener {
@@ -269,6 +283,7 @@ public class ShunbeiLogin extends Activity {
                         @Override
                         public void run() {
                             login();
+                            Log.i("message===",""+message);
                             if (status == 200){
                                 Intent intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
                                 startActivity(intent);

@@ -1,4 +1,4 @@
-package com.example.administrator.instantaneousbeiapp.login;
+package com.example.administrator.instantaneousbeiapp.menu;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,25 +12,25 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.R;
-import com.example.administrator.instantaneousbeiapp.menu.RenmidChargeAccountDelete;
-import com.example.administrator.instantaneousbeiapp.menu.UseAccount;
 
 /**
- * Created by Administrator on 2016/11/27.
+ * Created by Administrator on 2016/12/7.
  */
-public class RegisterActivity extends Activity {
+public class ActivityNickname extends Activity{
     ImageView backBtn;
     TextView saveingBtton;
     EditText editText;
-    String signature;
+    String nickname;
+
+    private static final int NICKNAME_RESULTCODE = 1060;;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_signature);
+        setContentView(R.layout.layout_nickname);
 
         backBtn = (ImageView) findViewById(R.id.back_btn);
         saveingBtton = (TextView) findViewById(R.id.saveing_btton);
-        editText = (EditText) findViewById(R.id.editText);
+        editText = (EditText) findViewById(R.id.nickname);
 
         backBtn.setOnClickListener(onClickListener);
         saveingBtton.setOnClickListener(onClickListener);
@@ -47,30 +47,27 @@ public class RegisterActivity extends Activity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                signature = editable.toString();
+                nickname = editable.toString();
             }
         });
     }
 
-    //点击事件
-    private static final int SIGNATURE_RESULTCODE = 1020;
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent;
             switch (view.getId()){
                 case R.id.back_btn:
                     finish();
                     break;
                 case R.id.saveing_btton:
-                    if(signature != null){
+                    if(nickname != null){
                         Intent saveIntentBtn = getIntent();
-                        saveIntentBtn.putExtra("signature",""+signature);//将签到情况回传给签到按钮
-                        setResult(SIGNATURE_RESULTCODE,saveIntentBtn);
-                        Toast.makeText(RegisterActivity.this, "保存成功", Toast.LENGTH_SHORT).show();
+                        saveIntentBtn.putExtra("nickname",""+nickname);//将签到情况回传给签到按钮
+                        setResult(NICKNAME_RESULTCODE,saveIntentBtn);
+                        Toast.makeText(ActivityNickname.this, "保存成功", Toast.LENGTH_SHORT).show();
                         finish();
                     }else {
-                        Toast.makeText(RegisterActivity.this, "签名为空", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ActivityNickname.this, "生日为空", Toast.LENGTH_SHORT).show();
                     }
                     break;
             }

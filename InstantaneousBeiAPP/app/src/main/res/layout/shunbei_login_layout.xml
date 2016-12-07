@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:hint="密码"
         android:textColorHint="#BBBBBB"
+        android:inputType="textPassword"
         android:background="@drawable/kuang_shuru_grey"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
