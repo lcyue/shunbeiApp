@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.R;
+import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.login.PhoneBindingActivity;
 import com.example.administrator.instantaneousbeiapp.login.RegisterActivity;
 import com.example.administrator.instantaneousbeiapp.login.XugaiChenggongActivity;
@@ -59,6 +60,7 @@ public class UseAccount extends Activity {
     private static final int BRITH_RESULTCODE = 1040;
     private static final int NICKNAME_REQUESTCODE = 1050;
     private static final int NICKNAME_RESULTCODE = 1060;
+    private static final int INTENT_RESULTCODE = 1070;
 
     private static final int ALBUM_REQUEST_CODE = 1;
     private static final int CAMERA_REQUEST_CODE = 2;
@@ -135,9 +137,18 @@ public class UseAccount extends Activity {
                     break;
                 case R.id.saveing_btton:
                     saveSharePreferences();//保存本地
-                    setUserData();//保存服务器
+                    new Thread(){
+                        @Override
+                        public void run() {
+                            setUserData();//数据上传服务器
+                        }
+                    }.start();
                     Toast.makeText(UseAccount.this, "保存成功", Toast.LENGTH_SHORT).show();
-                    finish();
+                    intent = new Intent(UseAccount.this, HomeMainActivity.class);
+                    Bundle bundle3 = new Bundle();
+                    bundle3.putInt("isShow", 3);
+                    intent.putExtras(bundle3);//在用bundle 来Put数据后必需再Put到intent里面，否则没有传递
+                    startActivityForResult(intent,INTENT_RESULTCODE);//第二个参数为请求码
                     break;
             }
         }

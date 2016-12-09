@@ -209,8 +209,8 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
 
             case R.id.sign_in_btton:
                 //将收到的验证码和手机号提交再次核对
-//                SMSSDK.submitVerificationCode("86", phoneNums, inputCodeEt
-//                        .getText().toString());
+                SMSSDK.submitVerificationCode("86", phoneNums, inputCodeEt
+                        .getText().toString());
                 new Thread(){
                     @Override
                     public void run() {
@@ -241,27 +241,7 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
                 int event = msg.arg1;
                 int result = msg.arg2;
                 Object data = msg.obj;
-//                Log.e("event", "event=" + event);
-//                if (result == SMSSDK.RESULT_COMPLETE) {
-//                    // 短信注册成功后，返回MainActivity,然后提示
-//                    if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
-//                        Toast.makeText(getApplicationContext(), "提交验证码成功",
-//                                Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(ZhuceActivity.this,
-//                                XugaiChenggongActivity.class);
-//                        startActivity(intent);
-//                    } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
-//                        Toast.makeText(getApplicationContext(), "正在获取验证码",
-//                                Toast.LENGTH_SHORT).show();
-//                    } else {
-//                        ((Throwable) data).printStackTrace();
-//                    }
-//                }
                 if(result==SMSSDK.RESULT_COMPLETE){
-//                    HashMap<String,Object> maps = (HashMap<String, Object>) data;
-//                    String country = (String) maps.get("country");
-//                    String phone = (String) maps.get("phone");
-//                    submitUserInfo(country,phone);
                     if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
                         Toast.makeText(getApplicationContext(), "提交验证码成功",
                                 Toast.LENGTH_SHORT).show();

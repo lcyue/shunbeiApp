@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Looper;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -159,6 +160,11 @@ public class ShunbeiLogin extends Activity {
                 Log.i("========",""+user_name);
                 token = jsonArray.getString("token");
                 saveSharePreferences();//将获取的数据存储起来
+
+                if (status == 200){
+                    Intent intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
+                    startActivity(intent);
+                }
             }else {
                 Log.i("getResponseCode()",""+httpURLConnection.getResponseCode());
             }
@@ -283,15 +289,12 @@ public class ShunbeiLogin extends Activity {
                         @Override
                         public void run() {
                             login();
-                            Log.i("message===",""+message);
-                            if (status == 200){
-                                Intent intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
-                                startActivity(intent);
-                            }else {
-                                Toast.makeText(ShunbeiLogin.this, ""+message , Toast.LENGTH_SHORT).show();
-                            }
+                            Looper.prepare();
+                            Toast.makeText(ShunbeiLogin.this, message , Toast.LENGTH_SHORT).show();
+                            Looper.loop();
                         }
                     }.start();
+
                     break;
                 case R.id.shunbei_zhuce_btn:
                     intent = new Intent(ShunbeiLogin.this,ZhuceActivity.class);

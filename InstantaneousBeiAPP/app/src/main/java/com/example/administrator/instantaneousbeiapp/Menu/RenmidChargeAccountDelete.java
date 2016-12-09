@@ -1,7 +1,9 @@
 package com.example.administrator.instantaneousbeiapp.menu;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -19,6 +21,7 @@ import com.example.administrator.instantaneousbeiapp.view.SwipeListLayout;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -34,6 +37,11 @@ public class RenmidChargeAccountDelete extends Activity {
     remindAdapter mAdapter;
     MRemind data;
     ArrayList<MRemind> list = new ArrayList<MRemind>();;
+    String time;
+
+    final int uplist = 123;
+    private static final int ADD_REQUESTCODE = 1070;
+    private static final int ADD_RESULTCODE = 1080;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,14 +54,8 @@ public class RenmidChargeAccountDelete extends Activity {
         addRemind.setOnClickListener(onClickListener);
         back_btn.setOnClickListener(onClickListener);
 
-        ArrayList<MRemind> list =getListData();
         mAdapter = new remindAdapter(this,list);
         listView.setAdapter(mAdapter);
-        if(mAdapter!=null){
-            Message message = new Message();
-            message.what = uplist;
-            handler.sendMessage(message);
-        }
 
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
@@ -78,36 +80,15 @@ public class RenmidChargeAccountDelete extends Activity {
         });
     }
 
-    public  ArrayList<MRemind> getListData(){
-        list = new ArrayList<MRemind>();
-        //数据库没建立之前的死数据
-        String[] strings = {"06:30","07:30","08:30"};
-        for (int i = 0 ; i < strings.length ; i++){
-            data = new MRemind();
-            data.setRemindTime(""+strings[i]);
-            list.add(data);
-        }
-        return list;
+    public void getSharePreferences(){
+        SharedPreferences sharedPreferences1 = getSharedPreferences("timeList", Context.MODE_PRIVATE);
     }
-    final int uplist = 123;
-
     Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message message) {
-            Intent intent;
             switch (message.what){
                 case uplist:
-                    intent = getIntent();
-                    Bundle bundle = intent.getExtras();
-                    if (bundle != null) {
-                        data = new MRemind();
-                        Serializable serializable = bundle.getSerializable("time");
-                        String time = (String) serializable;
-                        data.setRemindTime("" + time);
-//                        list.add(data);
-//                        mAdapter.notifyDataSetChanged();
-                        mAdapter.addItem(data);
-                    }
+                        mAdapter.notifyDataSetChanged();
                     break;
             }
             return true;
@@ -121,7 +102,10 @@ public class RenmidChargeAccountDelete extends Activity {
             switch (view.getId()){
                 case R.id.addRemind:
                     intent = new Intent(RenmidChargeAccountDelete.this,RenmidChargeAccoutSave.class);
-                    startActivity(intent);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("ischeck", "fause");
+                    intent.putExtras(bundle);//在用bundle 来Put数据后必需再Put到intent里面，否则没有传递
+                    startActivityForResult(intent,ADD_REQUESTCODE);//第二个参数为请求码
                     break;
                 case R.id.back_btn:
                     finish();
@@ -129,4 +113,26 @@ public class RenmidChargeAccountDelete extends Activity {
             }
         }
     };
+
+    /*当需要从第二个页面获得数据返回的时候，重写该方法*/
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //请求码      ，    结果码       ， intent对象（包含绑定的数据）
+        switch (resultCode){
+            case ADD_RESULTCODE:
+                if (data != null) {//判断是否为空是未来避免强制返回时，第二个页面没有返回数据而导致的空指针
+                    Log.i("SIGNATURE_RESULTCODE", data.toString());
+                    Bundle bundle = data.getExtras();
+                    time = bundle.getString("choseTime");//第二个页面新传的数据
+                    MRemind addtime = new MRemind();
+                    addtime.setRemindTime(""+time);
+                    list.add(addtime);
+                    Message message = new Message();
+                    message.what = uplist;
+                    handler.sendMessage(message);
+                    super.onActivityResult(requestCode, resultCode, data);
+                }
+                break;
+        }
+    }
 }

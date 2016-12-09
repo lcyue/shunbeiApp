@@ -64,6 +64,7 @@
         android:layout_marginRight="30dp"
         android:padding="15dp"/>
     <EditText
+        android:id="@+id/password_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="新密码"
@@ -74,6 +75,7 @@
         android:layout_marginRight="30dp"
         android:padding="15dp"/>
     <EditText
+        android:id="@+id/repassword_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="确认密码"
