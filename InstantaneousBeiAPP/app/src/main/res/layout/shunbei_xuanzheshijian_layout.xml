@@ -219,6 +219,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/seven_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -235,6 +236,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/eight_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -251,6 +253,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/nine_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -267,6 +270,7 @@
                         android:background="@color/grey_view" />
 
                     <ImageView
+                        android:id="@+id/delete_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -298,6 +302,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/four_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -314,6 +319,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/five_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -330,6 +336,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/six_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -346,6 +353,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/subtract_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -379,6 +387,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/one_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -395,6 +404,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/two_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -411,6 +421,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/three_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -427,6 +438,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/sum_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -460,6 +472,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/clear_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -476,6 +489,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/zore_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -492,6 +506,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/dot_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -508,6 +523,7 @@
                         android:background="@color/grey_view" />
 
                     <TextView
+                        android:id="@+id/ok_btn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"

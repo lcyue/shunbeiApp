@@ -180,7 +180,6 @@ public class PatterView extends View {
                 if(onPatterChangeListener != null){
                     onPatterChangeListener.onPatterStart(true);
                 }
-
                 resetPoint();
                 point = checkSelectPoint();
                 if (point != null) {
@@ -243,7 +242,6 @@ public class PatterView extends View {
                     }
                     onPatterChangeListener.onPatterChange(passwordStr);
                 }
-
             }
         }
 

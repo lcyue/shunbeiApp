@@ -1,6 +1,7 @@
 package com.example.administrator.instantaneousbeiapp.login;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -30,6 +31,7 @@ public class GesturesPasswordActivity extends Activity implements PatterView.OnP
         create_password= (Button) findViewById(R.id.create_password);
 
         returnBtton.setOnClickListener(onClickListener);
+        create_password.setOnClickListener(onClickListener);
         lockPatternView.setPatterChangeListener(this);
     }
 
@@ -41,6 +43,8 @@ public class GesturesPasswordActivity extends Activity implements PatterView.OnP
                 case R.id.return_btton:
                     finish();
                     break;
+                case R.id.create_password:
+                    break;
             }
         }
     };
@@ -49,7 +53,9 @@ public class GesturesPasswordActivity extends Activity implements PatterView.OnP
     public void onPatterChange(String passwordStr) {
         if(!TextUtils.isEmpty(passwordStr)){
             Toast.makeText(GesturesPasswordActivity.this, ""+passwordStr, Toast.LENGTH_SHORT).show();
-            create_password.setText("再次绘制密码");
+            create_password.setText("确认密码");
+        }else {
+            create_password.setText("创建手势密码");
         }
     }
 

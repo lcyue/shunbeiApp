@@ -53,6 +53,7 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
     EditText repassword_edit;
     EditText password_edit;
     int i = 60;
+    String numb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +80,7 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                 numb = s.toString();//获得密码
             }
 
             @Override
@@ -266,7 +267,11 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
                         Toast.makeText(getApplicationContext(), "提交验证码成功",
                                 Toast.LENGTH_SHORT).show();
                         aBoolean = true;
-
+                        Toast.makeText(ZhuceActivity.this, ""+numb,
+                                Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ZhuceActivity.this,
+                                XugaiChenggongActivity.class);
+                        startActivity(intent);
                     } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
                         Toast.makeText(getApplicationContext(), "正在获取验证码",
                                 Toast.LENGTH_SHORT).show();

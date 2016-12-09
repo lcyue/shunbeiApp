@@ -34,7 +34,9 @@
             android:background="@drawable/kuang_shuru_grey"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:inputType="phone"
+            android:maxLength="11"/>
         <TextView
             android:id="@+id/test_get_code_text"
             android:layout_width="wrap_content"
@@ -58,7 +60,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:inputType="number"
+        android:maxLength="6"/>
     <EditText
         android:id="@+id/password_edit"
         android:layout_width="match_parent"
@@ -86,7 +90,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        />
     <TextView
         android:id="@+id/sign_in_btton"
         android:layout_width="match_parent"

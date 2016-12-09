@@ -20,6 +20,9 @@ import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 import com.sina.weibo.sdk.auth.WeiboAuthListener;
 import com.sina.weibo.sdk.auth.sso.SsoHandler;
 import com.sina.weibo.sdk.exception.WeiboException;
+import com.sina.weibo.sdk.net.RequestListener;
+import com.tencent.connect.UserInfo;
+import com.tencent.connect.auth.QQToken;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
@@ -35,6 +38,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 
 /**
  * Created by Administrator on 2016/10/22.
@@ -125,7 +129,6 @@ public class ShunbeiLogin extends Activity {
     public void login(){
         String httpurl = "http://10.0.2.2/index.php/home/index/login?" + "user_name="+phoneNums+"&user_password="
                 +password;
-
         try {
             URL url = new URL(httpurl);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -154,6 +157,12 @@ public class ShunbeiLogin extends Activity {
                     String user_name = jsonObject.getString("user_name");
                     String token = jsonObject.getString("token");
                 }
+                if (status == 200) {
+                    Intent intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(ShunbeiLogin.this, "" + message, Toast.LENGTH_SHORT).show();
+                }
             }else {
                 Log.i("getResponseCode()",""+httpURLConnection.getResponseCode());
             }
@@ -169,7 +178,6 @@ public class ShunbeiLogin extends Activity {
 
 
     class AuthListener  implements WeiboAuthListener {
-
         @Override
         public void onComplete(Bundle values) {
             // 从 Bundle 中解析 Token
@@ -178,6 +186,7 @@ public class ShunbeiLogin extends Activity {
             if (mAccessToken.isSessionValid()) {
                 // 保存 Token 到 SharedPreferences
                 AccessTokenKeeper.writeAccessToken(ShunbeiLogin.this, mAccessToken);
+                Toast.makeText(ShunbeiLogin.this,"授权成功", Toast.LENGTH_SHORT).show();
             } else {
                 // 当您注册的应用程序签名不正确时，就会收到 Code，请确保签名正确
                 String code = values.getString("code", "");
@@ -193,14 +202,18 @@ public class ShunbeiLogin extends Activity {
         public void onWeiboException(WeiboException e) {
         }
     }
+
+
+
+
     //weibo授权需要在Activity的onActivityResult函数中，调用以下方法：
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (mSsoHandler != null) {
             mSsoHandler.authorizeCallBack(requestCode, resultCode, data);
-
         }
+
     }
 
     IUiListener loginListener = new BaseUiListener(){
@@ -259,6 +272,7 @@ public class ShunbeiLogin extends Activity {
         }
     }
 
+
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -269,12 +283,6 @@ public class ShunbeiLogin extends Activity {
                         @Override
                         public void run() {
                             login();
-                            if (status == 200){
-                                Intent intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
-                                startActivity(intent);
-                            }else {
-                                Toast.makeText(ShunbeiLogin.this, ""+message , Toast.LENGTH_SHORT).show();
-                            }
                         }
                     }.start();
                     break;
@@ -288,25 +296,28 @@ public class ShunbeiLogin extends Activity {
                     break;
                 case R.id.qq_login_btn:
                     tencent = Tencent.createInstance("1105853108",getApplicationContext());
+                    intent = new Intent(ShunbeiLogin.this,HomeMainActivity.class);
+                    startActivity(intent);
                     /** 判断是否登陆过 */
                     if(!tencent.isSessionValid()){
                         tencent.login(ShunbeiLogin.this,"all",loginListener);
-                        isServerSideLogin =false;
+                        isServerSideLogin = false;
                     /** 登陆过注销之后在登录 */
                     }else {
                         tencent.logout(ShunbeiLogin.this);
                     }
                     break;
-
                 case R.id.xinlang_login_btn:
+                    mAccessToken = AccessTokenKeeper.readAccessToken(ShunbeiLogin.this);
                     mAuthInfo = new AuthInfo(ShunbeiLogin.this, Constants.APP_KEY, Constants.REDIRECT_URL, Constants.SCOPE);
                     mSsoHandler = new SsoHandler(ShunbeiLogin.this, mAuthInfo);
                     mSsoHandler.authorize(new AuthListener());
-//                  intent = new Intent(ShunbeiLogin.this,HomeMainActivity.class);
-//                  startActivity(intent);
+//                    intent = new Intent(ShunbeiLogin.this,HomeMainActivity.class);
+//                    startActivity(intent);
                     break;
             }
         }
     };
+
 
 }

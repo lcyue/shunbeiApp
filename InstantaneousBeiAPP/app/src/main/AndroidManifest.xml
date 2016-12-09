@@ -21,11 +21,12 @@
     <!--注：如需在打包或者生成APK的时候进行混淆，请在proguard.cfg中添加如下代码
           -keep class com.iflytek.**{*;}  -->
     <!--短信验证码权限-->
-    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
 
     <application
         android:allowBackup="true"
@@ -34,7 +35,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:hardwareAccelerated="false">
-
         <activity android:name=".guide.GuideMainTransition"
             android:launchMode="singleTask">
             <intent-filter>
@@ -43,7 +43,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionOne"/><!--引导页过渡页1-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionTwo"/><!--引导页过渡页2-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.statement.Statement"/><!--报表页-->
@@ -82,7 +81,7 @@
         <activity android:name=".detail.MyCalendard"
             android:launchMode="singleTop"/><!--日历-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.RegisterActivity"/><!--签名-->
-        <activity android:name="com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity"/><!--手势页面-->
+        <!--<activity android:name="com.example.administrator.instantaneousbeiapp.login.GesturesPasswordActivity"/>&lt;!&ndash;手势页面&ndash;&gt;-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.login.PhoneBindingActivity"/><!--绑定手机页面-->
         <activity android:name=".menu.RenmidChargeAccountDelete"
             android:launchMode="singleTask"/><!--记账提醒（显示）页面-->

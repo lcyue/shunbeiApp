@@ -43,6 +43,21 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
     ImageView jizhang_gou2;
     ImageView jizhang_gou3;
     ImageView jizhang_yuyin_btn;
+    TextView one_btn;
+    TextView two_btn;
+    TextView three_btn;
+    TextView four_btn;
+    TextView five_btn;
+    TextView six_btn;
+    TextView seven_btn;
+    TextView eight_btn;
+    TextView nine_btn;
+    TextView zore_btn;
+    TextView clear_btn;
+    TextView delete_btn;
+    TextView subtract_btn;
+    TextView sum_btn;
+    TextView ok_btn;
 
     LinearLayout one;
     LinearLayout two;
@@ -84,6 +99,16 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
         three = (LinearLayout) findViewById(R.id.three);
         fore = (LinearLayout) findViewById(R.id.fore);
         jizhang_yuyin_btn = (ImageView) findViewById(R.id.jizhang_yuyin_btn);
+        one_btn = (TextView) findViewById(R.id.one_btn);
+        two_btn = (TextView) findViewById(R.id.two_btn);
+        three_btn = (TextView) findViewById(R.id.three_btn);
+        four_btn = (TextView) findViewById(R.id.four_btn);
+        five_btn = (TextView) findViewById(R.id.five_btn);
+        six_btn = (TextView) findViewById(R.id.six_btn);
+        seven_btn = (TextView) findViewById(R.id.seven_btn);
+        eight_btn = (TextView) findViewById(R.id.eight_btn);
+        nine_btn = (TextView) findViewById(R.id.nine_btn);
+        one_btn = (TextView) findViewById(R.id.one_btn);
 
         /**
          * 适配器

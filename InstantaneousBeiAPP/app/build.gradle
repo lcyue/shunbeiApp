@@ -41,10 +41,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
-    compile name:'SMSSDK-2.1.2',ext:'aar'
-    compile name:'SMSSDKGUI-2.1.2',ext:'aar'
+    compile name: 'SMSSDK-2.1.2', ext: 'aar'
+    compile name: 'SMSSDKGUI-2.1.2', ext: 'aar'
     compile files('libs/Msc.jar')
     compile files('libs/gson-2.3.1.jar')
-    compile files('libs/weiboSDKCore_3.1.4.jar')
-
+    compile files('libs/weibosdkcore_release.jar')
 }
