@@ -16,11 +16,9 @@ import android.widget.Toast;
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.homepage.HomeMainActivity;
 import com.example.administrator.instantaneousbeiapp.homepage.fragment.MoreFragment;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,84 +26,45 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
+
 
 /**
  * Created by Administrator on 2016/10/30.
  */
 public class SuggestionActivity extends Activity {
     ImageView backBtn;
-    Button putinto;
-    EditText ticking;
+    Button submit;
+    EditText editText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_suggestions);
 
         backBtn = (ImageView) findViewById(R.id.back_btn);
-        putinto = (Button) findViewById(R.id.putinto);
-        ticking = (EditText) findViewById(R.id.ticking);
+        submit = (Button) findViewById(R.id.submit);
+        editText = (EditText) findViewById(R.id.editText);
 
         backBtn.setOnClickListener(onClickListener);
-        putinto.setOnClickListener(onClickListener);
-        ticking.addTextChangedListener(new TextWatcher() {
+        submit.setOnClickListener(onClickListener);
+        editText.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
 
             }
 
             @Override
+
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                ticking_message = s.toString();
+
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                ticking_message = s.toString();
             }
         });
-    }
-
-    String ticking_message;
-    int status;
-    String message;
-    public void ticking(){
-        String httpurl = "http://10.0.2.2/index.php/home/index/ticking?" + "ticking_message="+ticking_message;
-        Log.i("============",""+ticking_message);
-        try {
-            URL url = new URL(httpurl);
-            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-            httpURLConnection.setRequestMethod("GET");
-            httpURLConnection.setConnectTimeout(5000);
-            httpURLConnection.setDoOutput(true);
-            httpURLConnection.connect();
-            if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK){
-                StringBuilder stringBuilder = new StringBuilder();
-                InputStream inputStream = httpURLConnection.getInputStream();//获得返回的数据流对象
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream,"UTF-8");
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String s;
-                while ((s=bufferedReader.readLine()) != null) {
-                    stringBuilder.append(s);
-                }
-                String data = stringBuilder.toString();
-                Log.i("data====>",""+data);
-
-                JSONObject jsonObject = new JSONObject(data);
-                status = jsonObject.getInt("status");
-                message = jsonObject.getString("message");
-
-            }else {
-                Log.i("getResponseCode()",""+httpURLConnection.getResponseCode());
-            }
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -115,7 +74,7 @@ public class SuggestionActivity extends Activity {
                 case R.id.back_btn:
                     finish();
                     break;
-                case R.id.putinto:
+                case R.id.submit:
                     new Thread(){
                         @Override
                         public void run() {
@@ -126,4 +85,42 @@ public class SuggestionActivity extends Activity {
             }
         }
     };
+
+    String ticking_message;
+    int status;
+    String message;
+    public void ticking(){
+        String httpurl = "http://10.0.2.2/index.php/home/index/ticking?"+"ticking_message="+ticking_message;
+        try {
+            URL url = new URL(httpurl);
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+            httpURLConnection.setRequestMethod("GET");
+            httpURLConnection.setConnectTimeout(5000);
+            httpURLConnection.connect();
+//            if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK){
+                StringBuilder stringBuilder = new StringBuilder();
+                InputStream inputStream = httpURLConnection.getInputStream();//获得返回的数据流对象
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream,"UTF-8");
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String s;
+                while ((s=bufferedReader.readLine()) != null) {
+                    stringBuilder.append(s);
+                }
+                String data = stringBuilder.toString();
+                Log.i("data====>",""+data);
+                JSONObject jsonObject = new JSONObject(data);
+                status = jsonObject.getInt("status");
+                message = jsonObject.getString("message");
+                finish();
+//            }else {
+//                Log.i("getResponseCode()",""+httpURLConnection.getResponseCode());
+//            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 }

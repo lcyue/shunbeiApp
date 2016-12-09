@@ -158,4 +158,18 @@
     <string name="this_year">今年</string>
    <string name="custom_period">自定义周期</string>
 
+    <string-array name="month">
+        <item>January</item>
+        <item>Februar</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
 </resources>

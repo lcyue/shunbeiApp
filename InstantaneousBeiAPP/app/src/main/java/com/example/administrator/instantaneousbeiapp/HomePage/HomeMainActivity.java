@@ -1,5 +1,6 @@
 package com.example.administrator.instantaneousbeiapp.homepage;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -62,7 +63,9 @@ public class HomeMainActivity extends FragmentActivity {
     ImageView card_btn;
     ImageView class_btn;
     DemoArcMenu ArcMenu;
-
+    ImageView userImage;//用户头像
+    TextView userName; //用户名字
+    TextView userContent; //用户签名
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +83,9 @@ public class HomeMainActivity extends FragmentActivity {
         qiandao = (LinearLayout) findViewById(R.id.qiandao);
         qiandaotext = (TextView) findViewById(R.id.qiandao_text);
         outBtn = (Button) findViewById(R.id.out_btn);
+        userImage = (ImageView) findViewById(R.id.userImage);
+        userName = (TextView) findViewById(R.id.userName);
+        userContent = (TextView) findViewById(R.id.userContent);
 
         ArcMenu = (DemoArcMenu) findViewById(R.id.DemoArcmenu);
         clock_btn = (ImageView) ArcMenu.getChildAt(2);
@@ -136,7 +142,8 @@ public class HomeMainActivity extends FragmentActivity {
         outBtn.setOnClickListener(onClickListener);
         viewPager.setOnPageChangeListener(onPageChangeListener);
 
-
+        getLoginSharePreferences();//调用登录时的电话号
+        getUserMessageSharePreferences();//如若个人设置修改后，调用且显示
     }
 
 
@@ -386,5 +393,37 @@ public class HomeMainActivity extends FragmentActivity {
         dudgetType.setOnClickListener(onClickListener);
         accountType.setOnClickListener(onClickListener);
 
+    }
+
+    public void getLoginSharePreferences(){
+        //在读取SharedPreferences数据前要实例化出一个SharedPreferences对象
+        SharedPreferences sharedPreferences= getSharedPreferences("shunbei", Activity.MODE_PRIVATE);
+        // 使用getString方法获得value，注意第2个参数是value的默认值
+        Integer user_id =sharedPreferences.getInt("user_id", 0);
+        String user_name =sharedPreferences.getString("user_name", "");
+        String token =sharedPreferences.getString("token", "");
+        userName.setText(user_name);
+    }
+
+    public void getUserMessageSharePreferences(){
+        //在读取SharedPreferences数据前要实例化出一个SharedPreferences对象
+        SharedPreferences sharedPreferences= getSharedPreferences("personMessage", Activity.MODE_PRIVATE);
+        // 使用getString方法获得value，注意第2个参数是value的默认值
+        String nickname =sharedPreferences.getString("nickname", "瞬贝");
+        String signature =sharedPreferences.getString("signature", "没有设置签名");
+        Boolean isnull = sharedPreferences.getBoolean("isnull",false);
+        if (isnull == true){
+            userName.setText(nickname);
+            userContent.setText(signature);
+        }
+    }
+
+    public void getSaveIntent(){
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle != null){
+            Integer string = bundle.getInt("isShow");
+            viewPager.setCurrentItem(string);
+        }
     }
 }

@@ -2,10 +2,14 @@ package com.example.administrator.instantaneousbeiapp.login;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -14,6 +18,16 @@ import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -34,7 +48,12 @@ public class XuigaiMimaActivity extends Activity implements View.OnClickListener
     // 验证码输入框
     private EditText inputCodeEt;
     EditText password_edit;
+    EditText repassword_edit;
+    int user_login_id;
+    String password;
+    String repassword;
     int i = 60;
+    Boolean aBoolean = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,13 +65,101 @@ public class XuigaiMimaActivity extends Activity implements View.OnClickListener
         inputCodeEt = (EditText) findViewById(R.id.inputCodeEt_edit);
         inputPhoneEt = (EditText) findViewById(R.id.inputPhoneEt_edit);
         password_edit = (EditText) findViewById(R.id.password_edit);
-
-        init();
+        repassword_edit = (EditText) findViewById(R.id.repassword_edit);
 
         requestCode.setOnClickListener(this);
         back_btn.setOnClickListener(this);
         shunbei_xuigai_wancheng_btn.setOnClickListener(this);
+
+        password_edit.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                password = s.toString();
+            }
+        });
+        repassword_edit.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                repassword = editable.toString();
+            }
+        });
+
+        init();
+        getSharePreferences();
     }
+    //读取登录时存储本地资源
+    public void getSharePreferences(){
+        //在读取SharedPreferences数据前要实例化出一个SharedPreferences对象
+        SharedPreferences sharedPreferences= getSharedPreferences("shunbei", Activity.MODE_PRIVATE);
+        // 使用getString方法获得value，注意第2个参数是value的默认值
+        Integer user_id =sharedPreferences.getInt("user_id", 0);
+        String user_name =sharedPreferences.getString("user_name", "");
+        String token =sharedPreferences.getString("token", "");
+        this.user_login_id = user_id;
+    }
+
+    public void changpassword(){
+        String httpurl = "http://10.0.2.2/index.php/home/index/changpassword?" + "user_login_id="+user_login_id
+                +"&user_new_password="+password+"&user_new_repassword"+repassword;
+        try {
+            URL url = new URL(httpurl);
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+            httpURLConnection.setRequestMethod("GET");
+            httpURLConnection.setConnectTimeout(5000);
+            httpURLConnection.connect();
+            if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK){
+                StringBuilder stringBuilder = new StringBuilder();
+                InputStream inputStream = httpURLConnection.getInputStream();//获得返回的数据流对象
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream,"UTF-8");
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String s;
+                while ((s=bufferedReader.readLine()) != null) {
+                    stringBuilder.append(s);
+                }
+                String data = stringBuilder.toString();
+                Log.i("data====>",""+data);
+
+                JSONObject jsonObject = new JSONObject(data);
+                int status = jsonObject.getInt("status");
+                String message = jsonObject.getString("message");
+                if(aBoolean = true && status == 200){
+                    Intent intent = new Intent(XuigaiMimaActivity.this,
+                            XugaiChenggongActivity.class);
+                    startActivity(intent);
+                }
+            }else {
+                Log.i("getResponseCode()",""+httpURLConnection.getResponseCode());
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     public void init(){
         // 启动短信验证sdk
         SMSSDK.initSDK(this, APPKEY, APPSECRETE);
@@ -107,6 +214,12 @@ public class XuigaiMimaActivity extends Activity implements View.OnClickListener
                 //将收到的验证码和手机号提交再次核对
                 SMSSDK.submitVerificationCode("86", phoneNums, inputCodeEt
                         .getText().toString());
+                new Thread(){
+                    @Override
+                    public void run() {
+                        changpassword();
+                    }
+                }.start();
                 break;
             case R.id.back_btn:
                 finish();
@@ -127,33 +240,11 @@ public class XuigaiMimaActivity extends Activity implements View.OnClickListener
                 int event = msg.arg1;
                 int result = msg.arg2;
                 Object data = msg.obj;
-//                Log.e("event", "event=" + event);
-//                if (result == SMSSDK.RESULT_COMPLETE) {
-//                    // 短信注册成功后，返回MainActivity,然后提示
-//                    if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
-//                        Toast.makeText(getApplicationContext(), "提交验证码成功",
-//                                Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(ZhuceActivity.this,
-//                                XugaiChenggongActivity.class);
-//                        startActivity(intent);
-//                    } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
-//                        Toast.makeText(getApplicationContext(), "正在获取验证码",
-//                                Toast.LENGTH_SHORT).show();
-//                    } else {
-//                        ((Throwable) data).printStackTrace();
-//                    }
-//                }
                 if(result==SMSSDK.RESULT_COMPLETE){
-//                    HashMap<String,Object> maps = (HashMap<String, Object>) data;
-//                    String country = (String) maps.get("country");
-//                    String phone = (String) maps.get("phone");
-//                    submitUserInfo(country,phone);
                     if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
                         Toast.makeText(getApplicationContext(), "提交验证码成功",
                                 Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(XuigaiMimaActivity.this,
-                                XugaiChenggongActivity.class);
-                        startActivity(intent);
+                        aBoolean = true;
                     } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
                         Toast.makeText(getApplicationContext(), "正在获取验证码",
                                 Toast.LENGTH_SHORT).show();

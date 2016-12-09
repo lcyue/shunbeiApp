@@ -68,6 +68,7 @@
         android:inputType="phone"
         android:maxLength="6"/>
     <EditText
+        android:id="@+id/password_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="新密码"
@@ -80,6 +81,7 @@
         android:inputType="text"
         android:maxLength="18"/>
     <EditText
+        android:id="@+id/repassword_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="确认密码"

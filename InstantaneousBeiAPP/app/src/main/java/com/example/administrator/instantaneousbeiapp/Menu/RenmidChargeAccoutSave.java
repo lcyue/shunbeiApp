@@ -1,7 +1,9 @@
 package com.example.administrator.instantaneousbeiapp.menu;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +13,9 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/10/22.
@@ -41,7 +46,7 @@ public class RenmidChargeAccoutSave extends Activity {
             }
         });
     }
-
+    private static final int ADD_RESULTCODE = 1080;
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -53,12 +58,17 @@ public class RenmidChargeAccoutSave extends Activity {
                 case R.id.saveing_btton:
                     //需要将timepicker的时间存下来即time
                     if(change){
+//                        intent = new Intent(RenmidChargeAccoutSave.this,RenmidChargeAccountDelete.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString("time", ""+time);
+//                        intent.putExtras(bundle);
+//                        startActivityForResult(intent,1001);//第二个参数为请求码,1000在签到那里用了
+                        Intent saveIntentBtn = getIntent();
+                        saveIntentBtn.putExtra("choseTime",""+time);//将签到情况回传给签到按钮
+                        setResult(ADD_RESULTCODE,saveIntentBtn);
                         Toast.makeText(RenmidChargeAccoutSave.this, "保存成功", Toast.LENGTH_SHORT).show();
-                        intent = new Intent(RenmidChargeAccoutSave.this,RenmidChargeAccountDelete.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putString("time", ""+time);
-                        intent.putExtras(bundle);
-                        startActivityForResult(intent,1001);//第二个参数为请求码,1000在签到那里用了
+                        finish();
+                        //list.add(time);
                     }else {
                         Toast.makeText(RenmidChargeAccoutSave.this, "请选择时间", Toast.LENGTH_SHORT).show();
                     }
@@ -67,6 +77,14 @@ public class RenmidChargeAccoutSave extends Activity {
             }
         }
     };
+        List<String> list = new ArrayList<String>();
 
+    //按保存后数据保存到本地
+    public void saveSharePreferences(){
+        SharedPreferences sharedPreferences1 = getSharedPreferences("timeList", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences1.edit();
+        //editor.putStringSet("timeList",""+list);
+        editor.commit();
+    }
 
 }

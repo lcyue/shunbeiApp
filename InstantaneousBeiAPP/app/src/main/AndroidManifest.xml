@@ -17,11 +17,13 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <!--摄相头权限，拍照需要用到 -->
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--  从SDCard读取数据权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <!--注：如需在打包或者生成APK的时候进行混淆，请在proguard.cfg中添加如下代码
           -keep class com.iflytek.**{*;}  -->
     <!--短信验证码权限-->
-
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
@@ -87,6 +89,9 @@
             android:launchMode="singleTask"/><!--记账提醒（显示）页面-->
         <activity android:name=".menu.RenmidChargeAccoutSave"
             android:launchMode="singleTask"/><!--记账提醒（闹钟）页面-->
+        <activity android:name=".menu.ActivityNickname"/><!--个人设置（昵称）页面-->
+        <activity android:name=".menu.ActivityBrithDay"/><!--个人设置（生日）页面-->
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
