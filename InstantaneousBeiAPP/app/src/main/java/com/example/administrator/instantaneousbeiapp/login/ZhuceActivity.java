@@ -153,7 +153,6 @@ public class ZhuceActivity extends Activity implements View.OnClickListener{
         }
     }
 
-
     public void init(){
 
         // 启动短信验证sdk

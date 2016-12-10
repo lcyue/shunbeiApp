@@ -43,6 +43,7 @@
             android:textColor="@color/black_word"/>
 
         <TextView
+            android:id="@+id/account_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/wallet_deposit_card"
@@ -123,35 +124,34 @@
         android:layout_marginBottom="5dp"
         android:background="@color/grey"></View>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/wallet_type_retivlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/wallet_change_account_style"
             android:textSize="22sp"
             android:textColor="@color/black_word"/>
 
         <TextView
+            android:id="@+id/account_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/wallet_deposit_card"
             android:textSize="22sp"
             android:textColor="@color/black_word"
             android:drawableLeft="@mipmap/deposit_card_blue"
-            android:layout_alignParentTop="true"
-
-            android:layout_toLeftOf="@+id/imageView"
-            android:layout_toStartOf="@+id/imageView"
-            android:layout_marginRight="50dp"
-            android:layout_marginEnd="50dp" />
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -159,7 +159,7 @@
             android:src="@mipmap/icon_right_grey"
             android:layout_alignParentRight="true"
             android:id="@+id/imageView" />
-    </RelativeLayout>
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -169,17 +169,19 @@
         android:layout_marginBottom="5dp"
         android:background="@color/grey"></View>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/wallet_color_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/wallet_change_color"
             android:textSize="22sp"
@@ -192,11 +194,8 @@
             android:textSize="22sp"
             android:textColor="@color/black_word"
             android:drawableLeft="@mipmap/icon_oval_blue"
-            android:layout_marginRight="115dp"
-            android:layout_marginEnd="115dp"
-            android:layout_alignParentTop="true"
-            android:layout_toLeftOf="@+id/imageViewchanggecolor"
-            android:layout_toStartOf="@+id/imageViewchanggecolor" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="30dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -204,7 +203,7 @@
             android:src="@mipmap/icon_right_grey"
             android:layout_alignParentRight="true"
             android:id="@+id/imageViewchanggecolor" />
-    </RelativeLayout>
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

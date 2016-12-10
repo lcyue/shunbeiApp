@@ -16,6 +16,7 @@
 
 package com.example.administrator.instantaneousbeiapp.login;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -93,4 +94,5 @@ public class AccessTokenKeeper {
         editor.clear();
         editor.commit();
     }
+
 }

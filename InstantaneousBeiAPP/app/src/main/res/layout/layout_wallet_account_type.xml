@@ -25,7 +25,18 @@
             android:layout_centerInParent="true"
             android:text="@string/wallet_account_type"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/saveing_btton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
     </RelativeLayout>
     <!--分类-->
     <ListView

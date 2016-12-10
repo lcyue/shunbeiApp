@@ -65,4 +65,5 @@ public class GesturesPasswordActivity extends Activity implements PatterView.OnP
             create_password.setText("创建手势密码");
         }
     }
+
 }

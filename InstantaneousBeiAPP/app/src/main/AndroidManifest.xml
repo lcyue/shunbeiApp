@@ -49,7 +49,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.GuideTransitionTwo"/><!--引导页过渡页2-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.statement.Statement"/><!--报表页-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.statement.StatementChoiceTimeActivity"/><!--报表选择时间-->
-        <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletAccountType"/><!--钱包选择账户类型-->
+        <activity android:name=".wallet.WalletAccountTypeActivity"/><!--钱包选择账户类型-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletSelectColour"/><!--钱包选择颜色类型-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletDepositCardActivity"/>><!--钱包储蓄卡页面*复用*-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.wallet.WalletChangeActivity"/>><!--钱包更改账户-->

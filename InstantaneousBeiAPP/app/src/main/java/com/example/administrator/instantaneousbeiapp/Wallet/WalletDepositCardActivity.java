@@ -3,11 +3,13 @@ package com.example.administrator.instantaneousbeiapp.wallet;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.R;
@@ -19,6 +21,8 @@ public class WalletDepositCardActivity extends Activity {
     ImageView walletGuideBtn;//返回按钮
     ImageView walletInstallWhite;//选择页面
     Spinner mSpinner;
+    TextView money;
+    TextView card_type;
     private ArrayAdapter<String> mAdapter ;
     private String [] mStringArray;
     @Override
@@ -28,9 +32,13 @@ public class WalletDepositCardActivity extends Activity {
 
         walletGuideBtn = (ImageView) findViewById(R.id.wallet_guide_btn);
         walletInstallWhite = (ImageView) findViewById(R.id.wallet_install_white);
+        money = (TextView) findViewById(R.id.money);
+        card_type = (TextView) findViewById(R.id.card_type);
+
         init();
         walletGuideBtn.setOnClickListener(onClickListener);
         walletInstallWhite.setOnClickListener(onClickListener);
+        getMyIntent();
     }
 
     //    点击事件
@@ -69,5 +77,20 @@ public class WalletDepositCardActivity extends Activity {
         @Override
         public void onNothingSelected(AdapterView<?> parent) {}
 
+    }
+
+    public void getMyIntent(){
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle != null){
+            String type = bundle.getString("type");
+            String money = bundle.getString("money");
+            if (type != null){
+                this.card_type.setText(type);
+            }
+            if (money != null){
+                this.money.setText(money);
+            }
+        }
     }
 }
