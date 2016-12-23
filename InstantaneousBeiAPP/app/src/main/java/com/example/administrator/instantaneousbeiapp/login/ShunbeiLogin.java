@@ -164,13 +164,10 @@ public class ShunbeiLogin extends Activity {
                 token = jsonArray.getString("token");
                 saveSharePreferences();//将获取的数据存储起来
 
-                if (status == 200){
-                    Intent intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
-                    startActivity(intent);
-                }
                 if (status == 200) {
                     Intent intent = new Intent(ShunbeiLogin.this, HomeMainActivity.class);
                     startActivity(intent);
+                    Toast.makeText(ShunbeiLogin.this, "" + message, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(ShunbeiLogin.this, "" + message, Toast.LENGTH_SHORT).show();
                 }
@@ -302,9 +299,8 @@ public class ShunbeiLogin extends Activity {
                     new Thread(){
                         @Override
                         public void run() {
-                            login();
                             Looper.prepare();
-                            Toast.makeText(ShunbeiLogin.this, message , Toast.LENGTH_SHORT).show();
+                            login();
                             Looper.loop();
                         }
                     }.start();
