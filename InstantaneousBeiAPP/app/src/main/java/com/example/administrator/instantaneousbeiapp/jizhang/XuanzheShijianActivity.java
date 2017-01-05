@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.instantaneousbeiapp.R;
 import com.example.administrator.instantaneousbeiapp.voice.VoiceActivity;
@@ -54,10 +55,11 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
     TextView nine_btn;
     TextView zore_btn;
     TextView clear_btn;
-    TextView delete_btn;
+    ImageView delete_btn;
     TextView subtract_btn;
     TextView sum_btn;
     TextView ok_btn;
+    TextView dot_btn;
 
     LinearLayout one;
     LinearLayout two;
@@ -69,11 +71,36 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
                   R.mipmap.bonus, R.mipmap.apply,R.mipmap.cash,R.mipmap.refund,R.mipmap.alipay,R.mipmap.rest,R.mipmap.compile};
     String[] text={"工资","兼职","红包","生活费","零花钱","投资",
             "奖金","报销","现金","退款","支付宝","其它", "编辑"};
+    //声明两个参数。接收tvResult前后的值
+    double num1=0,num2=0;
+    double Result=0;//计算结果
+    int op=0;//判断操作数，
+    boolean isClickEqu=false;//判断是否按了“=”按钮
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shunbei_xuanzheshijian_layout);
 
+
+        init();
+        /**
+         * 适配器
+         */
+        list = getData();//获取数据源
+//        String[] from ={"shunbei_image","shunbei_text"};
+//        int[] to = {R.id.shunbei_image,R.id.shunbei_text};
+//        SimpleAdapter simpleAdapter = new SimpleAdapter(this,list,R.layout.gridview_layout,from,to);
+//        gridView.setAdapter(simpleAdapter);
+        JizhangBaseAdapter jizhangBaseAdapter = new JizhangBaseAdapter(XuanzheShijianActivity.this,list);
+        gridView.setAdapter(jizhangBaseAdapter);
+        gridView.setOnItemClickListener(this);//设置点击事件
+
+
+    }
+
+    public void init(){
         jizhang_back_btn = (ImageView) findViewById(R.id.jizhang_back_btn);
         jizhang_shouru_btn= (TextView) findViewById(R.id.jizhang_shouru_btn);
         jizhang_zhichu_btn= (TextView) findViewById(R.id.jizhang_zhichu_btn);
@@ -109,18 +136,13 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
         eight_btn = (TextView) findViewById(R.id.eight_btn);
         nine_btn = (TextView) findViewById(R.id.nine_btn);
         one_btn = (TextView) findViewById(R.id.one_btn);
-
-        /**
-         * 适配器
-         */
-        list = getData();//获取数据源
-//        String[] from ={"shunbei_image","shunbei_text"};
-//        int[] to = {R.id.shunbei_image,R.id.shunbei_text};
-//        SimpleAdapter simpleAdapter = new SimpleAdapter(this,list,R.layout.gridview_layout,from,to);
-//        gridView.setAdapter(simpleAdapter);
-        JizhangBaseAdapter jizhangBaseAdapter = new JizhangBaseAdapter(XuanzheShijianActivity.this,list);
-        gridView.setAdapter(jizhangBaseAdapter);
-        gridView.setOnItemClickListener(this);//设置点击事件
+        zore_btn = (TextView) findViewById(R.id.zore_btn);
+        clear_btn = (TextView) findViewById(R.id.clear_btn);
+        delete_btn = (ImageView) findViewById(R.id.delete_btn);
+        subtract_btn = (TextView) findViewById(R.id.subtract_btn);
+        sum_btn = (TextView) findViewById(R.id.sum_btn);
+        ok_btn = (TextView) findViewById(R.id.ok_btn);
+        dot_btn = (TextView) findViewById(R.id.dot_btn);
 
         jizhang_bianji_btn.setOnClickListener(onClickListener);
         jizhang_back_btn.setOnClickListener(onClickListener);
@@ -135,7 +157,25 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
         three.setOnClickListener(onClickListener);
         fore.setOnClickListener(onClickListener);
         jizhang_yuyin_btn.setOnClickListener(onClickListener);
+        one_btn.setOnClickListener(onClickListener);
+        two_btn.setOnClickListener(onClickListener);
+        three_btn.setOnClickListener(onClickListener);
+        four_btn.setOnClickListener(onClickListener);
+        five_btn.setOnClickListener(onClickListener);
+        six_btn.setOnClickListener(onClickListener);
+        seven_btn.setOnClickListener(onClickListener);
+        eight_btn.setOnClickListener(onClickListener);
+        nine_btn.setOnClickListener(onClickListener);
+        one_btn.setOnClickListener(onClickListener);
+        zore_btn.setOnClickListener(onClickListener);
+        clear_btn.setOnClickListener(onClickListener);
+        delete_btn.setOnClickListener(onClickListener);
+        subtract_btn.setOnClickListener(onClickListener);
+        sum_btn.setOnClickListener(onClickListener);
+        ok_btn.setOnClickListener(onClickListener);
+        dot_btn.setOnClickListener(onClickListener);
     }
+
 
     //数据源
     public List<JizhangView> getData(){
@@ -250,6 +290,140 @@ public class XuanzheShijianActivity extends Activity implements AdapterView.OnIt
                 case R.id.jizhang_yuyin_btn:
                     intent = new Intent(XuanzheShijianActivity.this, VoiceActivity.class);
                     startActivity(intent);
+                    break;
+                case R.id.one_btn:
+                    String str1 = jizhang_money_btn.getText().toString();
+                    if(str1.equals("0.00")){
+                        jizhang_money_btn.setText("1");
+                    }else {
+                        str1 += "1";
+                        jizhang_money_btn.setText(str1);
+                    }
+                    break;
+                case R.id.two_btn:
+                    String str2 = jizhang_money_btn.getText().toString();
+                    if(str2.equals("0.00")){
+                        jizhang_money_btn.setText("2");
+                    }else {
+                        str2 += "2";
+                        jizhang_money_btn.setText(str2);
+                    }
+                    break;
+                case R.id.three_btn:
+                    String str3 = jizhang_money_btn.getText().toString();
+                    if(str3.equals("0.00")){
+                        jizhang_money_btn.setText("3");
+                    }else {
+                        str3 += "3";
+                        jizhang_money_btn.setText(str3);
+                    }
+                    break;
+                case R.id.four_btn:
+                    String str4 = jizhang_money_btn.getText().toString();
+                    if(str4.equals("0.00")){
+                        jizhang_money_btn.setText("4");
+                    }else {
+                        str4 += "4";
+                        jizhang_money_btn.setText(str4);
+                    }
+                    break;
+                case R.id.five_btn:
+                    String str5 = jizhang_money_btn.getText().toString();
+                    if(str5.equals("0.00")){
+                        jizhang_money_btn.setText("5");
+                    }else {
+                        str5 += "5";
+                        jizhang_money_btn.setText(str5);
+                    }
+                    break;
+                case R.id.six_btn:
+                    String str6 = jizhang_money_btn.getText().toString();
+                    if(str6.equals("0.00")){
+                        jizhang_money_btn.setText("6");
+                    }else {
+                        str6 += "6";
+                        jizhang_money_btn.setText(str6);
+                    }
+                    break;
+                case R.id.seven_btn:
+                    String str7 = jizhang_money_btn.getText().toString();
+                    if(str7.equals("0.00")){
+                        jizhang_money_btn.setText("7");
+                    }else {
+                        str7 += "7";
+                        jizhang_money_btn.setText(str7);
+                    }
+                    break;
+                case R.id.eight_btn:
+                    String str8 = jizhang_money_btn.getText().toString();
+                    if(str8.equals("0.00")){
+                        jizhang_money_btn.setText("8");
+                    }else {
+                        str8 += "8";
+                        jizhang_money_btn.setText(str8);
+                    }
+                    break;
+                case R.id.nine_btn:
+                    String str9 = jizhang_money_btn.getText().toString();
+                    if(str9.equals("0.00")){
+                        jizhang_money_btn.setText("9");
+                    }else {
+                        str9 += "9";
+                        jizhang_money_btn.setText(str9);
+                    }
+                    break;
+                case R.id.clear_btn:
+                    jizhang_money_btn.setText("");
+                    break;
+                case R.id.ok_btn:
+                    if(isClickEqu == false){
+                        String strok = jizhang_money_btn.getText().toString();
+                        num2 = Double.valueOf(strok);
+                        jizhang_money_btn.setText(null);
+                        switch (op){
+                            case 0:
+                                Result = num1 - num2;
+                                break;
+                            case 1:
+                                Result = num1 + num2;
+                                break;
+                        }
+                        jizhang_money_btn.setText(""+Result);
+                        isClickEqu = true;
+                    }else {
+                        jizhang_money_btn.setText("0.00");
+                        isClickEqu = false;
+                    }
+                    break;
+                case R.id.dot_btn:
+                    if(isClickEqu==false){
+                        String strdot = jizhang_money_btn.getText().toString();
+                        strdot += ".";
+                        jizhang_money_btn.setText(strdot);
+                        isClickEqu = true ;
+                    }else {
+                        Toast.makeText(XuanzheShijianActivity.this,"你的输入有误！",Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                case R.id.delete_btn:
+                    String str = jizhang_money_btn.getText().toString();
+                    try{
+                        jizhang_money_btn.setText(str.substring(0,str.length()-1));
+                    }catch (Exception e){
+                        jizhang_money_btn.setText("");
+                    }
+                    break;
+                case R.id.subtract_btn:
+                    String strsub = jizhang_money_btn.getText().toString();
+                    num1 = Double.valueOf(strsub);
+                    jizhang_money_btn.setText(null);
+                    op = 0;
+                    break;
+                case R.id.sum_btn:
+                    String strsum = jizhang_money_btn.getText().toString();
+                    num1 = Double.valueOf(strsum);
+                    jizhang_money_btn.setText(null);
+                    op = 1;
                     break;
             }
         }
