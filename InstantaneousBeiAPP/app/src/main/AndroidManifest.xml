@@ -76,6 +76,7 @@
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.Deadline"/><!--选择时间-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.register.ChangeDeadline"/><!--选择时间2-->
         <activity android:name="com.example.administrator.instantaneousbeiapp.guide.ActivityShunBei"/>
+        <activity android:name=".login.GesturesPasswordActivity"/>
         <!--自定义ViewGroup做的一个HorizontalScrollView  完成侧滑效果-->
         <activity android:name=".detail.DemoCehuaActivity"/>
         <!--<activity android:name=".Guide.GuideMainTransition"/>&lt;!&ndash;引导页开始&ndash;&gt;-->
