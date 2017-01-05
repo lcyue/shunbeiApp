@@ -134,7 +134,7 @@ public class ShunbeiLogin extends Activity {
     String user_name ;
     String token ;
     public void login(){
-        String httpurl = "http://10.0.2.2/index.php/home/index/login?" + "user_name="+phoneNums+"&user_password="
+        String httpurl = "http://192.168.7.5/index.php/home/index/login?" + "user_name="+phoneNums+"&user_password="
                 +password;
         try {
             URL url = new URL(httpurl);
